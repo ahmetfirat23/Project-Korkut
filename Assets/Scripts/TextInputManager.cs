@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TextInputManager : MonoBehaviour
@@ -17,7 +18,8 @@ public class TextInputManager : MonoBehaviour
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        playerInput.actions.FindAction("Player/Submit").Disable();
+        if (SceneManager.GetActiveScene().name=="SampleScene")
+            playerInput.actions.FindAction("Player/Submit").Disable();
         submitButton = GameObject.Find("SubmitButton");
     }
 
@@ -65,6 +67,17 @@ public class TextInputManager : MonoBehaviour
         playerInput.actions.FindAction("Player/Submit").Disable();
         playerInput.actions.FindAction("Skip").Enable();
         playerInput.actions.FindAction("Next").Enable();
+    }
+
+    public void CreatePlayer(InputAction.CallbackContext context) { if (context.performed) createPlayer(); }
+    public void CreatePlayer() { createPlayer(); }
+    private void createPlayer()
+    {
+        PlayerInfo.SetName(GameObject.Find("NameInput").GetComponent<TMP_InputField>().text);
+        PlayerInfo.SetGender(GameObject.Find("GenderInput").GetComponent<TMP_InputField>().text);
+        PlayerInfo.SetClass(GameObject.Find("ClassInput").GetComponent<TMP_Dropdown>().value);
+        PlayerInfo.SetRace(GameObject.Find("RaceInput").GetComponent<TMP_Dropdown>().value);
+        SceneManager.LoadScene("SampleScene");
     }
 
 }
