@@ -29,7 +29,7 @@ public class TextInputManager : MonoBehaviour
 
     public void OnSubmit() { onSubmit(); }
 
-    public void OnSubmit(InputAction.CallbackContext context) { if (context.performed) { Debug.Log("fuck"); onSubmit(); } }
+    public void OnSubmit(InputAction.CallbackContext context) { if (context.performed) onSubmit();}
 
     private void onSubmit()
     {

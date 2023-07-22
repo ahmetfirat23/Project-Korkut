@@ -14,122 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - name: Firat
-    line: 'I''m gonna fight ''em all
+    line: 'Somebody once told me the world is gonna roll me
 
-      A seven nation army couldn''t hold me
-      back
-
-      They''re gonna rip it off
-
-      Taking their time right behind
-      my back
-
-      And I''m talking to myself at night
-
-      Because I can''t
-      forget
-
-      Back and forth through my mind
-
-      Behind a cigarette
-
-      And
-      the message coming from my eyes
-
-      Says, "Leave it alone"
-
-      Don''t
-      wanna hear about it
-
-      Every single one''s got a story to tell
-
-      Everyone
-      knows about it
-
-      From the Queen of England to the Hounds of Hell
-
-      And
-      if I catch it coming back my way
-
-      I''m gonna serve it to you
-
-      And
-      that ain''t what you want to hear
-
-      But that''s what I''ll do
-
-      And
-      the feeling coming from my bones
-
-      Says, "Find a home"
-
-      I''m going
-      to Wichita
-
-      Far from this opera forevermore
-
-      I''m gonna work
-      the straw
-
-      Make the sweat drip out of every pore
-
-      And I''m bleeding,
-      and I''m bleeding, and I''m bleeding
-
-      Right before the Lord
-
-      All
-      the words are gonna bleed from me
-
-      And I will sing no more
-
-      And
-      the stains coming from my blood
-
-      Tell me, "Go back home"'
-    color: red
+      I ain''t the
+      sharpest tool in the shed'
     final: 0
   - name: Ahmet
-    line: "Harry Truman, Doris Day, Red China, Johnnie Ray\r\nSouth Pacific, Walter
-      Winchell, Joe DiMaggio\r\nJoe McCarthy, Richard Nixon, Studebaker, television\r\nNorth
-      Korea, South Korea, Marilyn Monroe\r\nRosenbergs, H-bomb, Sugar Ray, Panmunjom\r\nBrando,
-      \"The King and I\", and \"The Catcher in the Rye\"\r\nEisenhower, Vaccine,
-      England's got a new queen\r\nMarciano, Liberace, Santayana, goodbye\r\nWe didn't
-      start the fire\r\nIt was always burning, since the world's been turning\r\nWe
-      didn't start the fire\r\nNo, we didn't light it, but we tried to fight it\r\nJoseph
-      Stalin, Malenkov, Nasser and Prokofiev\r\nRockefeller, Campanella, Communist
-      Bloc\r\nRoy Cohn, Juan Peron, Toscanini, Dacron\r\nDien Bien Phu falls, \"Rock
-      Around the Clock\"\r\nEinstein, James Dean, Brooklyn's got a winning team\r\nDavy
-      Crockett, Peter Pan, Elvis Presley, Disneyland\r\nBardot, Budapest, Alabama,
-      Krushchev\r\nPrincess Grace, Peyton Place, Trouble in the Suez\r\nWe didn't
-      start the fire\r\nIt was always burning, since the world's been turning\r\nWe
-      didn't start the fire\r\nNo, we didn't light it, but we tried to fight it\r\nLittle
-      Rock, Pasternak, Mickey Mantle, Kerouac\r\nSputnik, Chou En-Lai, \"Bridge on
-      the River Kwai\"\r\nLebanon, Charles de Gaulle, California baseball\r\nStarkweather
-      homicide, children of thalidomide\r\nBuddy Holly, Ben Hur, space monkey, mafia\r\nHula
-      hoops, Castro, Edsel is a no-go\r\nU2, Syngman Rhee, Payola and Kennedy\r\nChubby
-      Checker, Psycho, Belgians in the Congo\r\nWe didn't start the fire\r\nIt was
-      always burning, since the world's been turning\r\nWe didn't start the fire\r\nNo,
-      we didn't light it, but we tried to fight it\r\nHemingway, Eichmann, \"Stranger
-      in a Strange Land\"\r\nDylan, Berlin, Bay of Pigs invasion\r\n\"Lawrence of
-      Arabia\", British Beatlemania\r\nOle Miss, John Glenn, Liston beats Patterson\r\nPope
-      Paul, Malcolm X, British politician sex\r\nJFK \u2013 blown away, what else
-      do I have to say?\r\nWe didn't start the fire\r\nIt was always burning, since
-      the world's been turning\r\nWe didn't start the fire\r\nNo, we didn't light
-      it, but we tried to fight it\r\nBirth control, Ho Chi Minh, Richard Nixon back
-      again\r\nMoonshot, Woodstock, Watergate, punk rock\r\nBegin, Reagan, Palestine,
-      terror on the airline\r\nAyatollah's in Iran, Russians in Afghanistan\r\n\"Wheel
-      of Fortune\", Sally Ride, heavy metal suicide\r\nForeign debts, homeless vets,
-      AIDS, crack, Bernie Goetz\r\nHypodermics on the shore, China's under martial
-      law\r\nRock and roller, cola wars, I can't take it anymore\r\nWe didn't start
-      the fire\r\nIt was always burning, since the world's been turning\r\nWe didn't
-      start the fire\r\nBut when we are gone\r\nIt will still burn on, and on, and
-      on, and on, and on, and on, and on, and on\r\nWe didn't start the fire\r\nIt
-      was always burning, since the world's been turning\r\nWe didn't start the fire\r\nNo,
-      we didn't light it, but we tried to fight it\r\nWe didn't start the fire\r\nIt
-      was always burning, since the world's been turning\r\nWe didn't start the fire\r\nNo,
-      we didn't light it, but we tried to fight it\r\nWe didn't start the fire\r\nIt
-      was always burning, since the world's been turning\r\nWe didn't start the fire\r\nNo,
-      we didn't light it, but we tried to fight it"
-    color: blue
+    line: 'She was looking kind of dumb with her finger and her thumb
+
+      In
+      the shape of an "L" on her forehead'
+    final: 0
+  - name: Firat
+    line: 'Well the years start coming and they don''t stop coming
+
+      Fed to
+      the rules and I hit the ground running'
+    final: 0
+  - name: Ahmet
+    line: 'Didn''t make sense not to live for fun
+
+      Your brain gets smart but
+      your head gets dumb'
+    final: 0
+  - name: Firat
+    line: 'So much to do, so much to see
+
+      So what''s wrong with taking the
+      back streets?'
+    final: 0
+  - name: Ahmet
+    line: 'You''ll never know if you don''t go
+
+      You''ll never shine if you
+      don''t glow'
     final: 1

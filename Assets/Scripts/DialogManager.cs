@@ -131,7 +131,7 @@ public class DialogManager : MonoBehaviour
             blipSound[currentSound].volume = Random.Range(0.17f, 0.20f);
             blipSound[currentSound].pitch = Random.Range(1.25f, 1.35f);
             blipSound[currentSound].Play();
-            yield return new WaitForSeconds(0.06f);
+            yield return new WaitForSeconds(0.02f);
         }
         isTyped = true;
         yield return new WaitForSeconds(5);
