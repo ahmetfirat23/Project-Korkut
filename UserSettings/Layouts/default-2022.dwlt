@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 105
+  controlID: 101
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1240.8
+    width: 1140.8
     height: 730.8
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 106
+  controlID: 276
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1240.8
-    height: 362.4
+    width: 1140.8
+    height: 483.2
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 40
+  controlID: 42
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 322.4
-    height: 362.4
+    width: 241.6
+    height: 483.2
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -211,10 +211,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 322.4
+    x: 241.6
     y: 0
-    width: 918.4
-    height: 362.4
+    width: 899.2001
+    height: 483.2
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 362.4
-    width: 1240.8
-    height: 368.4
+    y: 483.2
+    width: 1140.8
+    height: 247.59998
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 17}
@@ -262,24 +262,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1240.8
+    x: 1140.8
     y: 0
-    width: 295.19995
+    width: 395.19995
     height: 730.8
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,9 +300,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 976
+    x: 1140.8
     y: 73.6
-    width: 559
+    width: 394.19995
     height: 709.8
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: -1
+  progressMessageClearTime: 1389.4838367
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
   currentStatusEntriesHasUpdate: 0
   repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 0
-  changeTab: 2
-  activeTab: 2
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 0
     isUserDataPresent: 0
@@ -334,8 +334,19 @@ MonoBehaviour:
     treeLocals:
       IsRemote: 0
       folders:
-        keys: []
-        values: []
+        keys:
+        - Local branches
+        values:
+        - path: Local branches
+          label: Local branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -344,7 +355,27 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes: []
+      nodes:
+      - path: Local branches
+        label: Local branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: master
+        label: master
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 1
+        treeIsCheckable: 0
+        checkState: 0
       selectedNode:
         path: 
         label: 
@@ -359,8 +390,30 @@ MonoBehaviour:
     treeRemotes:
       IsRemote: 1
       folders:
-        keys: []
-        values: []
+        keys:
+        - Remote branches
+        - origin
+        values:
+        - path: Remote branches
+          label: Remote branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+        - path: origin
+          label: origin
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -369,7 +422,47 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes: []
+      nodes:
+      - path: Remote branches
+        label: Remote branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin
+        label: origin
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/HEAD
+        label: HEAD
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/master
+        label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
       selectedNode:
         path: 
         label: 
@@ -384,42 +477,662 @@ MonoBehaviour:
     mode: 0
     newBranchName: 
     scroll: {x: 0, y: 0}
-    disableDelete: 0
-    disableCreate: 0
+    disableDelete: 1
+    disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-07-23T00:54:19.400+03:00
+      cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 
-      cacheType: 0
+      updatedTimeString: 2023-07-23T00:53:36.994+03:00
+      cacheType: 1
     currentBranch:
-      name: 
-      tracking: 
+      name: master
+      tracking: origin/master
     currentRemote:
-      name: 
-      url: 
+      name: origin
+      url: https://github.com/ahmetfirat23/Project-Korkut
       login: 
       user: 
       host: 
       function: 0
       token: 
-    localBranches: []
-    remoteBranches: []
+    localBranches:
+    - name: master
+      tracking: origin/master
+    remoteBranches:
+    - name: origin/HEAD
+      tracking: '[None]'
+    - name: origin/master
+      tracking: '[None]'
   changesView:
     currentBranchHasUpdate: 0
     currentStatusEntriesHasUpdate: 0
     currentLocksHasUpdate: 0
     commitBody: 
-    commitMessage: 
+    commitMessage: ASDFG
     currentBranch: master
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000001000000000000000
+        - 536911cb24659d4408d57535718df400
+        - f2aa0b48cc830d64886003742107cca7
+        - c0de174e15358e249ad23a7ba1522976
+        - e2cd8dcb0822a414f8e53b7afc3069d8
+        - 523e2a98b1c50374b9e2093bdc0ce4ee
+        - 83764466e83f8aa40b421e5af75b1b49
+        - adc0146c2853ed1418133faaf4379eb1
+        - 53cd26a6eefa5a74086203cd118a04d3
+        - aedad172eb85eeb47b5e1d175d698ab1
+        - 23a28d2cfe89df44583aa3d7f62a10d9
+        - ad0539b2c2ca5c442a8f357ab436a58a
+        - 109e9bdd0fcc649c5bc59085c35bdc83
+        - 8c9cfa26abfee488c85f1582747f6a02
+        - 97f02dc9bd3abf14d9da4adbf00029f3
+        - a6bceb06c329e7e46a7e14ff9fa938c0
+        - fc7cae8c020c1ba40af800e590a3f3af
+        - c00c81104d36bb949ae6d1c930c45737
+        - d7d251b219e21f24fac48eeef021cc59
+        - 114d864f4c3502c46862998381904e9a
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples
+          label: Samples
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 1
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity
+          label: OpenAI Unity
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15
+          label: 0.1.15
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT
+          label: ChatGPT
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+          label: ChatGPT Sample.unity
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI
+              Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+            projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+          label: ChatGPT.cs
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI
+              Unity\0.1.15\ChatGPT\ChatGPT.cs
+            projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+          label: Received Message.prefab
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI
+              Unity\0.1.15\ChatGPT\Received Message.prefab
+            projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+          label: Sent Message.prefab
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI
+              Unity\0.1.15\ChatGPT\Sent Message.prefab
+            projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE
+          label: DallE
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+          label: DallE Sample.unity
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI
+              Unity\0.1.15\DallE\DallE Sample.unity
+            projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+          label: DallE.cs
+          level: 5
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI
+              Unity\0.1.15\DallE\DallE.cs
+            projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          label: SampleScene.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene.unity
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\SampleScene.unity
+            projectPath: Assets\Scenes\SampleScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\ChatGptTest.cs
+          label: ChatGptTest.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\ChatGptTest.cs
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs
+            projectPath: Assets\Scripts\ChatGptTest.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Scripts\DialogManager.cs
+          label: DialogManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\DialogManager.cs
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\DialogManager.cs
+            projectPath: Assets\Scripts\DialogManager.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Scripts\Dialogs
+          label: Dialogs
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Dialogs\dialogData.asset
+          label: dialogData.asset
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Dialogs\dialogData.asset
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\Dialogs\dialogData.asset
+            projectPath: Assets\Scripts\Dialogs\dialogData.asset
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Scripts\TextInputManager.cs
+          label: TextInputManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\TextInputManager.cs
+            fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\TextInputManager.cs
+            projectPath: Assets\Scripts\TextInputManager.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
       folders:
-        keys: []
-        values: []
+        keys:
+        - Assets
+        - Assets\Samples
+        - Assets\Samples\OpenAI Unity
+        - Assets\Samples\OpenAI Unity\0.1.15
+        - Assets\Samples\OpenAI Unity\0.1.15\ChatGPT
+        - Assets\Samples\OpenAI Unity\0.1.15\DallE
+        - Assets\Scenes
+        - Assets\Scripts
+        - Assets\Scripts\Dialogs
+        - Packages
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples
+          label: Samples
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 1
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity
+          label: OpenAI Unity
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15
+          label: 0.1.15
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT
+          label: ChatGPT
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE
+          label: DallE
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 1
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Dialogs
+          label: Dialogs
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Packages
+          label: Packages
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
       checkedFileNodes:
         keys: []
         values: []
@@ -448,6 +1161,734 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples.meta
+        label: Samples.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples.meta
+          projectPath: Assets\Samples.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples
+        label: Samples
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 1
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity.meta
+        label: OpenAI Unity.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity.meta
+          projectPath: Assets\Samples\OpenAI Unity.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity
+        label: OpenAI Unity
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15.meta
+        label: 0.1.15.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15
+        label: 0.1.15
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+        label: ChatGPT.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT
+        label: ChatGPT
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+        label: ChatGPT Sample.unity
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT
+            Sample.unity
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+        label: ChatGPT Sample.unity.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT
+            Sample.unity.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+        label: ChatGPT.cs
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+        label: ChatGPT.cs.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+        label: Received Message.prefab
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received
+            Message.prefab
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+        label: Received Message.prefab.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received
+            Message.prefab.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+        label: Sent Message.prefab
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent
+            Message.prefab
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+        label: Sent Message.prefab.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent
+            Message.prefab.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+        label: DallE.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE
+        label: DallE
+        level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+        label: DallE Sample.unity
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE
+            Sample.unity
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+        label: DallE Sample.unity.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE
+            Sample.unity.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+        label: DallE.cs
+        level: 5
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+        label: DallE.cs.meta
+        level: 6
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 1
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        label: SampleScene.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\ChatGptTest.cs
+        label: ChatGptTest.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\ChatGptTest.cs
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs
+          projectPath: Assets\Scripts\ChatGptTest.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\ChatGptTest.cs.meta
+        label: ChatGptTest.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\ChatGptTest.cs.meta
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs.meta
+          projectPath: Assets\Scripts\ChatGptTest.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        label: DialogManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\DialogManager.cs
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\DialogManager.cs
+          projectPath: Assets\Scripts\DialogManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\Dialogs
+        label: Dialogs
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Dialogs\dialogData.asset
+        label: dialogData.asset
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Dialogs\dialogData.asset
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\Dialogs\dialogData.asset
+          projectPath: Assets\Scripts\Dialogs\dialogData.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\TextInputManager.cs
+        label: TextInputManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\TextInputManager.cs
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\TextInputManager.cs
+          projectPath: Assets\Scripts\TextInputManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Packages
+        label: Packages
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Packages\manifest.json
+        label: manifest.json
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Packages\manifest.json
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        label: packages-lock.json
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Packages\packages-lock.json
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        label: CurrentMaximizeLayout.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 9
+          workTreeStatus: 9
       selectedNode:
         path: 
         label: 
@@ -467,21 +1908,221 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries: []
-    changedFilesText: No changed files
+    gitStatusEntries:
+    - path: Assets\Samples.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples.meta
+      projectPath: Assets\Samples.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity.meta
+      projectPath: Assets\Samples\OpenAI Unity.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT
+        Sample.unity
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT
+        Sample.unity.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received
+        Message.prefab
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received
+        Message.prefab.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent
+        Message.prefab
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent
+        Message.prefab.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE
+        Sample.unity
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE
+        Sample.unity.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\ChatGptTest.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs
+      projectPath: Assets\Scripts\ChatGptTest.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ChatGptTest.cs.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs.meta
+      projectPath: Assets\Scripts\ChatGptTest.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\DialogManager.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\DialogManager.cs
+      projectPath: Assets\Scripts\DialogManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Dialogs\dialogData.asset
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\Dialogs\dialogData.asset
+      projectPath: Assets\Scripts\Dialogs\dialogData.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TextInputManager.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\TextInputManager.cs
+      projectPath: Assets\Scripts\TextInputManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Packages\manifest.json
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Packages\manifest.json
+      projectPath: Packages\manifest.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Packages\packages-lock.json
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Packages\packages-lock.json
+      projectPath: Packages\packages-lock.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 9
+      workTreeStatus: 9
+    changedFilesText: 28 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-07-22T11:45:59.999+03:00
+      updatedTimeString: 2023-07-23T01:14:10.200+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-22T11:49:51.784+03:00
+      updatedTimeString: 2023-07-23T01:14:10.803+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-07-22T11:49:50.600+03:00
+      updatedTimeString: 2023-07-23T01:14:11.700+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: dedf627f25d059825ce0d85c751d1c38190ee66b
+      mergeA: 
+      mergeB: 
+      authorName: Fatih Demir
+      authorEmail: 101219059+fatih260@users.noreply.github.com
+      commitEmail: 101219059+fatih260@users.noreply.github.com
+      commitName: Fatih Demir
+      summary: m
+      description: 
+      timeString: 2023-07-22T16:17:45.000+03:00
+      commitTimeString: 2023-07-22T16:17:45.000+03:00
+      changes:
+      - path: ProjectSettings\ShaderGraphSettings.asset
+        fullPath: C:\Users\Fatih\Desktop\Project-Korkut\ProjectSettings\ShaderGraphSettings.asset
+        projectPath: ProjectSettings\ShaderGraphSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: 86dfc297455c4441ab76b1410bb5b78b6fa17d77
       mergeA: 
       mergeB: 
@@ -3778,16 +5419,40 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 0
+    statusAhead: 1
     lastLogChangedEvent:
-      updatedTimeString: 2023-07-22T11:50:53.536+03:00
+      updatedTimeString: 2023-07-23T00:59:08.027+03:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2023-07-22T11:50:57.308+03:00
+      updatedTimeString: 2023-07-23T00:59:06.880+03:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: dedf627f25d059825ce0d85c751d1c38190ee66b
+        mergeA: 
+        mergeB: 
+        authorName: Fatih Demir
+        authorEmail: 101219059+fatih260@users.noreply.github.com
+        commitEmail: 101219059+fatih260@users.noreply.github.com
+        commitName: Fatih Demir
+        summary: m
+        description: 
+        timeString: 2023-07-22T16:17:45.000+03:00
+        commitTimeString: 2023-07-22T16:17:45.000+03:00
+        changes:
+        - path: ProjectSettings\ShaderGraphSettings.asset
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\ProjectSettings\ShaderGraphSettings.asset
+          projectPath: ProjectSettings\ShaderGraphSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: 86dfc297455c4441ab76b1410bb5b78b6fa17d77
         mergeA: 
         mergeB: 
@@ -7102,32 +8767,32 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 0
-      selectedIndex: 1
+      statusAhead: 1
+      selectedIndex: 0
     selectedEntry:
-      commitID: 2bb81df819bbbbc26413b10d311a2bb238135909
+      commitID: dedf627f25d059825ce0d85c751d1c38190ee66b
       mergeA: 
       mergeB: 
       authorName: Fatih Demir
       authorEmail: 101219059+fatih260@users.noreply.github.com
       commitEmail: 101219059+fatih260@users.noreply.github.com
       commitName: Fatih Demir
-      summary: fdsf
+      summary: m
       description: 
-      timeString: 2023-07-22T11:49:07.000+03:00
-      commitTimeString: 2023-07-22T11:49:07.000+03:00
+      timeString: 2023-07-22T16:17:45.000+03:00
+      commitTimeString: 2023-07-22T16:17:45.000+03:00
       changes:
-      - path: Assets\Scenes\dialogData.asset
-        fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\dialogData.asset
-        projectPath: Assets\Scenes\dialogData.asset
+      - path: ProjectSettings\ShaderGraphSettings.asset
+        fullPath: C:\Users\Fatih\Desktop\Project-Korkut\ProjectSettings\ShaderGraphSettings.asset
+        projectPath: ProjectSettings\ShaderGraphSettings.asset
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-      - path: Assets\Scenes\dialogData.asset.meta
-        fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\dialogData.asset.meta
-        projectPath: Assets\Scenes\dialogData.asset.meta
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
         originalPath: 
-        indexStatus: 4
+        indexStatus: 3
         workTreeStatus: 0
     treeChanges:
       assets:
@@ -7135,11 +8800,12 @@ MonoBehaviour:
         values: []
       folders:
         keys:
-        - Assets
-        - Assets\Scenes
+        - ProjectSettings
+        - UserSettings
+        - UserSettings\Layouts
         values:
-        - path: Assets
-          label: Assets
+        - path: ProjectSettings
+          label: ProjectSettings
           level: 0
           isFolder: 1
           isContainer: 0
@@ -7156,8 +8822,26 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
           level: 1
           isFolder: 1
           isContainer: 0
@@ -7202,8 +8886,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
+      - path: ProjectSettings
+        label: ProjectSettings
         level: 0
         isFolder: 1
         isContainer: 0
@@ -7220,8 +8904,44 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes
-        label: Scenes
+      - path: ProjectSettings\ShaderGraphSettings.asset
+        label: ShaderGraphSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: ProjectSettings\ShaderGraphSettings.asset
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\ProjectSettings\ShaderGraphSettings.asset
+          projectPath: ProjectSettings\ShaderGraphSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
         level: 1
         isFolder: 1
         isContainer: 0
@@ -7238,27 +8958,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes\dialogData.asset
-        label: dialogData.asset
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
         level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\dialogData.asset
-          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\dialogData.asset
-          projectPath: Assets\Scenes\dialogData.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes\dialogData.asset.meta
-        label: dialogData.asset.meta
-        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -7268,11 +8970,11 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scenes\dialogData.asset.meta
-          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scenes\dialogData.asset.meta
-          projectPath: Assets\Scenes\dialogData.asset.meta
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
           originalPath: 
-          indexStatus: 4
+          indexStatus: 3
           workTreeStatus: 0
       selectedNode:
         path: 
@@ -7304,7 +9006,7 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-07-22T11:45:59.999+03:00
+      updatedTimeString: 2023-07-23T00:53:36.994+03:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/ahmetfirat23/Project-Korkut
     repositoryRemoteName: origin
@@ -7317,7 +9019,7 @@ MonoBehaviour:
       newGitEmail: 101219059+fatih260@users.noreply.github.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2023-07-22T11:46:02.391+03:00
+        updatedTimeString: 2023-07-23T00:59:12.871+03:00
         cacheType: 8
     webTimeout: 100000
     gitTimeout: 5000
@@ -7346,16 +9048,186 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Oca 0001, 02:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-07-22T11:45:59.999+03:00
+      updatedTimeString: 2023-07-23T00:53:36.994+03:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-07-23T00:59:07.659+03:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-22T11:49:10.046+03:00
+      updatedTimeString: 2023-07-23T00:59:06.868+03:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries: []
+    gitStatusEntries:
+    - path: Assets\Samples.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples.meta
+      projectPath: Assets\Samples.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity.meta
+      projectPath: Assets\Samples\OpenAI Unity.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT
+        Sample.unity
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT
+        Sample.unity.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT Sample.unity.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\ChatGPT.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received
+        Message.prefab
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received
+        Message.prefab.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Received Message.prefab.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent
+        Message.prefab
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent
+        Message.prefab.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\ChatGPT\Sent Message.prefab.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE
+        Sample.unity
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE
+        Sample.unity.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+      projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\ChatGptTest.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs
+      projectPath: Assets\Scripts\ChatGptTest.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ChatGptTest.cs.meta
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\ChatGptTest.cs.meta
+      projectPath: Assets\Scripts\ChatGptTest.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\DialogManager.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\DialogManager.cs
+      projectPath: Assets\Scripts\DialogManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Dialogs\dialogData.asset
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\Dialogs\dialogData.asset
+      projectPath: Assets\Scripts\Dialogs\dialogData.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TextInputManager.cs
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Assets\Scripts\TextInputManager.cs
+      projectPath: Assets\Scripts\TextInputManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Packages\manifest.json
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Packages\manifest.json
+      projectPath: Packages\manifest.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Packages\packages-lock.json
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\Packages\packages-lock.json
+      projectPath: Packages\packages-lock.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: C:\Users\Fatih\Desktop\Project-Korkut\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 9
+      workTreeStatus: 9
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -7369,9 +9241,9 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: master
   currentRemoteUrl: https://github.com/ahmetfirat23/Project-Korkut
-  statusAhead: 0
-  statusBehind: 0
-  hasItemsToCommit: 0
+  statusAhead: 1
+  statusBehind: 2
+  hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -7382,13 +9254,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-07-22T11:50:51.312+03:00
+    updatedTimeString: 2023-07-23T01:14:10.200+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-07-22T11:50:57.308+03:00
+    updatedTimeString: 2023-07-23T01:14:10.826+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-07-22T11:50:51.163+03:00
+    updatedTimeString: 2023-07-23T01:14:10.803+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -7406,9 +9278,9 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0
-  repositoryProgressMessage: 
-  appManagerProgressValue: 0
+  repositoryProgressValue: 1
+  repositoryProgressMessage: Failed to push
+  appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
 --- !u!114 &13
@@ -7431,10 +9303,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 322.4
+    x: 241.6
     y: 73.6
-    width: 916.4
-    height: 341.4
+    width: 897.2001
+    height: 462.2
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -7487,23 +9359,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 916.4
-      height: 320.4
-    m_Scale: {x: 0.55625, y: 0.55625}
-    m_Translation: {x: 458.2, y: 160.2}
+      width: 897.2001
+      height: 441.2
+    m_Scale: {x: 0.76597226, y: 0.76597226}
+    m_Translation: {x: 448.60004, y: 220.6}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -823.7304
+      x: -585.66095
       y: -288
-      width: 1647.4608
+      width: 1171.3219
       height: 576
     m_MinimalGUI: 1
-  m_defaultScale: 0.55625
-  m_LastWindowPixelSize: {x: 1145.5, y: 426.75}
+  m_defaultScale: 0.76597226
+  m_LastWindowPixelSize: {x: 1121.5001, y: 577.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -7531,8 +9403,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 321.4
-    height: 341.4
+    width: 240.6
+    height: 462.2
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -7546,9 +9418,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 16fd0000
-      m_LastClickedID: 64790
-      m_ExpandedIDs: e00dfeff1817feff16fd0000
+      m_SelectedIDs: 3ce9ffff
+      m_LastClickedID: -5828
+      m_ExpandedIDs: bae9ffff50eaffff84f2ffff1af3ffffc8f3ffff48f4ffffb8f4ffff62f5ffffeef5ffff36f6ffffaaf6ffff20f7ffffd0f7ffff3af8ffffe6f8ffff10fbffffc8740000d8740000f27400004881000098810000e6810000228400004c840000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -7592,10 +9464,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 403
-    y: 73
-    width: 1120
-    height: 540
+    x: 292.80002
+    y: 73.6
+    width: 846.00006
+    height: 462.2
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -7610,7 +9482,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -166, y: -26}
+      snapOffset: {x: -166, y: -26.399994}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
@@ -7954,9 +9826,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.0622628, y: -3.0579119, z: 617.3717}
+    m_Target: {x: -1.9968547, y: 1.1294436, z: 90.00001}
     speed: 2
-    m_Value: {x: -2.0622628, y: -3.0579119, z: 617.3717}
+    m_Value: {x: -1.9968547, y: 1.1294436, z: 90.00001}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -7997,7 +9869,7 @@ MonoBehaviour:
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 2, y: 2}
+      m_Size: {x: 1, y: 1}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
@@ -8006,9 +9878,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.3393106
+    m_Target: 5.327927
     speed: 2
-    m_Value: 4.3393106
+    m_Value: 5.327927
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -8053,10 +9925,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 413
-    y: 73
-    width: 1144
-    height: 540
+    x: 292.80002
+    y: 73.6
+    width: 846.00006
+    height: 462.2
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8088,9 +9960,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 436
-    width: 1239.8
-    height: 347.4
+    y: 556.8
+    width: 1139.8
+    height: 226.59998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8112,7 +9984,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/DialogData
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -8120,30 +9992,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/DialogData
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Fatih\Desktop\Project-Korkut
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de070000
-    m_LastClickedID: 2014
-    m_ExpandedIDs: 0000000006060000c606000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 175.89957}
+    m_SelectedIDs: d0770000
+    m_LastClickedID: 30672
+    m_ExpandedIDs: 00000000567700005a7700005c770000ce77000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: DallE
+      m_OriginalName: DallE
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 30752
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -8157,7 +10029,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000056770000587700005a7700005c770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -8184,7 +10056,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c0730000c089000000000000807200007e720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -8234,9 +10106,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 506.4
-    width: 1219
-    height: 277
+    y: 556.8
+    width: 1139.8
+    height: 226.59998
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -8283,7 +10155,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 29264
+  m_LastSelectedObjectID: -6680
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -8304,9 +10176,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1240.8
+    x: 1140.8
     y: 73.6
-    width: 294.19995
+    width: 394.19995
     height: 709.8
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -8325,7 +10197,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 1026
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -8351,10 +10223,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1525
-    y: 73
-    width: 394
-    height: 926
+    x: 1140.8
+    y: 73.6
+    width: 394.19995
+    height: 709.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
