@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace OpenAI
 {
-    public class DallE : MonoBehaviour
+    public class GetPromptDallE : MonoBehaviour
     {
-        [SerializeField] private TMP_InputField inputField;
         [SerializeField] private Button button;
-        [SerializeField] private Image image;
-        //[SerializeField] private GameObject loadingLabel;
+        //[SerializeField] private Image image;
+
+        [SerializeField] private GameObject otherObject;
 
         private OpenAIApi openai = new OpenAIApi();
 
@@ -23,11 +23,21 @@ namespace OpenAI
 
         private async void SendImageRequest()
         {
-            image.sprite = null;
+            
             button.enabled = false;
-            inputField.enabled = false;
-            //loadingLabel.SetActive(true);
+            Image otherImage = otherObject.GetComponent<Image>();
+            
+            if (otherImage != null)
+            {
+                //image.sprite = otherImage.sprite;
+                otherImage.sprite = null;
+            }
+            else
+            {
+                Debug.LogWarning("OtherObject does not have a valid Image component or Sprite.");
+            }
 
+            
             var response = await openai.CreateImage(new CreateImageRequest
             {
                 Prompt = PromptManager.GetPrompt(),
@@ -47,7 +57,7 @@ namespace OpenAI
                     Texture2D texture = new Texture2D(2, 2);
                     texture.LoadImage(request.downloadHandler.data);
                     var sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
-                    image.sprite = sprite;
+                    otherImage.sprite = sprite;
                 }
             }
             else
@@ -56,8 +66,7 @@ namespace OpenAI
             }
 
             button.enabled = true;
-            inputField.enabled = true;
-            //loadingLabel.SetActive(false);
+
         }
     }
 }

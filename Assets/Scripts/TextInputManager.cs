@@ -12,15 +12,25 @@ public class TextInputManager : MonoBehaviour
     public TMP_InputField inputField;
     public string userInput;
     private GameObject submitButton;
+    private bool isNewUser = false; // A boolean variable to track if the user is new or already enrolled
+    private HashSet<string> usedNames = new HashSet<string>(); // HashSet to store used names
 
     PlayerInput playerInput;
     // Start is called before the first frame update
     void Start()
     {
+        isNewUser = PlayerPrefs.GetInt("IsNewUser", 1) == 1; // Default value is 1 (true) for a new user
+        // Show or hide the button for generating profile photos based on the isNewUser value
+        submitButton.SetActive(isNewUser);
+
         playerInput = GetComponent<PlayerInput>();
         if (SceneManager.GetActiveScene().name=="SampleScene")
             playerInput.actions.FindAction("Player/Submit").Disable();
         submitButton = GameObject.Find("SubmitButton");
+
+        string usedNamesJson = PlayerPrefs.GetString("UsedNames", "[]");
+        usedNames = new HashSet<string>(JsonUtility.FromJson<List<string>>(usedNamesJson));
+        
     }
 
     // Update is called once per frame
@@ -78,6 +88,24 @@ public class TextInputManager : MonoBehaviour
         PlayerInfo.SetClass(GameObject.Find("ClassInput").GetComponent<TMP_Dropdown>().value);
         PlayerInfo.SetRace(GameObject.Find("RaceInput").GetComponent<TMP_Dropdown>().value);
         SceneManager.LoadScene("SampleScene");
+
+        // Check if the name is already used
+        if (usedNames.Contains(PlayerInfo.GetName()))
+        {
+            Debug.LogWarning("This name is already used. Please choose another name.");
+            return;
+        }
+
+        // Save the new name to the HashSet
+        usedNames.Add(PlayerInfo.GetName());
+        string usedNamesJson = JsonUtility.ToJson(new List<string>(usedNames));
+        PlayerPrefs.SetString("UsedNames", usedNamesJson);
+
+        // If the user logs in (not a new user), set the PlayerPrefs value to false
+        PlayerPrefs.SetInt("IsNewUser", 0);
+        PlayerPrefs.Save();
+
+
     }
 
 }

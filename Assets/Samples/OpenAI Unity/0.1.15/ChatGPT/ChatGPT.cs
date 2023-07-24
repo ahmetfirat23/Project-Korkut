@@ -17,7 +17,7 @@ namespace OpenAI
         private OpenAIApi openai = new OpenAIApi();
 
         private List<ChatMessage> messages = new List<ChatMessage>();
-        private string prompt = "Act as a random stranger in a chat room and reply to the questions. Don't break character. Don't ever mention that you are an AI model.";
+        private string prompt = "In a dnd game, write a prompt for the dalle model ,which creates images based on the given text, the necessary informations are as follows. ";// +  "Name : " + PlayerInfo.GetName() + ",Gender : " + PlayerInfo.GetGender() + ",Class : "PlayerInfo.GetClass() + ",Race : "PlayerInfo.GetRace() + "Do not add anything different than the prompt" ;
 
         private void Start()
         {
