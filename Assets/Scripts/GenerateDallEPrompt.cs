@@ -5,28 +5,26 @@ using UnityEngine;
 
 namespace OpenAI
 {
-    public class ChatGptTest : MonoBehaviour
+    public class GenerateDallEPrompts : MonoBehaviour
     {
   
         private OpenAIApi openai = new OpenAIApi();
-
         private List<ChatMessage> messages = new List<ChatMessage>();
-        private string prompt = "Act as a random stranger in a chat room and reply to the questions. Don't break character. Don't ever mention that you are an AI model.";
-
+        private string prompt = PromptManager.GetGptPrompt();
         private void Start()
         {
-            SendReply("What do you think about Oppenheimer?");
+            SendReply();
         }
 
-        private async void SendReply(string text)
+        private async void SendReply()
         {
             var newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = text
+                Content = " "
             };
 
-            if (messages.Count == 0) newMessage.Content = prompt + "\n" + text;
+            if (messages.Count == 0) newMessage.Content = prompt;
 
             messages.Add(newMessage);
 
@@ -44,6 +42,8 @@ namespace OpenAI
 
                 messages.Add(message);
                 Debug.Log(message.Content);
+
+                PromptManager.SetGptPromptToSendDalle(message.Content);
             }
             else
             {

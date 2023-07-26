@@ -23,7 +23,7 @@ namespace OpenAI
 
         public void OnTextEntry(string text)
         {
-             PromptManager.SetPrompt(text);
+             PromptManager.SetDallePrompt(text);
         }
 
         private async void SendImageRequest()
@@ -35,7 +35,7 @@ namespace OpenAI
 
             var response = await openai.CreateImage(new CreateImageRequest
             {
-                Prompt = PromptManager.GetPrompt(),
+                Prompt = PromptManager.GetDallePrompt(),
                 Size = ImageSize.Size256
             });
 

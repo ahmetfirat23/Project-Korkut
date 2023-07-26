@@ -20,10 +20,17 @@ namespace OpenAI
         {
             button.onClick.AddListener(SendImageRequest);
         }
+        private void TransferPrompts()
+        {
+            string goodPrompt = PromptManager.GetGptPromptToSendDalle();
+            PromptManager.SetDallePrompt(goodPrompt);
+        }
 
         private async void SendImageRequest()
         {
             
+            TransferPrompts();
+
             button.enabled = false;
             Image otherImage = otherObject.GetComponent<Image>();
             
@@ -40,7 +47,7 @@ namespace OpenAI
             
             var response = await openai.CreateImage(new CreateImageRequest
             {
-                Prompt = PromptManager.GetPrompt(),
+                Prompt = PromptManager.GetDallePrompt(),
                 Size = ImageSize.Size256
             });
 

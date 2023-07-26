@@ -87,6 +87,10 @@ public class TextInputManager : MonoBehaviour
         PlayerInfo.SetGender(GameObject.Find("GenderInput").GetComponent<TMP_InputField>().text);
         PlayerInfo.SetClass(GameObject.Find("ClassInput").GetComponent<TMP_Dropdown>().value);
         PlayerInfo.SetRace(GameObject.Find("RaceInput").GetComponent<TMP_Dropdown>().value);
+
+        string characterizedPrompt = "Generate a DallE prompt so that DallE model can generate a photo of the character whose information will be provided suitable to display in a Dungeons & Dragons(dnd) game, the information of the character is as follows. Name: " + PlayerInfo.GetName() + " Gender: " + PlayerInfo.GetGender() + " Class: " + PlayerInfo.GetClass() + " Race: " + PlayerInfo.GetRace();
+        PromptManager.SetGptPrompt(characterizedPrompt);
+
         SceneManager.LoadScene("SampleScene");
 
         // Check if the name is already used
