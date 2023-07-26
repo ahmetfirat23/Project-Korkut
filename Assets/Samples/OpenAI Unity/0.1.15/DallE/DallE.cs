@@ -21,6 +21,11 @@ namespace OpenAI
             button.onClick.AddListener(SendImageRequest);
         }
 
+        public void OnTextEntry(string text)
+        {
+             PromptManager.SetPrompt(text);
+        }
+
         private async void SendImageRequest()
         {
             image.sprite = null;
