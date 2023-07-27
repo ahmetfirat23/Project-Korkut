@@ -10,13 +10,13 @@ namespace OpenAI
   
         private OpenAIApi openai = new OpenAIApi();
         private List<ChatMessage> messages = new List<ChatMessage>();
-        private string prompt = PromptManager.GetGptPrompt();
-        private void Start()
+        private string prompt = "Generate a DallE prompt so that DallE model can generate a photo of the character whose information will be provided suitable to display in a Dungeons & Dragons(dnd) game, the information of the character is as follows. Name: " + PlayerInfo.GetName() + " Gender: " + PlayerInfo.GetGender() + " Class: " + PlayerInfo.GetClass() + " Race: " + PlayerInfo.GetRace();
+        /*private void Start()
         {
             SendReply();
-        }
+        }*/
 
-        private async void SendReply()
+        public async void SendReply()
         {
             var newMessage = new ChatMessage()
             {

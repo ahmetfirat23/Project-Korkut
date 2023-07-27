@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PromptManager
+public class PromptManager : MonoBehaviour
 {
     private static string dallePrompt;
     private static string gptPromptToSendDalle;
@@ -30,15 +30,6 @@ public static class PromptManager
         gptPromptToSendDalle = newgptPromptToSendDalle;
     }
 
-    public static string GetGptPrompt()
-    {
-        return gptPrompt;
-    }
-
-    public static void SetGptPrompt(string newGptPrompt)
-    {
-        gptPrompt = newGptPrompt;
-    }
 
 
 }

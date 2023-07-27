@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine.Networking;
 using System.Threading.Tasks;
 
+using OpenAI;
+
 namespace OpenAI
 {
     public class GetPromptDallE : MonoBehaviour
@@ -12,7 +14,9 @@ namespace OpenAI
         [SerializeField] private Button button;
         //[SerializeField] private Image image;
 
-        [SerializeField] private GameObject otherObject;
+        [SerializeField] private GameObject imageObject;
+        [SerializeField] private GameObject promptObject;
+
 
         private OpenAIApi openai = new OpenAIApi();
 
@@ -22,6 +26,8 @@ namespace OpenAI
         }
         private void TransferPrompts()
         {
+            promptObject.GetComponent<GenerateDallEPrompts>().SendReply();
+
             string goodPrompt = PromptManager.GetGptPromptToSendDalle();
             PromptManager.SetDallePrompt(goodPrompt);
         }
@@ -32,7 +38,7 @@ namespace OpenAI
             TransferPrompts();
 
             button.enabled = false;
-            Image otherImage = otherObject.GetComponent<Image>();
+            Image otherImage = imageObject.GetComponent<Image>();
             
             if (otherImage != null)
             {
