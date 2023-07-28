@@ -34,14 +34,14 @@ public enum Class{
 public static class PlayerInfo
 {
     static string playerName = "Kevin";
-    static string playerGender = "Male";
+    static GenderEnum playerGender = GenderEnum.Male;
     static Race playerRace = Race.Human;
     static Class playerClass = Class.Fighter;
 
     public static string GetName() { return playerName; }
     public static void SetName(string playerName) {if (playerName != "") PlayerInfo.playerName = playerName; }
-    public static string GetGender() { return playerGender; }
-    public static void SetGender(string playerGender) { if (playerGender != "") PlayerInfo.playerGender = playerGender; }
+    public static GenderEnum GetGender() { return playerGender; }
+    public static void SetGender(int idx) { PlayerInfo.playerGender = (GenderEnum)idx; }
     public static Race GetRace() {  return playerRace; }
     public static void SetRace(int idx) { PlayerInfo.playerRace = (Race)idx; }
     public static Class GetClass() {  return playerClass; }
