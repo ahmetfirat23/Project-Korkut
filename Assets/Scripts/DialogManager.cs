@@ -30,7 +30,6 @@ public class DialogManager : MonoBehaviour
     bool isTyped = false;
 
     int nextLineID = 0;
-    Line nextLine;
     string sentence;
     TextToSpeech tts;
 
@@ -96,23 +95,16 @@ public class DialogManager : MonoBehaviour
         {
             StopAllCoroutines();
             boxData.dialogText.text = "";
-            nextLine = null;
             EndDialog();
             return;
         }
 
 
         line = dialogData.lines[lineID];
-        if (!line.final)
-        {
-            nextLine = dialogData.lines[lineID + 1];
-            nextBoxData = dialog.GetDialogBoxDataWithName(nextLine.name);
-            nextLine.speaker = nextBoxData.speaker;
-            tts.GenerateSentenceAudio(nextLine, next: true);
-        }
+
 
         boxData = dialog.GetDialogBoxDataWithName(line.name);
-        line.speaker = boxData.speaker;
+        line.voiceName = boxData.voiceName;
         boxData.dialogBox.SetActive(true);
 
         portraitGO = dialog.GetPortraitGOWithOrientation(boxData.portraitOrientation);
@@ -134,7 +126,6 @@ public class DialogManager : MonoBehaviour
 
         sentence = line.line;
 
-        tts.GenerateSentenceAudio(line, next: false);
         StartCoroutine(TypeSentence(line));
     }
 
@@ -152,7 +143,10 @@ public class DialogManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             boxData.dialogText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+            if (letter == '\n' || letter == '.')
+                yield return new WaitForSeconds(0.20f);
+            else
+                yield return new WaitForSeconds(0.045f);
         }
         isTyped = true;
         yield return new WaitForSeconds(10);

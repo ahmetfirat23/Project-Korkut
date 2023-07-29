@@ -6,7 +6,7 @@ using UnityEngine;
 public class Line
 {
     public string name;
-    public string speaker;
+    public string voiceName;
     public byte[] audio;
     [TextArea(2, 10)]
     public string line;

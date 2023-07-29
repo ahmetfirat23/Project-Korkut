@@ -16,17 +16,11 @@ public class TextToSpeech : MonoBehaviour
 
     private List<string> usedVoices = new List<string>();
 
-    private List<SpeechConfig> configs = new List<SpeechConfig>();
-    private SpeechConfig config;
-
-    SpeechSynthesizer synthesizerNow;
-    SpeechSynthesizer synthesizerNext;
 
 
     public async void Start()
     {
-        synthesizerNow = GenerateSynthesizer();
-        synthesizerNext = GenerateSynthesizer();
+
 
         SpeechSynthesizer synthesizer = generateSynthesizer();
         SynthesisVoicesResult result = await synthesizer.GetVoicesAsync();
@@ -50,8 +44,11 @@ public class TextToSpeech : MonoBehaviour
         Debug.Log(unknownVoices.Count);
     }
 
-    public void SelectVoice(DialogBoxData dbd, GenderEnum gender)
+    public void GenerateSynthesizer(DialogBoxData dbd, GenderEnum gender)
     {
+        AudioConfig audioConfig = AudioConfig.FromStreamOutput(AudioOutputStream.CreatePullStream());
+        SpeechConfig config = SpeechConfig.FromSubscription("a7297d7539e14fd4aa773bac0b100455", "westus");
+        config.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
         string voice; 
         int idx;
         do
@@ -74,32 +71,15 @@ public class TextToSpeech : MonoBehaviour
             usedVoices.Add(voice);
         }
         while (!usedVoices.Contains(voice));
-        dbd.speaker = voice;
-    }
-
-    public SpeechSynthesizer GenerateSynthesizer()
-    {
-        AudioConfig audioConfig = AudioConfig.FromStreamOutput(AudioOutputStream.CreatePullStream());
-        SpeechConfig config = SpeechConfig.FromSubscription("a7297d7539e14fd4aa773bac0b100455", "westus");
-        config.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
-        configs.Add(config);
+        dbd.voiceName = voice;
+        config.SpeechSynthesisVoiceName = voice;
         SpeechSynthesizer synthesizer = new SpeechSynthesizer(config, audioConfig);
-        return synthesizer;
+        dbd.synthesizer = synthesizer;
     }
 
-    public async void GenerateSentenceAudio(Line line, bool next)
+    public void GenerateSentenceAudio(Line line, SpeechSynthesizer synthesizer)
     {
-        if (!next){
-            await synthesizerNow.StopSpeakingAsync();
-            setSynthesizerVoice(line.speaker, 0);
-            generateSentenceAudio(line, synthesizerNow); 
-        }
-        else
-        {
-            await synthesizerNext.StopSpeakingAsync();
-            setSynthesizerVoice(line.speaker, 1);
-            generateSentenceAudio(line, synthesizerNext);
-        }
+        generateSentenceAudio(line, synthesizer); 
     }
 
     private SpeechSynthesizer generateSynthesizer()
@@ -111,23 +91,13 @@ public class TextToSpeech : MonoBehaviour
         return synthesizer;
     }
 
-    private void setSynthesizerVoice(string voiceName, int idx)
-    {
-        config = configs[idx];
-        Debug.Log(voiceName);
-        config.SpeechSynthesisVoiceName = voiceName;
-    }
+
 
     private async void generateSentenceAudio(Line line, SpeechSynthesizer synthesizer)
     {
-        if (line.audio.Length == 0)
-        {
-            Debug.Log(line.speaker);
-            Debug.Log(config.SpeechSynthesisVoiceName);
-            SpeechSynthesisResult result = await synthesizer.SpeakTextAsync(line.line).ConfigureAwait(false);
-            await synthesizer.StopSpeakingAsync();
-            line.audio = result.AudioData;
-            Debug.Log(result);
-        }
+        Debug.Log(line.voiceName);
+        SpeechSynthesisResult result = await synthesizer.SpeakTextAsync(line.line).ConfigureAwait(false);
+        line.audio = result.AudioData;
+        Debug.Log(result);
     }
 }

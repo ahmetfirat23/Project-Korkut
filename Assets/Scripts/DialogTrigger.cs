@@ -29,12 +29,12 @@ public class DialogTrigger : MonoBehaviour
                 {
                     Names.Add(dbd.name);
                     Debug.Log(dbd.name);
-                    tts.SelectVoice(dbd, dbd.gender);
+                    tts.GenerateSynthesizer(dbd, dbd.gender);
                 }
             }
             foreach(Line line in dialog.dialogData.lines)
             {
-                line.audio = new byte[] { };
+                tts.GenerateSentenceAudio(line, dialog.GetDialogBoxDataWithName(line.name).synthesizer);
             }
             foreach (GameObject portraitGO in dialog.portraitGameObjects)
                 portraitGO.SetActive(false);

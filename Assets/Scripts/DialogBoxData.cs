@@ -12,7 +12,8 @@ public enum GenderEnum { Male, Female, Unknown};
 public class DialogBoxData
 {
     public string name;
-    public string speaker;
+    public string voiceName;
+    public SpeechSynthesizer synthesizer;
     public GenderEnum gender;
     public ColorEnum color;
     public TMP_Text nameText;
