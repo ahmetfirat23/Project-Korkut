@@ -18,10 +18,8 @@ public class TextToSpeech : MonoBehaviour
 
 
 
-    public async void Start()
-    {
-
-
+    public async void Awake()
+    { 
         SpeechSynthesizer synthesizer = generateSynthesizer();
         SynthesisVoicesResult result = await synthesizer.GetVoicesAsync();
         ReadOnlyCollection<VoiceInfo> voices = result.Voices;

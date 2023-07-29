@@ -18,16 +18,10 @@ public class TextInputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
         playerInput = GetComponent<PlayerInput>();
         if (SceneManager.GetActiveScene().name=="SampleScene")
             playerInput.actions.FindAction("Player/Submit").Disable();
         submitButton = GameObject.Find("SubmitButton");
-
-    
-        
-        
     }
 
     // Update is called once per frame

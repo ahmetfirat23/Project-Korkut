@@ -15,16 +15,18 @@ namespace OpenAI
 
         private async void Start()
         {
-            DialogTrigger dt = FindObjectOfType<DialogTrigger>();
+           /* DialogTrigger dt = FindObjectOfType<DialogTrigger>();
             Dialog dialog = dt.dialog;
             DialogBoxData dbd = dialog.dialogBoxDatas[0];
             Debug.Log("started");
-            await GenerateImage(dbd, "[Narrator]: You wake up in a deserted planet." +
-                "[Firat]: Wake up! Who are you?" +
-                "[Narrator]: The man standing right besides you is a huge ork!");
-            Debug.Log("completed");
+            await GenerateImage(dbd, @"[Narrator]: You wake up in a deserted planet. There are two orks looking at you.
+[Firat]: Wake up stranger! Who are you?
+[Narrator]: The second ork screams at you!
+[Ahmet]: Stranger! You are under arrest!");
+            Debug.Log("completed");*/
         }
-        private async Task GenerateImage(DialogBoxData dbd, string str)
+
+        public async Task GenerateImage(DialogBoxData dbd, string str)
         {
             string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(dbd, str);
             await SendImageRequest(dbd, prompt);
@@ -52,6 +54,7 @@ namespace OpenAI
                     texture.LoadImage(request.downloadHandler.data);
                     var sprite = Sprite.Create(texture, new Rect(0, 0, 512, 512), Vector2.zero, 1f);
                     dbd.portraitSprite = sprite;
+                    Debug.Log("completed");
                 }
             }
             else
