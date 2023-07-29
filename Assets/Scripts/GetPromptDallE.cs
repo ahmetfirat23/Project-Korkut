@@ -24,9 +24,9 @@ namespace OpenAI
         {
             button.onClick.AddListener(SendImageRequest);
         }
-        private void TransferPrompts()
+        private async Task TransferPrompts()
         {
-            promptObject.GetComponent<GenerateDallEPrompts>().SendReply();
+            await promptObject.GetComponent<GenerateDallEPrompts>().SendReply();
 
             string goodPrompt = PromptManager.GetGptPromptToSendDalle();
             PromptManager.SetDallePrompt(goodPrompt);
@@ -35,7 +35,7 @@ namespace OpenAI
         private async void SendImageRequest()
         {
             
-            TransferPrompts();
+            await TransferPrompts();
 
             button.enabled = false;
             Image otherImage = imageObject.GetComponent<Image>();

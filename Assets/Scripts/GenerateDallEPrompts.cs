@@ -1,6 +1,7 @@
 using OpenAI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace OpenAI
@@ -16,7 +17,7 @@ namespace OpenAI
             SendReply();
         }*/
 
-        public async void SendReply()
+        public async Task SendReply()
         {
             var newMessage = new ChatMessage()
             {
