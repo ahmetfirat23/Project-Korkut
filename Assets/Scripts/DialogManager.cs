@@ -87,7 +87,11 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence(int lineID)
     {
-        speechSource.Stop();
+        if (!line.final)
+        {
+            speechSource.Stop();
+        }
+
         skipClick = false;
         autoClick = false;
         isTyped = false;
@@ -98,6 +102,8 @@ public class DialogManager : MonoBehaviour
             EndDialog();
             return;
         }
+
+            
 
 
         line = dialogData.lines[lineID];
@@ -148,9 +154,10 @@ public class DialogManager : MonoBehaviour
                 yield return new WaitForSeconds(0.045f);
         }
         isTyped = true;
-        yield return new WaitForSeconds(15f);
+        if (!line.final)
+            yield return new WaitForSeconds(15f);
         autoClick = true;
-        boxData.dialogBox.SetActive(false);
+        //boxData.dialogBox.SetActive(false);
     }
 
     void EndDialog()
@@ -208,9 +215,9 @@ public class DialogManager : MonoBehaviour
             speechSource.clip = WavUtility.ToAudioClip(line.audio);
             speechSource.Play();
         }
-
-        yield return new WaitForSeconds(15f);
+        if (!line.final)
+            yield return new WaitForSeconds(15f);
         autoClick = true;
-        boxData.dialogBox.SetActive(false);
+        //boxData.dialogBox.SetActive(false);
     }
 }

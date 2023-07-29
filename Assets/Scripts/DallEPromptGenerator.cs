@@ -16,7 +16,6 @@ namespace OpenAI
         private string systemPrompt = @"Stable Diffusion is an AI art generation model similar to DALLE-2.
 You are a DallE prompt generator and only return the prompt you generated.
 Below is a list of prompts that can be used to generate images with Stable Diffusion:
-- pirate, concept art, deep focus, fantasy, intricate, highly detailed, digital painting, artstation, matte, sharp focus, illustration, art by magali villeneuve, chippy, ryan yee, rk post, clint cearley, daniel ljunggren, zoltan boros, gabor szikszai, howard lyon, steve argyle, winona nelson
 - a fantasy style portrait painting of rachel lane / alison brie hybrid in the style of francois boucher oil painting unreal 5 daz.rpg portrait, extremely detailed artgerm greg rutkowski alphonse mucha greg hildebrandt tim hildebrandt
 - athena, greek goddess, claudia black, art by artgerm and greg rutkowski and magali villeneuve, bronze greek armor, owl crown, d & d, fantasy, intricate, portrait, highly detailed, headshot, digital painting, trending on artstation, concept art, sharp focus, illustration
 - a close up of a woman with a braid in her hair, fantasy concept art portrait, a portrait of an elf, character art portrait, portrait of an elf, dnd character art portrait, dnd portrait, portrait dnd, detailed matte fantasy portrait, detailed character portrait, fantasy art portrait, digital fantasy portrait, side portrait of elven royalty, portrait of a female elf warlock

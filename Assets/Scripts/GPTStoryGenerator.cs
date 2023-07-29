@@ -20,9 +20,9 @@ namespace OpenAI
         {
 
             beginText = "Act as though we are playing a Game of Dungeons and Dragons 5th edition in a Skyrim universe. " +
-                "Act as though you are the dungeon master and I am the player. Keep it short. No talk; just go." /*+
+                "Act as though you are the dungeon master and I am the player. " +
                 "We will be creating a narrative together, where I make decisions for my character, " +
-                "and you make decisions for all other characters (NPCs) and creatures in the world.\n\n" +
+                "and you make decisions for all other characters (NPCs) and creatures in the world.\n\nKeep it short. No talk; just go." /*+
                 "Your responsibilities as dungeon master are to describe the setting, environment, " +
                 "Non-player characters (NPCs) and their actions, as well as explain the consequences of " +
                 "my actions on all of the above. You may only describe the actions of my character if you " +
