@@ -14,7 +14,7 @@ namespace OpenAI
         [SerializeField] private Text move;
         [SerializeField] private Text beginText;
 
-        private OpenAIApi openai = new OpenAIApi("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");
+        //never push your api key
         private CancellationTokenSource token = new CancellationTokenSource();
 
 
