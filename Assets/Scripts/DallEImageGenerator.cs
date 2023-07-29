@@ -37,7 +37,7 @@ namespace OpenAI
             CreateImageResponse response = await openai.CreateImage(new CreateImageRequest
             {
                 Prompt = prompt,
-                Size = ImageSize.Size512
+                Size = ImageSize.Size256
             });
 
             if (response.Data != null && response.Data.Count > 0)
@@ -52,7 +52,7 @@ namespace OpenAI
 
                     Texture2D texture = new Texture2D(2, 2);
                     texture.LoadImage(request.downloadHandler.data);
-                    var sprite = Sprite.Create(texture, new Rect(0, 0, 512, 512), Vector2.zero, 1f);
+                    var sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
                     dbd.portraitSprite = sprite;
                     Debug.Log("completed");
                 }

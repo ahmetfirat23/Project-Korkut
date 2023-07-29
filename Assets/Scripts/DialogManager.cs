@@ -32,6 +32,7 @@ public class DialogManager : MonoBehaviour
     int nextLineID = 0;
     string sentence;
     TextToSpeech tts;
+    TextInputManager tim;
 
 
 
@@ -40,6 +41,7 @@ public class DialogManager : MonoBehaviour
     {
         started = false;
         tts = FindObjectOfType<TextToSpeech>();
+        tim = FindObjectOfType<TextInputManager>();
 
     }
 
@@ -80,7 +82,6 @@ public class DialogManager : MonoBehaviour
         nextLineID = 0;
         this.dialog = dialog;
         dialogData = dialog.dialogData;
-
         DisplayNextSentence(nextLineID);
     }
 
@@ -94,7 +95,6 @@ public class DialogManager : MonoBehaviour
         if (lineID == -1)
         {
             StopAllCoroutines();
-            boxData.dialogText.text = "";
             EndDialog();
             return;
         }
@@ -158,6 +158,8 @@ public class DialogManager : MonoBehaviour
     {
         finished = true;
         started = false;
+        tim.SwitchActionMap(false);
+        tim.skipButton.GetComponent<Button>().interactable = false; 
 
         if (inputFieldGO.activeSelf == false)
             inputFieldGO.SetActive(true);

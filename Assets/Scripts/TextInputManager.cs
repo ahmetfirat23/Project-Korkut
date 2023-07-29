@@ -11,7 +11,8 @@ public class TextInputManager : MonoBehaviour
 {
     public TMP_InputField inputField;
     public string userInput;
-    private GameObject submitButton;
+    [HideInInspector] public GameObject submitButton;
+    [HideInInspector] public GameObject skipButton;
     
 
     PlayerInput playerInput;
@@ -22,6 +23,8 @@ public class TextInputManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name=="SampleScene")
             playerInput.actions.FindAction("Player/Submit").Disable();
         submitButton = GameObject.Find("SubmitButton");
+        skipButton = GameObject.Find("SkipButton");
+        Debug.Log(skipButton);
     }
 
     // Update is called once per frame
@@ -40,8 +43,10 @@ public class TextInputManager : MonoBehaviour
         {
             inputField.interactable = false;
             submitButton.GetComponent<Button>().interactable = false;
+            skipButton.GetComponent<Button>().interactable = true;
             EventSystem.current.SetSelectedGameObject(null);
-            EnableActionMap();
+            SwitchActionMap(true);
+            SwitchSubmitButton(false);
             userInput = inputField.text;
             Debug.Log(userInput);
             //TODO implement logic here
@@ -56,18 +61,31 @@ public class TextInputManager : MonoBehaviour
         }
     }
 
-    public void DisableActionMap()
+    public void SwitchSubmitButton(bool enable)
     {
-        playerInput.actions.FindAction("Player/Submit").Enable();
-        playerInput.actions.FindAction("Skip").Disable();
-        playerInput.actions.FindAction("Next").Disable();
+        if (enable)
+        {
+            playerInput.actions.FindAction("Player/Submit").Enable();
+        }
+        else
+        {
+            playerInput.actions.FindAction("Player/Submit").Disable();
+        }
+
     }
 
-    public void EnableActionMap()
+    public void SwitchActionMap(bool enable)
     {
-        playerInput.actions.FindAction("Player/Submit").Disable();
-        playerInput.actions.FindAction("Skip").Enable();
-        playerInput.actions.FindAction("Next").Enable();
+        if (enable)
+        {
+            playerInput.actions.FindAction("Skip").Enable();
+            playerInput.actions.FindAction("Next").Enable();
+        }
+        else
+        {
+            playerInput.actions.FindAction("Skip").Disable();
+            playerInput.actions.FindAction("Next").Disable();
+        }
     }
 
     public void CreatePlayer(InputAction.CallbackContext context) { if (context.performed) createPlayer(); }

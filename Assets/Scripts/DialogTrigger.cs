@@ -14,6 +14,7 @@ public class DialogTrigger : MonoBehaviour
     DialogManager dm;
     TextToSpeech tts;
     DallEImageGenerator dalle;
+    bool triggered = false;
 
     public List<string> Names = new List<string>();
 
@@ -22,37 +23,37 @@ public class DialogTrigger : MonoBehaviour
         dm = FindObjectOfType<DialogManager>();
         tts = FindObjectOfType<TextToSpeech>();
         dalle = FindObjectOfType<DallEImageGenerator>();
-        while (tts.maleVoices.Count==0)
-        {
-            Console.WriteLine("Excel is busy");
-            await Task.Delay(25);
-        }
+    }
 
-        foreach (DialogBoxData dbd in dialog.dialogBoxDatas)
-        {
-            if (!Names.Contains(dbd.name))
+    public async void TriggerDialog()
+    {
+        if (!dm.started && tts.maleVoices.Count!=0 && !triggered) {
+            triggered = true;
+            List<Task> tasks = new List<Task>();
+            foreach (DialogBoxData dbd in dialog.dialogBoxDatas)
             {
-                Names.Add(dbd.name);
-                Debug.Log(dbd.name);
-                tts.GenerateSynthesizer(dbd, dbd.gender);
-                dalle.GenerateImage(dbd, @"[Narrator]: You wake up in a deserted planet.
+                if (!Names.Contains(dbd.name))
+                {
+                    Names.Add(dbd.name);
+                    Debug.Log(dbd.name);
+                    tts.GenerateSynthesizer(dbd, dbd.gender);
+                    Task task = dalle.GenerateImage(dbd, @"[Narrator]: You wake up in a deserted planet.
 [Firat]: Wake up! Who are you?
 [Narrator]: The men standing right besides you are huge orks!
 [Ahmet]: Stranger! You are under arrest!");
+                    tasks.Add(task);
+                }
             }
-        }
-        foreach (Line line in dialog.dialogData.lines)
-        {
-            tts.GenerateSentenceAudio(line, dialog.GetDialogBoxDataWithName(line.name).synthesizer);
-        }
-    }
 
-    public void TriggerDialog()
-    {
-        if (!dm.started && tts.maleVoices.Count!=0) {
+            foreach (Line line in dialog.dialogData.lines)
+            {
+                tts.GenerateSentenceAudio(line, dialog.GetDialogBoxDataWithName(line.name).synthesizer);
+            }
             foreach (GameObject portraitGO in dialog.portraitGameObjects)
                 portraitGO.SetActive(false);
+            await Task.WhenAll(tasks.ToArray());
             dm.StartDialog(dialog);
+            triggered = false;
         }
     }
 

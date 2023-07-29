@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 375021042}
   - component: {fileID: 375021041}
   m_Layer: 5
-  m_Name: 'SkipButton '
+  m_Name: SkipButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1366,6 +1366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1744714740}
   userInput: 
+  submitButton: {fileID: 0}
+  skipButton: {fileID: 0}
 --- !u!1 &780482369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,15 +3174,15 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 758135127}
         m_TargetAssemblyTypeName: TextInputManager, Assembly-CSharp
-        m_MethodName: DisableActionMap
-        m_Mode: 1
+        m_MethodName: SwitchSubmitButton
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: A
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1959186570}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
