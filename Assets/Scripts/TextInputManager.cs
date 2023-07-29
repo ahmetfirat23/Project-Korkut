@@ -13,12 +13,14 @@ public class TextInputManager : MonoBehaviour
     public string userInput;
     [HideInInspector] public GameObject submitButton;
     [HideInInspector] public GameObject skipButton;
+    DialogTrigger dialogTrigger;
     
 
     PlayerInput playerInput;
     // Start is called before the first frame update
     void Start()
     {
+        dialogTrigger = FindObjectOfType<DialogTrigger>();
         playerInput = GetComponent<PlayerInput>();
         if (SceneManager.GetActiveScene().name=="SampleScene")
             playerInput.actions.FindAction("Player/Submit").Disable();
@@ -27,11 +29,6 @@ public class TextInputManager : MonoBehaviour
         Debug.Log(skipButton);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OnSubmit() { onSubmit(); }
 
@@ -49,17 +46,17 @@ public class TextInputManager : MonoBehaviour
             SwitchSubmitButton(false);
             userInput = inputField.text;
             Debug.Log(userInput);
-            //TODO implement logic here
+            dialogTrigger.NextDialog(userInput);
         }
     }
-
+    /*
     public void OnSkipClick(InputAction.CallbackContext context)
     {
         if (context.performed && inputField != null)
         {
             userInput = inputField.text;
         }
-    }
+    }*/
 
     public void SwitchSubmitButton(bool enable)
     {

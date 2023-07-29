@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using System;
 
-[System.Serializable]
+[Serializable]
 public class Dialog
 {
     public DialogData dialogData;
@@ -31,19 +31,13 @@ public class Dialog
     public GameObject GetPortraitGOWithOrientation(OrientationEnum orientation) 
     {
         GameObject portrait;
-        switch (orientation)
+        try
         {
-            case OrientationEnum.Left:
-                portrait = portraitGameObjects[0];
-                break;
-            case OrientationEnum.Middle:
-                portrait = portraitGameObjects[1];
-                break;
-            case OrientationEnum.Right:
-                portrait = portraitGameObjects[2];
-                break;
-            default:
-                throw new Exception("Incorrect orientation");
+            portrait = portraitGameObjects[(int)orientation];
+        }
+        catch
+        {
+            throw new Exception("Incorrect orientation");
         }
         return portrait;
     }

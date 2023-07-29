@@ -4,31 +4,23 @@ using System.Linq;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Data;
 
 namespace OpenAI
 {
-    public class StreamResponse : MonoBehaviour
+    public class GPTStoryGenerator : MonoBehaviour
     {
-        [SerializeField] private Button button;
-        [SerializeField] private Text responseEvent;
-        [SerializeField] private Text move;
-        [SerializeField] private Text beginText;
-
-        //never push your api key
-        private CancellationTokenSource token = new CancellationTokenSource();
+        private string beginText;
+        private OpenAIApi openai = new OpenAIApi();
+        List<ChatMessage> messages = new List<ChatMessage>();
 
 
-
-        private void Start()
-        {
-            button.onClick.AddListener(SendMessage);
-        }
-
-        private void StartStory()
+        public async Task<string> StartStory()
         {
 
-            beginText.text = "Act as though we are playing a Game of Dungeons and Dragons 5th edition in a Skyrim universe. " +
-                "Act as though you are the dungeon master and I am the player. " +
+            beginText = "Act as though we are playing a Game of Dungeons and Dragons 5th edition in a Skyrim universe. " +
+                "Act as though you are the dungeon master and I am the player. Keep it short. No talk; just go." /*+
                 "We will be creating a narrative together, where I make decisions for my character, " +
                 "and you make decisions for all other characters (NPCs) and creatures in the world.\n\n" +
                 "Your responsibilities as dungeon master are to describe the setting, environment, " +
@@ -71,62 +63,69 @@ namespace OpenAI
                 "Name: " + PlayerInfo.GetName() + "\n" +
                 "Race: " + PlayerInfo.GetRace() + "\n" +
                 "Gender: " + PlayerInfo.GetGender() + "\n" +
-                "Class: " + PlayerInfo.GetClass();
-                
+                "Class: " + PlayerInfo.GetClass()*/;
 
+            return await SendCompletionRequest(beginText, "system");
+        }
 
-            button.enabled = false;
-
-            var message = new List<ChatMessage>
+        public async Task<string> SendCompletionRequestWithoutHistory(string userInput)
+        {
+            List<ChatMessage> messages = new List<ChatMessage>
             {
                 new ChatMessage()
                 {
-                    Role = "user",
-                    Content = beginText.text
+                Role = "user",
+                Content = userInput
                 }
             };
-
-            openai.CreateChatCompletionAsync(new CreateChatCompletionRequest()
-            {
-                Model = "gpt-3.5-turbo-0301",
-                Messages = message,
-                Stream = true
-            }, HandleResponse, null, token);
-
-            button.enabled = true;
+            ChatMessage message = await sendCompletionRequest(messages);
+            return message.Content;
         }
 
-        private void SendMessage()
+        public async Task<string> SendCompletionRequest(string userInput, string role = "user")
         {
-            button.enabled = false;
-
-            var message = new List<ChatMessage>
+            ChatMessage newMessage = new ChatMessage()
             {
-                new ChatMessage()
+                Role = role,
+                Content = userInput
+            };
+            messages.Add(newMessage);
+            ChatMessage message = await sendCompletionRequest(messages);
+            messages.Add(message);
+            return message.Content;
+
+
+
+        }
+
+        private async Task<ChatMessage> sendCompletionRequest(List<ChatMessage> messages)
+        {
+            CreateChatCompletionResponse completionResponse = await openai.CreateChatCompletion(new CreateChatCompletionRequest()
+            {
+                Model = "gpt-3.5-turbo-0301",
+                Messages = messages,
+            });
+
+            ChatMessage message;
+            if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
+            {
+                message = completionResponse.Choices[0].Message;
+                message.Content = message.Content.Trim(); //TODO what does this do?
+
+                Debug.Log(message.Content);
+            }
+            else
+            {
+                message = new ChatMessage()
                 {
-                    Role = "user",
-                    Content = StoryManager.GetMove()
-                }
-            };
+                    Role = "assistant",
+                    Content = "System error, please try again."
+                };
+                Debug.LogWarning("No text was generated from this prompt.");           
+            }
 
-            openai.CreateChatCompletionAsync(new CreateChatCompletionRequest()
-            {
-                Model = "gpt-3.5-turbo-0301",
-                Messages = message,
-                Stream = true
-            }, HandleResponse, null, token);
-
-            button.enabled = true;
+            return message;
         }
 
-        private void HandleResponse(List<CreateChatCompletionResponse> responses)
-        {
-            responseEvent.text = string.Join("", responses.Select(r => r.Choices[0].Delta.Content));
-        }
-
-        private void OnDestroy()
-        {
-            token.Cancel();
-        }
     }
 }

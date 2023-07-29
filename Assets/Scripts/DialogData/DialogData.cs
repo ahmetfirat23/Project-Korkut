@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "dialogData", menuName = "Dialog")]
-public class DialogData : ScriptableObject
+[System.Serializable]
+public class DialogData
 {
     public Line[] lines; 
 }

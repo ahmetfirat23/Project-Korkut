@@ -134,8 +134,7 @@ public class DialogManager : MonoBehaviour
     {
         boxData.dialogText.text = "";
         sentence = line.line;
-
-        yield return new WaitUntil(() => (line.audio.Length != 0));
+        yield return new WaitUntil(()=>line.audio!=null);
         speechSource.clip = WavUtility.ToAudioClip(line.audio);
         speechSource.Play();
           
@@ -144,12 +143,12 @@ public class DialogManager : MonoBehaviour
         {
             boxData.dialogText.text += letter;
             if (letter == '\n' || letter == '.')
-                yield return new WaitForSeconds(0.20f);
+                yield return new WaitForSeconds(0.25f);
             else
                 yield return new WaitForSeconds(0.045f);
         }
         isTyped = true;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(15f);
         autoClick = true;
         boxData.dialogBox.SetActive(false);
     }
@@ -210,7 +209,7 @@ public class DialogManager : MonoBehaviour
             speechSource.Play();
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(15f);
         autoClick = true;
         boxData.dialogBox.SetActive(false);
     }

@@ -5,7 +5,7 @@ using TMPro;
 using Microsoft.CognitiveServices.Speech;
 
 public enum ColorEnum { Red, Blue};
-public enum OrientationEnum { Left, Middle, Right };
+public enum OrientationEnum { Left, Right, Middle };
 public enum GenderEnum { Male, Female, Unknown};
 
 [System.Serializable]
