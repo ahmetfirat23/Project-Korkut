@@ -103,9 +103,6 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-            
-
-
         line = dialogData.lines[lineID];
 
 

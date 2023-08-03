@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 using UnityEngine.Networking;
 using System.Threading.Tasks;
@@ -12,6 +15,7 @@ namespace OpenAI
     public class DallEImageGenerator : MonoBehaviour
     { 
         private OpenAIApi openai = new OpenAIApi();
+        private List<ChatMessage> messages = new List<ChatMessage>();
 
         private async void Start()
         {
@@ -25,10 +29,43 @@ namespace OpenAI
 [Ahmet]: Stranger! You are under arrest!");
             Debug.Log("completed");*/
         }
+        public async Task<string> DescribeCharacter(DialogBoxData dbd, string gptAnswer){
+            //TODO make a call to gpt
+            ChatMessage newMessage = new ChatMessage()
+            {
+                Role = "user",
+                Content = $@"In a DnD(Dungeons and Dragons) game, please describe the character that has name {dbd.name} and said this : {gptAnswer}"
+            };
+            messages.Add(newMessage);
+
+            CreateChatCompletionResponse completionResponse = await openai.CreateChatCompletion(new CreateChatCompletionRequest()
+            {
+                Model = "gpt-3.5-turbo-0613",
+                Messages = messages
+            });
+
+            messages.Remove(newMessage);
+
+            if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
+            {
+                ChatMessage message = completionResponse.Choices[0].Message;
+                message.Content = message.Content.Trim(); //TODO what does this do?
+
+                Debug.Log(message.Content);
+
+                return message.Content;
+            }
+            else
+            {
+                Debug.LogWarning("No text was generated from this prompt.");
+                return "Describe a random dnd character";
+            }
+        }
 
         public async Task GenerateImage(DialogBoxData dbd, string str)
         {
-            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(dbd, str);
+            string description = await DescribeCharacter(dbd, str);
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(dbd, description);
             await SendImageRequest(dbd, prompt);
         }
 

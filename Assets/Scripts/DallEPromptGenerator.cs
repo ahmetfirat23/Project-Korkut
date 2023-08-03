@@ -22,7 +22,7 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
     Follow the structure of the example prompts.";
 
 
-        private string prompt = "Generate a DallE prompt so that DallE model can generate a photo of the character whose information will be provided suitable to display in a Dungeons & Dragons(dnd) game, the information of the character is as follows. Name: " + PlayerInfo.GetName() + " Gender: " + PlayerInfo.GetGender() + " Class: " + PlayerInfo.GetClass() + " Race: " + PlayerInfo.GetRace();
+        //private string prompt = "Generate a DallE prompt so that DallE model can generate a photo of the character whose information will be provided suitable to display in a Dungeons & Dragons(dnd) game, the information of the character is as follows. Name: " + PlayerInfo.GetName() + " Gender: " + PlayerInfo.GetGender() + " Class: " + PlayerInfo.GetClass() + " Race: " + PlayerInfo.GetRace();
         
 
         void Start()
@@ -35,13 +35,13 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
             messages.Add(template);
         }
 
-        public async Task<string> GenerateDallEPrompt(DialogBoxData dbd, string str)
+        public async Task<string> GenerateDallEPrompt(DialogBoxData dbd, string description)
         {
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $@"Following example prompts, generate a prompt for {dbd.name}'s portrait image generation. You may use the following text for extra information. Include word 'portrait'in the prompt. No talk; just go. Keep the prompt shorter than 70 words.
-###Text:'{str}'"
+                Content = $@"Following example prompts, generate a prompt for {dbd.name}'s portrait image generation. You should use the following text for extra information. Include word 'portrait'in the prompt. Keep the prompt shorter than 70 words.
+###Text:'{description}'"
             };
             messages.Add(newMessage);
 
