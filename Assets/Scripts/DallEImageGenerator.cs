@@ -16,10 +16,15 @@ namespace OpenAI
     { 
         private OpenAIApi openai = new OpenAIApi();
         private List<ChatMessage> messages = new List<ChatMessage>();
+        Dialog dialog;
 
-        private async void Start()
+        //private async void Start()
+        void Start()
         {
-           /* DialogTrigger dt = FindObjectOfType<DialogTrigger>();
+            dialog = FindObjectOfType<Dialog>();
+
+
+            /*DialogTrigger dt = FindObjectOfType<DialogTrigger>();
             Dialog dialog = dt.dialog;
             DialogBoxData dbd = dialog.dialogBoxDatas[0];
             Debug.Log("started");
@@ -29,19 +34,27 @@ namespace OpenAI
 [Ahmet]: Stranger! You are under arrest!");
             Debug.Log("completed");*/
         }
+        public string GetProfileInfo(){
+            string player_info = "Name: " + PlayerInfo.GetName() +
+                                    " Gender: " + PlayerInfo.GetGender().ToString() +
+                                    " Class: " + PlayerInfo.GetClass().ToString() +
+                                    " Race: " + PlayerInfo.GetRace().ToString();
+            return player_info;
+        }
         public async Task<string> DescribeCharacter(DialogBoxData dbd, string gptAnswer){
             //TODO make a call to gpt
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $@"In a DnD(Dungeons and Dragons) game, please describe the character that has name {dbd.name} and said this : {gptAnswer}"
+                Content = $@"In a DnD(Dungeons and Dragons) game, please create a background story the character that has name {dbd.name} in the following dialog : {gptAnswer}"
             };
             messages.Add(newMessage);
 
             CreateChatCompletionResponse completionResponse = await openai.CreateChatCompletion(new CreateChatCompletionRequest()
             {
                 Model = "gpt-3.5-turbo-0613",
-                Messages = messages
+                Messages = messages,
+                Temperature = 0.6f
             });
 
             messages.Remove(newMessage);
@@ -53,7 +66,8 @@ namespace OpenAI
 
                 Debug.Log(message.Content);
 
-                return message.Content;
+                string answer = "Character Name : " + dbd.name + "\n\n\n Description : " + message.Content;
+                return answer;
             }
             else
             {
@@ -61,11 +75,19 @@ namespace OpenAI
                 return "Describe a random dnd character";
             }
         }
+        
+        public async Task GeneratePlayerImage()
+        {
+            DialogBoxData playerDbd = dialog.GetDialogBoxDataWithName("you");
 
-        public async Task GenerateImage(DialogBoxData dbd, string str)
+            string player_information = GetProfileInfo();
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(player_information);
+            await SendImageRequest(playerDbd, prompt);
+        }
+        public async Task GenerateNpcImage(DialogBoxData dbd, string str)
         {
             string description = await DescribeCharacter(dbd, str);
-            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(dbd, description);
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(description);
             await SendImageRequest(dbd, prompt);
         }
 

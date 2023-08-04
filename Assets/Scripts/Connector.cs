@@ -57,7 +57,7 @@ public class Connector : MonoBehaviour
                 Debug.Log(line.name);
                 tts.GenerateSynthesizer(dbd, dbd.gender);
                 
-                Task task = dalle.GenerateImage(dbd, gptResponse);
+                Task task = dalle.GenerateNpcImage(dbd, gptResponse);
                 tasks.Add(task);
                 dbdList.Add(dbd);
             }

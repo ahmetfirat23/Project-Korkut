@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using System;
 
 [Serializable]
-public class Dialog
+public class Dialog : MonoBehaviour
 {
     public DialogData dialogData;
     public Sprite[] dialogBoxColors;
