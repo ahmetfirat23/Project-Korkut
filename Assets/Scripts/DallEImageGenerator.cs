@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 using UnityEngine.Networking;
 using System.Threading.Tasks;
@@ -13,22 +16,35 @@ namespace OpenAI
     { 
         private OpenAIApi openai = new OpenAIApi();
 
-        private async void Start()
+
+        //private async void Start()
+        void Start()
         {
-           /* DialogTrigger dt = FindObjectOfType<DialogTrigger>();
-            Dialog dialog = dt.dialog;
-            DialogBoxData dbd = dialog.dialogBoxDatas[0];
-            Debug.Log("started");
-            await GenerateImage(dbd, @"[Narrator]: You wake up in a deserted planet. There are two orks looking at you.
-[Firat]: Wake up stranger! Who are you?
-[Narrator]: The second ork screams at you!
-[Ahmet]: Stranger! You are under arrest!");
-            Debug.Log("completed");*/
+
         }
 
-        public async Task GenerateImage(DialogBoxData dbd, string str)
+
+        public string GetProfileInfo(){
+            string player_info = "Name: " + PlayerInfo.GetName() +
+                                    " Gender: " + PlayerInfo.GetGender().ToString() +
+                                    " Class: " + PlayerInfo.GetClass().ToString() +
+                                    " Race: " + PlayerInfo.GetRace().ToString();
+            return player_info;
+        }
+
+        
+        public async Task GeneratePlayerImage(DialogBoxData dbd)
         {
-            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(dbd, str);
+            string player_information = GetProfileInfo();
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(player_information);
+            await SendImageRequest(dbd, prompt);
+        }
+
+
+        public async Task GenerateNPCImage(DialogBoxData dbd, string str)
+        {
+            string description = await GetComponent<DallEPromptGenerator>().DescribeCharacter(dbd, str);
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(description);
             await SendImageRequest(dbd, prompt);
         }
 

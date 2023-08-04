@@ -103,9 +103,6 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-            
-
-
         line = dialogData.lines[lineID];
 
 
@@ -165,7 +162,24 @@ public class DialogManager : MonoBehaviour
         finished = true;
         started = false;
         tim.SwitchActionMap(false);
-        tim.skipButton.GetComponent<Button>().interactable = false; 
+        tim.skipButton.GetComponent<Button>().interactable = false;
+        DialogBoxData playerdbd = dialog.GetDialogBoxDataWithName(PlayerInfo.GetName());
+        if (boxData.portraitOrientation == OrientationEnum.Left)
+            playerdbd.portraitOrientation = OrientationEnum.Right;
+        else
+            playerdbd.portraitOrientation = OrientationEnum.Left;
+        portraitGO = dialog.GetPortraitGOWithOrientation(boxData.portraitOrientation);
+        portraitGO.SetActive(true);
+        portraitAnim = portraitGO.GetComponent<Animator>();
+
+        dialog.SetVisuals(line.name, boxData.color, boxData.portraitOrientation);
+
+        if (!portraitGO.activeSelf)
+            portraitGO.SetActive(true);
+        else
+            portraitAnim.SetTrigger("speak");
+
+        portraitAnim.SetBool("speaking", true);
 
         if (inputFieldGO.activeSelf == false)
             inputFieldGO.SetActive(true);

@@ -25,7 +25,7 @@ public class Dialog
             }
         }
 
-        throw new Exception("Invalid character name");
+        throw new Exception($"Invalid character name {name}");
     }
 
     public GameObject GetPortraitGOWithOrientation(OrientationEnum orientation) 

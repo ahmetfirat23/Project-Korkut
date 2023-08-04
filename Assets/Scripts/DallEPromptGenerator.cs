@@ -22,7 +22,6 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
     Follow the structure of the example prompts.";
 
 
-        private string prompt = "Generate a DallE prompt so that DallE model can generate a photo of the character whose information will be provided suitable to display in a Dungeons & Dragons(dnd) game, the information of the character is as follows. Name: " + PlayerInfo.GetName() + " Gender: " + PlayerInfo.GetGender() + " Class: " + PlayerInfo.GetClass() + " Race: " + PlayerInfo.GetRace();
         
 
         void Start()
@@ -35,20 +34,60 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
             messages.Add(template);
         }
 
-        public async Task<string> GenerateDallEPrompt(DialogBoxData dbd, string str)
+
+        public async Task<string> DescribeCharacter(DialogBoxData dbd, string gptAnswer)
         {
+            //TODO make a call to gpt
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $@"Following example prompts, generate a prompt for {dbd.name}'s portrait image generation. You may use the following text for extra information. Include word 'portrait'in the prompt. No talk; just go. Keep the prompt shorter than 70 words.
-###Text:'{str}'"
+                Content = $@"In a DnD(Dungeons and Dragons) game, create a background story the character that has name {dbd.name} in the following dialog : {gptAnswer}"
             };
             messages.Add(newMessage);
 
             CreateChatCompletionResponse completionResponse = await openai.CreateChatCompletion(new CreateChatCompletionRequest()
             {
                 Model = "gpt-3.5-turbo-0613",
-                Messages = messages
+                Messages = messages,
+                Temperature = 0.6f
+            });
+
+            messages.Remove(newMessage);
+
+            if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
+            {
+                ChatMessage message = completionResponse.Choices[0].Message;
+                message.Content = message.Content.Trim(); //TODO what does this do?
+
+                Debug.Log(message.Content);
+
+                string answer = "Character Name : " + dbd.name + "\n\n\n Description : " + message.Content;
+                return answer;
+            }
+            else
+            {
+                Debug.LogWarning("No text was generated from this prompt.");
+                return "Describe a random dnd character";
+            }
+        }
+
+
+        public async Task<string> GenerateDallEPrompt(string description)
+        {
+            ChatMessage newMessage = new ChatMessage()
+            {
+                Role = "user",
+                Content = $@"In a DnD(Dungeons and Dragons) game, following example prompts, generate a prompt for the image generation of a character portrait. You should use the following text for extra information. Include word 'portrait'in the prompt. Keep the prompt shorter than 70 words.
+###Text:'{description}'"
+            };
+            messages.Add(newMessage);
+
+            CreateChatCompletionResponse completionResponse = await openai.CreateChatCompletion(new CreateChatCompletionRequest()
+            {
+                Model = "gpt-3.5-turbo-0613",
+                Messages = messages,
+                Temperature = 0f
+
             });
 
             messages.Remove(newMessage);

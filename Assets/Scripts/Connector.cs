@@ -1,6 +1,8 @@
 using OpenAI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEditor.Rendering;
@@ -8,6 +10,8 @@ using UnityEngine;
 
 public class Connector : MonoBehaviour
 {
+    public Sprite[] femaleNarrators;
+    public Sprite[] maleNarrators;
     public Sprite[] dialogBoxColors;
     public GameObject[] portraitGameObjects;
     public TMP_Text nameText;
@@ -29,6 +33,23 @@ public class Connector : MonoBehaviour
 
     }
 
+    public void CreatePlayer() {
+
+        DialogBoxData dbd = new DialogBoxData() {
+            name = PlayerInfo.GetName(),
+            gender = PlayerInfo.GetGender(),
+            color = (ColorEnum)Random.Range(0, 2),
+            dialogText = dialogText,
+            dialogBox = dialogBox,
+            portraitOrientation = OrientationEnum.Right,
+        };
+        tts.GenerateSynthesizer(dbd, dbd.gender);
+        Names.Add(PlayerInfo.GetName());
+        dbds.Add(dbd);
+        Task task = dalle.GeneratePlayerImage(dbd);
+        task.ContinueWith(task => { });
+    }
+
     public async Task<Dialog> CreateDialog(string gptResponse) {
 
         List<Line> lines = SplitResponseToLines(gptResponse);
@@ -36,6 +57,9 @@ public class Connector : MonoBehaviour
         List<Task> tasks = new List<Task>();
         DialogData dialogData = new DialogData();
         List<DialogBoxData> dbdList = new List<DialogBoxData>();
+
+        Debug.Log(dbds[0].name);
+        dbdList.Add(dbds[0]);
 
         foreach (Line line in lines)
         {
@@ -56,8 +80,19 @@ public class Connector : MonoBehaviour
                 dbds.Add(dbd);
                 Debug.Log(line.name);
                 tts.GenerateSynthesizer(dbd, dbd.gender);
-                Task task = dalle.GenerateImage(dbd, gptResponse);
-                tasks.Add(task);
+
+                if (line.name == "Narrator")
+                {
+                    if (dbd.gender == GenderEnum.Male)
+                        dbd.portraitSprite = maleNarrators[Random.Range(0, maleNarrators.Length)];
+                    else
+                        dbd.portraitSprite = femaleNarrators[Random.Range(0, femaleNarrators.Length)];
+                }
+                else
+                {
+                    Task task = dalle.GenerateNPCImage(dbd, gptResponse);
+                    tasks.Add(task);
+                }
                 dbdList.Add(dbd);
             }
             else
@@ -72,6 +107,7 @@ public class Connector : MonoBehaviour
         }
         dialogData.lines = lines.ToArray();
 
+
         Dialog dialog = new Dialog()
         {
             dialogData = dialogData,
@@ -85,8 +121,8 @@ public class Connector : MonoBehaviour
             line.voiceName = dialog.GetDialogBoxDataWithName(line.name).voiceName;
             tts.GenerateSentenceAudio(line, dialog.GetDialogBoxDataWithName(line.name).synthesizer);
         }
-        foreach (GameObject portraitGO in dialog.portraitGameObjects)
-            portraitGO.SetActive(false);
+        /**foreach (GameObject portraitGO in dialog.portraitGameObjects)
+            portraitGO.SetActive(false);**/
         await Task.WhenAll(tasks.ToArray());
 
         return dialog;
@@ -96,13 +132,29 @@ public class Connector : MonoBehaviour
     //[Narrator]:Speak
     //[a KISISI]:SPEAK STUFF.
     public List<Line> SplitResponseToLines(string gptResponse)
-    { 
+    {
         List<string> speechs = new List<string>();
         List<string> names = new List<string>();
         List<Line> lines = new List<Line>();
-        //TODO Logic to split response into list of names and speechs
-        names.Add("Narrator");
-        speechs.Add(gptResponse);
+
+        MatchCollection speechMatches = Regex.Matches(gptResponse, @"\[[A-Za-z\s0-9]+\]:([^\[]*)");
+        MatchCollection namesMatches = Regex.Matches(gptResponse, @"\[([A-Za-z0-9\s]+)\]:");
+        foreach (Match match in speechMatches)
+        {
+            speechs.Add(match.Groups[1].Value);
+            Debug.Log(match.Groups[1].Value);
+        }
+        foreach (Match match in namesMatches)
+        {
+            names.Add(match.Groups[1].Value);
+            Debug.Log(match.Groups[1].Value);
+        }
+        if (speechs.Count == 0) {
+            speechs.Add(gptResponse);
+            names.Add("Narrator");
+            Debug.Log("ChatGPT formatting error!");
+        }
+
         for (int i = 0; i < speechs.Count; i++)
         {
             Line line = new Line()
