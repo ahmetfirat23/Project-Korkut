@@ -17,8 +17,7 @@ public class TextToSpeech : MonoBehaviour
     private List<string> usedVoices = new List<string>();
 
 
-
-    public async void Awake()
+    private async void Awake()
     { 
         SpeechSynthesizer synthesizer = generateSynthesizer();
         SynthesisVoicesResult result = await synthesizer.GetVoicesAsync();

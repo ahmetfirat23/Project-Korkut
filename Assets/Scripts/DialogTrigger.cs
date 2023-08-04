@@ -17,7 +17,7 @@ public class DialogTrigger : MonoBehaviour
     bool triggered = false;
     
 
-    public void Start()
+    private void Start()
     {
         dm = FindObjectOfType<DialogManager>();
         tts = FindObjectOfType<TextToSpeech>();
@@ -29,6 +29,7 @@ public class DialogTrigger : MonoBehaviour
     {
         if (!dm.started && tts.maleVoices.Count!=0 && !triggered) {
             triggered = true;
+            connector.CreatePlayer();
             string gptResponse = await gsg.StartStory();
             Dialog dialog = await connector.CreateDialog(gptResponse);
             dm.StartDialog(dialog);

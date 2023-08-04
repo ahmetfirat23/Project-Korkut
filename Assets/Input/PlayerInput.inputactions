@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Next",
+                    "name": "Start",
                     "type": "Button",
                     "id": "5f5c5a94-d1f9-4fbc-ba9c-895af3da6914",
                     "expectedControlType": "Button",
@@ -295,11 +295,11 @@
                 {
                     "name": "",
                     "id": "3daa9208-96c1-4e43-9d17-30b880b8e610",
-                    "path": "<Keyboard>/v",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Next",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -22,11 +22,9 @@ public class TextInputManager : MonoBehaviour
     {
         dialogTrigger = FindObjectOfType<DialogTrigger>();
         playerInput = GetComponent<PlayerInput>();
-        if (SceneManager.GetActiveScene().name=="SampleScene")
-            playerInput.actions.FindAction("Player/Submit").Disable();
+        playerInput.actions.FindAction("Player/Submit").Disable();
         submitButton = GameObject.Find("SubmitButton");
         skipButton = GameObject.Find("SkipButton");
-        Debug.Log(skipButton);
     }
 
 
@@ -76,12 +74,10 @@ public class TextInputManager : MonoBehaviour
         if (enable)
         {
             playerInput.actions.FindAction("Skip").Enable();
-            playerInput.actions.FindAction("Next").Enable();
         }
         else
         {
             playerInput.actions.FindAction("Skip").Disable();
-            playerInput.actions.FindAction("Next").Disable();
         }
     }
 
@@ -94,8 +90,9 @@ public class TextInputManager : MonoBehaviour
         PlayerInfo.SetClass(GameObject.Find("ClassInput").GetComponent<TMP_Dropdown>().value);
         PlayerInfo.SetRace(GameObject.Find("RaceInput").GetComponent<TMP_Dropdown>().value);
 
-
-
+        playerInput.actions.FindAction("Start").Disable();
+        GameObject.Find("CharacterGeneration").SetActive(false);
+        FindObjectOfType<DialogTrigger>().TriggerDialog();
     }
 
 }
