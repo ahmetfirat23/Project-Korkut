@@ -11,7 +11,7 @@ namespace OpenAI
 {
     public class GPTStoryGenerator : MonoBehaviour
     {
-        private string beginText;
+        private string systemPrompt;
         private OpenAIApi openai = new OpenAIApi();
         List<ChatMessage> messages = new List<ChatMessage>();
 
@@ -19,7 +19,7 @@ namespace OpenAI
         public async Task<string> StartStory()
         {
 
-            beginText = "Act as though we are playing a Game of Dungeons and Dragons 5th edition in a Skyrim universe. " +
+            systemPrompt = "Act as though we are playing a Game of Dungeons and Dragons 5th edition in a Skyrim universe. " +
                 "Act as though you are the dungeon master and I am the player. " +
                 "We will be creating a narrative together, where I make decisions for my character, " +
                 "and you make decisions for all other characters (NPCs) and creatures in the world.\n\nKeep it short. No talk; just go." /*+
@@ -65,7 +65,7 @@ namespace OpenAI
                 "Gender: " + PlayerInfo.GetGender() + "\n" +
                 "Class: " + PlayerInfo.GetClass()*/;
 
-            return await SendCompletionRequest(beginText, "system");
+            return await SendCompletionRequest(systemPrompt, "system");
         }
 
         public async Task<string> SendCompletionRequestWithoutHistory(string userInput)

@@ -93,6 +93,8 @@ public class Connector : MonoBehaviour
     }
 
     // Update is called once per frame
+    //[Narrator]:Speak
+    //[a KISISI]:SPEAK STUFF.
     public List<Line> SplitResponseToLines(string gptResponse)
     { 
         List<string> speechs = new List<string>();

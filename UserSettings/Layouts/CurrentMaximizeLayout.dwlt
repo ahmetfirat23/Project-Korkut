@@ -23,8 +23,208 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 48
+  controlID: 134
 --- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 496
+    y: 484
+    width: 916
+    height: 515
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1280, y: 720}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 09000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -640
+    m_HBaseRangeMax: 640
+    m_VBaseRangeMin: -360
+    m_VBaseRangeMax: 360
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 916
+      height: 494
+    m_Scale: {x: 0.6861111, y: 0.6861111}
+    m_Translation: {x: 458, y: 247}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -667.5304
+      y: -360
+      width: 1335.0608
+      height: 720
+    m_MinimalGUI: 1
+  m_defaultScale: 0.6861111
+  m_LastWindowPixelSize: {x: 916, y: 515}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 16}
+  - {fileID: 23}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 947
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 0
+  controlID: 135
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 496
+    height: 947
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 89
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 496
+    height: 663
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 68
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 219
+    height: 663
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 7}
+  m_Panes:
+  - {fileID: 7}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +246,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 267
+    width: 218
     height: 642
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -68,7 +268,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -84,7 +285,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 48400000
     m_LastClickedID: 16456
-    m_ExpandedIDs: 00000000827900008479000086790000887900008a7900008c7900008e79000090790000927900009479000096790000987900009a7900009c7900009e790000a0790000a2790000
+    m_ExpandedIDs: 00000000627900006479000066790000687900006a7900006c7900006e79000070790000727900007479000076790000787900007a7900007c7900007e7900008079000082790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -109,10 +310,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62f9ffff
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000827900008479000086790000887900008a7900008c7900008e79000090790000927900009479000096790000987900009a7900009c7900009e790000a0790000a2790000
+    m_ExpandedIDs: ffffffff00000000627900006479000066790000687900006a7900006c7900006e79000070790000727900007479000076790000787900007a7900007c7900007e7900008079000082790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -128,7 +329,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 6}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -137,8 +338,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 62f9ffff
-    m_LastClickedInstanceID: -1694
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -168,109 +369,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 15}
-  - {fileID: 23}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1920
-    height: 947
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 32384, y: 16192}
-  vertical: 0
-  controlID: 49
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 5}
-  - {fileID: 9}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 609
-    height: 947
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 50
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 6}
-  - {fileID: 7}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 609
-    height: 663
-  m_MinSize: {x: 200, y: 50}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 51
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 268
-    height: 663
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 2}
-  m_Panes:
-  - {fileID: 2}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &7
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,18 +384,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 268
+    x: 219
     y: 0
-    width: 341
+    width: 277
     height: 663
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 8}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 9}
   m_Panes:
-  - {fileID: 8}
+  - {fileID: 9}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &8
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,9 +415,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 268
+    x: 219
     y: 73
-    width: 339
+    width: 275
     height: 642
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -333,9 +432,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 62f9ffff
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c87af3ff0ad3fffffcfaffff0efbffff5cfbffff8a3700007c750000a2750000
+      m_ExpandedIDs: 0efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -351,7 +450,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -359,7 +458,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &9
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,20 +475,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 663
-    width: 609
+    width: 496
     height: 284
   m_MinSize: {x: 561, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 10}
   - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
+  - {fileID: 15}
   m_Selected: 2
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,7 +510,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 736
-    width: 500
+    width: 495
     height: 263
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -423,7 +522,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &11
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,7 +544,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 736
-    width: 500
+    width: 495
     height: 263
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -459,8 +558,8 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 30068
---- !u!114 &12
+  m_LastSelectedObjectID: 30402
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -482,7 +581,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 736
-    width: 608
+    width: 495
     height: 263
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -494,7 +593,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &13
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -676,7 +775,7 @@ MonoBehaviour:
   m_ShowReferencedBuses: 1
   m_ShowBusConnections: 0
   m_ShowBusConnectionsOfSelection: 0
---- !u!114 &14
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -719,7 +818,7 @@ MonoBehaviour:
   m_SequencePath:
     m_SelectionRoot: 0
     m_SubElements: []
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -732,19 +831,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 16}
-  - {fileID: 21}
+  - {fileID: 17}
+  - {fileID: 22}
   m_Position:
     serializedVersion: 2
-    x: 609
+    x: 496
     y: 0
-    width: 805
+    width: 918
     height: 947
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 164
---- !u!114 &16
+  controlID: 136
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -761,19 +860,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 805
+    width: 918
     height: 411
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 3
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -793,9 +892,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 609
+    x: 496
     y: 73
-    width: 803
+    width: 916
     height: 390
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1142,9 +1241,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.339429, y: -6.568863, z: 134.97415}
+    m_Target: {x: 4.3597765, y: 0.19776195, z: 205.76735}
     speed: 2
-    m_Value: {x: 0.339429, y: -6.568863, z: 134.97415}
+    m_Value: {x: 4.3597765, y: 0.19776195, z: 205.76735}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1194,9 +1293,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.2693696
+    m_Target: 5.6018524
     speed: 2
-    m_Value: 4.2693696
+    m_Value: 5.6018524
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1221,7 +1320,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1327,9 +1426,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: e70f596a7c071044a9ff3137d2c87715, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 6f27204c97d6c1a498241055dd506df8, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -6975596870955222924, guid: e70f596a7c071044a9ff3137d2c87715, type: 2}
+  - m_Target: {fileID: -6975596870955222924, guid: 6f27204c97d6c1a498241055dd506df8, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1342,7 +1441,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1383,7 +1482,7 @@ MonoBehaviour:
   m_SelectedObject: {fileID: 0}
   m_SelectedSpriteRectGUID: 00000000000000000000000000000000
   m_LastUsedModuleTypeName: 
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1417,7 +1516,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &21
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1434,113 +1533,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 411
-    width: 805
+    width: 918
     height: 536
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 609
-    y: 484
-    width: 803
-    height: 515
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1280, y: 720}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 09000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 803
-      height: 494
-    m_Scale: {x: 0.6273438, y: 0.6273438}
-    m_Translation: {x: 401.5, y: 247}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -640
-      y: -393.7235
-      width: 1280
-      height: 787.447
-    m_MinimalGUI: 1
-  m_defaultScale: 0.6273438
-  m_LastWindowPixelSize: {x: 803, y: 515}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
+  m_ActualView: {fileID: 2}
+  m_Panes:
+  - {fileID: 2}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1637,9 +1638,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1415
+    x: 1414
     y: 73
-    width: 504
+    width: 505
     height: 926
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1753,7 +1754,7 @@ MonoBehaviour:
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -1902,10 +1903,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2023-07-29T01:31:44.173+03:00
+      updatedTimeString: 2023-07-31T21:02:11.114+03:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2023-07-29T01:31:44.194+03:00
+      updatedTimeString: 2023-07-31T21:02:07.779+03:00
       cacheType: 1
     currentBranch:
       name: master
@@ -1925,9 +1926,9 @@ MonoBehaviour:
     - name: origin/master
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
+    currentBranchHasUpdate: 0
     currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: master
@@ -1936,14 +1937,150 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
+        - 109e9bdd0fcc649c5bc59085c35bdc83
+        - 8c9cfa26abfee488c85f1582747f6a02
         - 97f02dc9bd3abf14d9da4adbf00029f3
-        - fc7cae8c020c1ba40af800e590a3f3af
-        - bce030325d02e3948a2da0adb0a8c525
-        - 114d864f4c3502c46862998381904e9a
+        - 2c98573ebeaa7cf49a452553a7a92df0
+        - 1381082a6158c4a748e436a5f575630e
         values:
         - path: Assets
           label: Assets
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          label: SampleScene.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\SampleScene.unity
+            fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+            projectPath: Assets\Scenes\SampleScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Connector.cs
+          label: Connector.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Connector.cs
+            fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs
+            projectPath: Assets\Scripts\Connector.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\GPTStoryGenerator.cs
+          label: GPTStoryGenerator.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\GPTStoryGenerator.cs
+            fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+            projectPath: Assets\Scripts\GPTStoryGenerator.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+      folders:
+        keys:
+        - Assets
+        - Assets\Scenes
+        - Assets\Scripts
+        - Recordings
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1977,67 +2114,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts\DialogManager.cs
-          label: DialogManager.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\DialogManager.cs
-            fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
-            projectPath: Assets\Scripts\DialogManager.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\DialogTrigger.cs
-          label: DialogTrigger.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\DialogTrigger.cs
-            fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
-            projectPath: Assets\Scripts\DialogTrigger.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\TextInputManager.cs
-          label: TextInputManager.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\TextInputManager.cs
-            fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
-            projectPath: Assets\Scripts\TextInputManager.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-      folders:
-        keys:
-        - Assets
-        - Assets\Scripts
-        values:
-        - path: Assets
-          label: Assets
+        - path: Recordings
+          label: Recordings
           level: 0
           isFolder: 1
           isContainer: 0
@@ -2054,8 +2132,26 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
           level: 1
           isFolder: 1
           isContainer: 0
@@ -2118,6 +2214,42 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        label: SampleScene.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts
         label: Scripts
         level: 1
@@ -2136,8 +2268,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\DialogManager.cs
-        label: DialogManager.cs
+      - path: Assets\Scripts\Connector.cs
+        label: Connector.cs
         level: 2
         isFolder: 0
         isContainer: 0
@@ -2148,14 +2280,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\DialogManager.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
-          projectPath: Assets\Scripts\DialogManager.cs
+          path: Assets\Scripts\Connector.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs
+          projectPath: Assets\Scripts\Connector.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\Scripts\DialogTrigger.cs
-        label: DialogTrigger.cs
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        label: GPTStoryGenerator.cs
         level: 2
         isFolder: 0
         isContainer: 0
@@ -2166,14 +2298,86 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\DialogTrigger.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
-          projectPath: Assets\Scripts\DialogTrigger.cs
+          path: Assets\Scripts\GPTStoryGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\Scripts\TextInputManager.cs
-        label: TextInputManager.cs
+      - path: Recordings
+        label: Recordings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Recordings\Movie_004.mp4
+        label: Movie_004.mp4
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Recordings\Movie_004.mp4
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_004.mp4
+          projectPath: Recordings\Movie_004.mp4
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        label: CurrentMaximizeLayout.dwlt
         level: 2
         isFolder: 0
         isContainer: 0
@@ -2184,9 +2388,27 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\TextInputManager.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
-          projectPath: Assets\Scripts\TextInputManager.cs
+          path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -2210,38 +2432,666 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Scripts\DialogManager.cs
-      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
-      projectPath: Assets\Scripts\DialogManager.cs
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Scripts\DialogTrigger.cs
-      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
-      projectPath: Assets\Scripts\DialogTrigger.cs
+    - path: Assets\Scripts\Connector.cs
+      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs
+      projectPath: Assets\Scripts\Connector.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Scripts\TextInputManager.cs
-      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
-      projectPath: Assets\Scripts\TextInputManager.cs
+    - path: Assets\Scripts\GPTStoryGenerator.cs
+      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+      projectPath: Assets\Scripts\GPTStoryGenerator.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 3 changed files
+    - path: Recordings\Movie_004.mp4
+      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_004.mp4
+      projectPath: Recordings\Movie_004.mp4
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 6 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-07-29T22:56:30.503+03:00
+      updatedTimeString: 2023-08-01T20:41:02.308+03:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-29T22:56:43.734+03:00
+      updatedTimeString: 2023-08-01T20:42:52.989+03:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-07-29T22:56:33.189+03:00
+      updatedTimeString: 2023-08-01T20:42:11.021+03:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: d03c51b16c2ab215e053fbadd82e641e119b92b3
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: animations
+      description: 
+      timeString: 2023-07-29T22:57:10.000+03:00
+      commitTimeString: 2023-07-29T22:57:10.000+03:00
+      changes:
+      - path: Assets\Animations\LeftPortraitAnimator.controller
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller
+        projectPath: Assets\Animations\LeftPortraitAnimator.controller
+        originalPath: Assets\Animations\LeftPortraitSpeak.controller
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\LeftPortraitAnimator.controller.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller.meta
+        projectPath: Assets\Animations\LeftPortraitAnimator.controller.meta
+        originalPath: Assets\Animations\LeftPortraitSpeak.controller.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidEnter.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim
+        projectPath: Assets\Animations\MidEnter.anim
+        originalPath: Assets\Animations\LeftEnter.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidEnter.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim.meta
+        projectPath: Assets\Animations\MidEnter.anim.meta
+        originalPath: Assets\Animations\LeftEnter.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidExit.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim
+        projectPath: Assets\Animations\MidExit.anim
+        originalPath: Assets\Animations\LeftExit.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidExit.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim.meta
+        projectPath: Assets\Animations\MidExit.anim.meta
+        originalPath: Assets\Animations\LeftExit.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidPortraitAnimator.controller
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller
+        projectPath: Assets\Animations\MidPortraitAnimator.controller
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Animations\MidPortraitAnimator.controller.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller.meta
+        projectPath: Assets\Animations\MidPortraitAnimator.controller.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Animations\MidShut.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim
+        projectPath: Assets\Animations\MidShut.anim
+        originalPath: Assets\Animations\LeftShut.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidShut.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim.meta
+        projectPath: Assets\Animations\MidShut.anim.meta
+        originalPath: Assets\Animations\LeftShut.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidSpeak.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim
+        projectPath: Assets\Animations\MidSpeak.anim
+        originalPath: Assets\Animations\LeftSpeak.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidSpeak.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim.meta
+        projectPath: Assets\Animations\MidSpeak.anim.meta
+        originalPath: Assets\Animations\LeftSpeak.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\RightPortraitAnimator.controller
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller
+        projectPath: Assets\Animations\RightPortraitAnimator.controller
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Animations\RightPortraitAnimator.controller.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller.meta
+        projectPath: Assets\Animations\RightPortraitAnimator.controller.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEPromptGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+        projectPath: Assets\Scripts\DallEPromptGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+        projectPath: Assets\Scripts\DialogManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+        projectPath: Assets\Scripts\GPTStoryGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+        projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+        projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Fallback.asset
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\TextMesh
+          Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+        projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+          SDF - Fallback.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Recordings\Movie_002.mp4
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_002.mp4
+        projectPath: Recordings\Movie_002.mp4
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Recordings\Movie_003.mp4
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_003.mp4
+        projectPath: Recordings\Movie_003.mp4
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: c0ea182abdb5e3c61f3f41bda2a345d84e9f8f74
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: dialog integration
+      description: 
+      timeString: 2023-07-29T21:21:29.000+03:00
+      commitTimeString: 2023-07-29T21:21:29.000+03:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Connector.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs
+        projectPath: Assets\Scripts\Connector.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Connector.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs.meta
+        projectPath: Assets\Scripts\Connector.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEPromptGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+        projectPath: Assets\Scripts\DallEPromptGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Dialog.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Dialog.cs
+        projectPath: Assets\Scripts\Dialog.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogBoxData.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogBoxData.cs
+        projectPath: Assets\Scripts\DialogBoxData.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogData\DialogData.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogData\DialogData.cs
+        projectPath: Assets\Scripts\DialogData\DialogData.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+        projectPath: Assets\Scripts\DialogManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogTrigger.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+        projectPath: Assets\Scripts\DialogTrigger.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+        projectPath: Assets\Scripts\GPTStoryGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TextInputManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
+        projectPath: Assets\Scripts\TextInputManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: d45d7d3ec5691b6b16da9c1522302501940ccbd7
+      mergeA: c978b85dfcb62529e0931833a350c98087d00fb9
+      mergeB: 8ad3a41d27d6e78560235b45fa4a385fc63a3221
+      authorName: yasinbastug
+      authorEmail: 98092648+yasinbastug@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge pull request #1 from ahmetfirat23/KRT-001
+      description: '- add story management code???'
+      timeString: 2023-07-29T17:17:52.000+03:00
+      commitTimeString: 2023-07-29T17:17:52.000+03:00
+      changes: []
+    - commitID: 8ad3a41d27d6e78560235b45fa4a385fc63a3221
+      mergeA: 
+      mergeB: 
+      authorName: "Ahmet F\u0131rat Gams\u0131z"
+      authorEmail: 69598652+ahmetfirat23@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Update GPTStoryGenerator.cs
+      description: 
+      timeString: 2023-07-29T17:16:42.000+03:00
+      commitTimeString: 2023-07-29T17:16:42.000+03:00
+      changes:
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+        projectPath: Assets\Scripts\GPTStoryGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: c978b85dfcb62529e0931833a350c98087d00fb9
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: i fix stuff, i guess
+      description: 
+      timeString: 2023-07-29T17:09:40.000+03:00
+      commitTimeString: 2023-07-29T17:09:40.000+03:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEImageGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs
+        projectPath: Assets\Scripts\DallEImageGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+        projectPath: Assets\Scripts\DialogManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogTrigger.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+        projectPath: Assets\Scripts\DialogTrigger.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TextInputManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
+        projectPath: Assets\Scripts\TextInputManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 84dc3b48af30ed29a4cdc16aa990f3a9f6269d04
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: prompt adjustment etc
+      description: 
+      timeString: 2023-07-29T14:54:40.000+03:00
+      commitTimeString: 2023-07-29T14:54:40.000+03:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEImageGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs
+        projectPath: Assets\Scripts\DallEImageGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEPromptGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+        projectPath: Assets\Scripts\DallEPromptGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogTrigger.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+        projectPath: Assets\Scripts\DialogTrigger.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TextInputManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
+        projectPath: Assets\Scripts\TextInputManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TextToSpeech.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextToSpeech.cs
+        projectPath: Assets\Scripts\TextToSpeech.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: b029e88f582dbb580d2cc306fab5a970a0f2e188
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: gone but not forgotten
+      description: 
+      timeString: 2023-07-29T13:49:21.000+03:00
+      commitTimeString: 2023-07-29T13:49:21.000+03:00
+      changes:
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+          Unity\0.1.15\DallE.meta
+        projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+          Unity\0.1.15\DallE\DallE Sample.unity
+        projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+          Unity\0.1.15\DallE\DallE Sample.unity.meta
+        projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+          Unity\0.1.15\DallE\DallE.cs
+        projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+          Unity\0.1.15\DallE\DallE.cs.meta
+        projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\PromptManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\PromptManager.cs
+        projectPath: Assets\Scripts\PromptManager.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\PromptManager.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\PromptManager.cs.meta
+        projectPath: Assets\Scripts\PromptManager.cs.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: 77ea7c463e843fd728cfcf0d7a4df93591227a57
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: prompt stuff
+      description: 
+      timeString: 2023-07-29T13:47:51.000+03:00
+      commitTimeString: 2023-07-29T13:47:51.000+03:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEImageGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs
+        projectPath: Assets\Scripts\DallEImageGenerator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEImageGenerator.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs.meta
+        projectPath: Assets\Scripts\DallEImageGenerator.cs.meta
+        originalPath: Assets\Scripts\GetPromptDallE.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEPromptGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+        projectPath: Assets\Scripts\DallEPromptGenerator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\DallEPromptGenerator.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs.meta
+        projectPath: Assets\Scripts\DallEPromptGenerator.cs.meta
+        originalPath: Assets\Scripts\GenerateDallEPrompts.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Scripts\GenerateDallEPrompts.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs
+        projectPath: Assets\Scripts\GenerateDallEPrompts.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\GetPromptDallE.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GetPromptDallE.cs
+        projectPath: Assets\Scripts\GetPromptDallE.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: e149edf6c9bb08398235e3a0efb45ad44f0fa3e5
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: dalle fix
+      description: I changed the return type of prompt generation function and intermediary
+        functions' return type to task so they can be awaited. otherwise function
+        calls dalle with empty prompt
+      timeString: 2023-07-29T12:31:02.000+03:00
+      commitTimeString: 2023-07-29T12:31:02.000+03:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GenerateDallEPrompts.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs
+        projectPath: Assets\Scripts\GenerateDallEPrompts.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GetPromptDallE.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GetPromptDallE.cs
+        projectPath: Assets\Scripts\GetPromptDallE.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: f48d81eac67c0970020485874200d538567958ea
+      mergeA: 
+      mergeB: 
+      authorName: Ahmet Firat Gamsiz
+      authorEmail: ahmetfiratgamsiz287@gmail.com
+      commitEmail: ahmetfiratgamsiz287@gmail.com
+      commitName: Ahmet Firat Gamsiz
+      summary: Text to speech lets goooo
+      description: 
+      timeString: 2023-07-29T12:03:14.000+03:00
+      commitTimeString: 2023-07-29T12:03:14.000+03:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogBoxData.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogBoxData.cs
+        projectPath: Assets\Scripts\DialogBoxData.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogData\Line.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogData\Line.cs
+        projectPath: Assets\Scripts\DialogData\Line.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+        projectPath: Assets\Scripts\DialogManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogTrigger.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+        projectPath: Assets\Scripts\DialogTrigger.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\TextToSpeech.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextToSpeech.cs
+        projectPath: Assets\Scripts\TextToSpeech.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: e0f314c15ba789eb6da0200b0fd1b7d83533d3ee
       mergeA: 
       mergeB: 
@@ -2943,6 +3793,42 @@ MonoBehaviour:
         projectPath: UserSettings\Layouts\default-2022.dwlt
         originalPath: 
         indexStatus: 5
+        workTreeStatus: 0
+    - commitID: 01ea1da4da48d5090fcde0e876c90b60502ac49d
+      mergeA: 
+      mergeB: 
+      authorName: yasinbastug
+      authorEmail: oyba2003@gmail.com
+      commitEmail: oyba2003@gmail.com
+      commitName: yasinbastug
+      summary: '- add story management code???'
+      description: ' Please enter the commit message for your changes. Lines starting'
+      timeString: 2023-07-28T19:29:53.000+03:00
+      commitTimeString: 2023-07-28T19:29:53.000+03:00
+      changes:
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+        projectPath: Assets\Scripts\GPTStoryGenerator.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\GPTStoryGenerator.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs.meta
+        projectPath: Assets\Scripts\GPTStoryGenerator.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\StoryManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\StoryManager.cs
+        projectPath: Assets\Scripts\StoryManager.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\StoryManager.cs.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\StoryManager.cs.meta
+        projectPath: Assets\Scripts\StoryManager.cs.meta
+        originalPath: 
+        indexStatus: 4
         workTreeStatus: 0
     - commitID: a822116c9426113da9e24c431fc811b752eac113
       mergeA: 
@@ -6777,14 +7663,624 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-07-29T01:31:46.911+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2023-07-29T01:31:46.894+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: d03c51b16c2ab215e053fbadd82e641e119b92b3
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: animations
+        description: 
+        timeString: 2023-07-29T22:57:10.000+03:00
+        commitTimeString: 2023-07-29T22:57:10.000+03:00
+        changes:
+        - path: Assets\Animations\LeftPortraitAnimator.controller
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller
+          projectPath: Assets\Animations\LeftPortraitAnimator.controller
+          originalPath: Assets\Animations\LeftPortraitSpeak.controller
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\LeftPortraitAnimator.controller.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller.meta
+          projectPath: Assets\Animations\LeftPortraitAnimator.controller.meta
+          originalPath: Assets\Animations\LeftPortraitSpeak.controller.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidEnter.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim
+          projectPath: Assets\Animations\MidEnter.anim
+          originalPath: Assets\Animations\LeftEnter.anim
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidEnter.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim.meta
+          projectPath: Assets\Animations\MidEnter.anim.meta
+          originalPath: Assets\Animations\LeftEnter.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidExit.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim
+          projectPath: Assets\Animations\MidExit.anim
+          originalPath: Assets\Animations\LeftExit.anim
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidExit.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim.meta
+          projectPath: Assets\Animations\MidExit.anim.meta
+          originalPath: Assets\Animations\LeftExit.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidPortraitAnimator.controller
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller
+          projectPath: Assets\Animations\MidPortraitAnimator.controller
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Animations\MidPortraitAnimator.controller.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller.meta
+          projectPath: Assets\Animations\MidPortraitAnimator.controller.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Animations\MidShut.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim
+          projectPath: Assets\Animations\MidShut.anim
+          originalPath: Assets\Animations\LeftShut.anim
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidShut.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim.meta
+          projectPath: Assets\Animations\MidShut.anim.meta
+          originalPath: Assets\Animations\LeftShut.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidSpeak.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim
+          projectPath: Assets\Animations\MidSpeak.anim
+          originalPath: Assets\Animations\LeftSpeak.anim
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\MidSpeak.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim.meta
+          projectPath: Assets\Animations\MidSpeak.anim.meta
+          originalPath: Assets\Animations\LeftSpeak.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Animations\RightPortraitAnimator.controller
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller
+          projectPath: Assets\Animations\RightPortraitAnimator.controller
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Animations\RightPortraitAnimator.controller.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller.meta
+          projectPath: Assets\Animations\RightPortraitAnimator.controller.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEPromptGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+          projectPath: Assets\Scripts\DallEPromptGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+          projectPath: Assets\Scripts\DialogManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GPTStoryGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+          projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+          projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Fallback.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Recordings\Movie_002.mp4
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_002.mp4
+          projectPath: Recordings\Movie_002.mp4
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Recordings\Movie_003.mp4
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_003.mp4
+          projectPath: Recordings\Movie_003.mp4
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: c0ea182abdb5e3c61f3f41bda2a345d84e9f8f74
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: dialog integration
+        description: 
+        timeString: 2023-07-29T21:21:29.000+03:00
+        commitTimeString: 2023-07-29T21:21:29.000+03:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Connector.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs
+          projectPath: Assets\Scripts\Connector.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Connector.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Connector.cs.meta
+          projectPath: Assets\Scripts\Connector.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEPromptGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+          projectPath: Assets\Scripts\DallEPromptGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Dialog.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\Dialog.cs
+          projectPath: Assets\Scripts\Dialog.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogBoxData.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogBoxData.cs
+          projectPath: Assets\Scripts\DialogBoxData.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogData\DialogData.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogData\DialogData.cs
+          projectPath: Assets\Scripts\DialogData\DialogData.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+          projectPath: Assets\Scripts\DialogManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogTrigger.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+          projectPath: Assets\Scripts\DialogTrigger.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GPTStoryGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TextInputManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
+          projectPath: Assets\Scripts\TextInputManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: d45d7d3ec5691b6b16da9c1522302501940ccbd7
+        mergeA: c978b85dfcb62529e0931833a350c98087d00fb9
+        mergeB: 8ad3a41d27d6e78560235b45fa4a385fc63a3221
+        authorName: yasinbastug
+        authorEmail: 98092648+yasinbastug@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge pull request #1 from ahmetfirat23/KRT-001
+        description: '- add story management code???'
+        timeString: 2023-07-29T17:17:52.000+03:00
+        commitTimeString: 2023-07-29T17:17:52.000+03:00
+        changes: []
+      - commitID: 8ad3a41d27d6e78560235b45fa4a385fc63a3221
+        mergeA: 
+        mergeB: 
+        authorName: "Ahmet F\u0131rat Gams\u0131z"
+        authorEmail: 69598652+ahmetfirat23@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Update GPTStoryGenerator.cs
+        description: 
+        timeString: 2023-07-29T17:16:42.000+03:00
+        commitTimeString: 2023-07-29T17:16:42.000+03:00
+        changes:
+        - path: Assets\Scripts\GPTStoryGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: c978b85dfcb62529e0931833a350c98087d00fb9
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: i fix stuff, i guess
+        description: 
+        timeString: 2023-07-29T17:09:40.000+03:00
+        commitTimeString: 2023-07-29T17:09:40.000+03:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEImageGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs
+          projectPath: Assets\Scripts\DallEImageGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+          projectPath: Assets\Scripts\DialogManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogTrigger.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+          projectPath: Assets\Scripts\DialogTrigger.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TextInputManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
+          projectPath: Assets\Scripts\TextInputManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 84dc3b48af30ed29a4cdc16aa990f3a9f6269d04
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: prompt adjustment etc
+        description: 
+        timeString: 2023-07-29T14:54:40.000+03:00
+        commitTimeString: 2023-07-29T14:54:40.000+03:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEImageGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs
+          projectPath: Assets\Scripts\DallEImageGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEPromptGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+          projectPath: Assets\Scripts\DallEPromptGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogTrigger.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+          projectPath: Assets\Scripts\DialogTrigger.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TextInputManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
+          projectPath: Assets\Scripts\TextInputManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TextToSpeech.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextToSpeech.cs
+          projectPath: Assets\Scripts\TextToSpeech.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: b029e88f582dbb580d2cc306fab5a970a0f2e188
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: gone but not forgotten
+        description: 
+        timeString: 2023-07-29T13:49:21.000+03:00
+        commitTimeString: 2023-07-29T13:49:21.000+03:00
+        changes:
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+            Unity\0.1.15\DallE.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+            Unity\0.1.15\DallE\DallE Sample.unity
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+            Unity\0.1.15\DallE\DallE Sample.unity.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE Sample.unity.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+            Unity\0.1.15\DallE\DallE.cs
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Samples\OpenAI
+            Unity\0.1.15\DallE\DallE.cs.meta
+          projectPath: Assets\Samples\OpenAI Unity\0.1.15\DallE\DallE.cs.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\PromptManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\PromptManager.cs
+          projectPath: Assets\Scripts\PromptManager.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\PromptManager.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\PromptManager.cs.meta
+          projectPath: Assets\Scripts\PromptManager.cs.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: 77ea7c463e843fd728cfcf0d7a4df93591227a57
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: prompt stuff
+        description: 
+        timeString: 2023-07-29T13:47:51.000+03:00
+        commitTimeString: 2023-07-29T13:47:51.000+03:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEImageGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs
+          projectPath: Assets\Scripts\DallEImageGenerator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEImageGenerator.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEImageGenerator.cs.meta
+          projectPath: Assets\Scripts\DallEImageGenerator.cs.meta
+          originalPath: Assets\Scripts\GetPromptDallE.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEPromptGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+          projectPath: Assets\Scripts\DallEPromptGenerator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\DallEPromptGenerator.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs.meta
+          projectPath: Assets\Scripts\DallEPromptGenerator.cs.meta
+          originalPath: Assets\Scripts\GenerateDallEPrompts.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Scripts\GenerateDallEPrompts.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs
+          projectPath: Assets\Scripts\GenerateDallEPrompts.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\GetPromptDallE.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GetPromptDallE.cs
+          projectPath: Assets\Scripts\GetPromptDallE.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: e149edf6c9bb08398235e3a0efb45ad44f0fa3e5
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: dalle fix
+        description: I changed the return type of prompt generation function and
+          intermediary functions' return type to task so they can be awaited. otherwise
+          function calls dalle with empty prompt
+        timeString: 2023-07-29T12:31:02.000+03:00
+        commitTimeString: 2023-07-29T12:31:02.000+03:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GenerateDallEPrompts.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs
+          projectPath: Assets\Scripts\GenerateDallEPrompts.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\GetPromptDallE.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GetPromptDallE.cs
+          projectPath: Assets\Scripts\GetPromptDallE.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: f48d81eac67c0970020485874200d538567958ea
+        mergeA: 
+        mergeB: 
+        authorName: Ahmet Firat Gamsiz
+        authorEmail: ahmetfiratgamsiz287@gmail.com
+        commitEmail: ahmetfiratgamsiz287@gmail.com
+        commitName: Ahmet Firat Gamsiz
+        summary: Text to speech lets goooo
+        description: 
+        timeString: 2023-07-29T12:03:14.000+03:00
+        commitTimeString: 2023-07-29T12:03:14.000+03:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogBoxData.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogBoxData.cs
+          projectPath: Assets\Scripts\DialogBoxData.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogData\Line.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogData\Line.cs
+          projectPath: Assets\Scripts\DialogData\Line.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+          projectPath: Assets\Scripts\DialogManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\DialogTrigger.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogTrigger.cs
+          projectPath: Assets\Scripts\DialogTrigger.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\TextToSpeech.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextToSpeech.cs
+          projectPath: Assets\Scripts\TextToSpeech.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: e0f314c15ba789eb6da0200b0fd1b7d83533d3ee
         mergeA: 
         mergeB: 
@@ -7486,6 +8982,42 @@ MonoBehaviour:
           projectPath: UserSettings\Layouts\default-2022.dwlt
           originalPath: 
           indexStatus: 5
+          workTreeStatus: 0
+      - commitID: 01ea1da4da48d5090fcde0e876c90b60502ac49d
+        mergeA: 
+        mergeB: 
+        authorName: yasinbastug
+        authorEmail: oyba2003@gmail.com
+        commitEmail: oyba2003@gmail.com
+        commitName: yasinbastug
+        summary: '- add story management code???'
+        description: ' Please enter the commit message for your changes. Lines starting'
+        timeString: 2023-07-28T19:29:53.000+03:00
+        commitTimeString: 2023-07-28T19:29:53.000+03:00
+        changes:
+        - path: Assets\Scripts\GPTStoryGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\GPTStoryGenerator.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs.meta
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\StoryManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\StoryManager.cs
+          projectPath: Assets\Scripts\StoryManager.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\StoryManager.cs.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\StoryManager.cs.meta
+          projectPath: Assets\Scripts\StoryManager.cs.meta
+          originalPath: 
+          indexStatus: 4
           workTreeStatus: 0
       - commitID: a822116c9426113da9e24c431fc811b752eac113
         mergeA: 
@@ -11339,61 +12871,184 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: 0
+      selectedIndex: -1
     selectedEntry:
-      commitID: e0f314c15ba789eb6da0200b0fd1b7d83533d3ee
+      commitID: 
       mergeA: 
       mergeB: 
-      authorName: Ahmet Firat Gamsiz
-      authorEmail: ahmetfiratgamsiz287@gmail.com
-      commitEmail: ahmetfiratgamsiz287@gmail.com
-      commitName: Ahmet Firat Gamsiz
-      summary: '?'
+      authorName: 
+      authorEmail: 
+      commitEmail: 
+      commitName: 
+      summary: 
       description: 
-      timeString: 2023-07-29T01:30:57.000+03:00
-      commitTimeString: 2023-07-29T01:30:57.000+03:00
+      timeString: 0001-01-01T00:00:00.000+00:00
+      commitTimeString: 0001-01-01T00:00:00.000+00:00
       changes:
+      - path: Assets\Animations\LeftPortraitAnimator.controller
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller
+        projectPath: Assets\Animations\LeftPortraitAnimator.controller
+        originalPath: Assets\Animations\LeftPortraitSpeak.controller
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\LeftPortraitAnimator.controller.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller.meta
+        projectPath: Assets\Animations\LeftPortraitAnimator.controller.meta
+        originalPath: Assets\Animations\LeftPortraitSpeak.controller.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidEnter.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim
+        projectPath: Assets\Animations\MidEnter.anim
+        originalPath: Assets\Animations\LeftEnter.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidEnter.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim.meta
+        projectPath: Assets\Animations\MidEnter.anim.meta
+        originalPath: Assets\Animations\LeftEnter.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidExit.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim
+        projectPath: Assets\Animations\MidExit.anim
+        originalPath: Assets\Animations\LeftExit.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidExit.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim.meta
+        projectPath: Assets\Animations\MidExit.anim.meta
+        originalPath: Assets\Animations\LeftExit.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidPortraitAnimator.controller
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller
+        projectPath: Assets\Animations\MidPortraitAnimator.controller
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Animations\MidPortraitAnimator.controller.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller.meta
+        projectPath: Assets\Animations\MidPortraitAnimator.controller.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Animations\MidShut.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim
+        projectPath: Assets\Animations\MidShut.anim
+        originalPath: Assets\Animations\LeftShut.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidShut.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim.meta
+        projectPath: Assets\Animations\MidShut.anim.meta
+        originalPath: Assets\Animations\LeftShut.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidSpeak.anim
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim
+        projectPath: Assets\Animations\MidSpeak.anim
+        originalPath: Assets\Animations\LeftSpeak.anim
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\MidSpeak.anim.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim.meta
+        projectPath: Assets\Animations\MidSpeak.anim.meta
+        originalPath: Assets\Animations\LeftSpeak.anim.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Animations\RightPortraitAnimator.controller
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller
+        projectPath: Assets\Animations\RightPortraitAnimator.controller
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Animations\RightPortraitAnimator.controller.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller.meta
+        projectPath: Assets\Animations\RightPortraitAnimator.controller.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
       - path: Assets\Scenes\SampleScene.unity
         fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scenes\SampleScene.unity
         projectPath: Assets\Scenes\SampleScene.unity
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: Assets\Scripts\GenerateDallEPrompts.cs
-        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs
-        projectPath: Assets\Scripts\GenerateDallEPrompts.cs
+      - path: Assets\Scripts\DallEPromptGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+        projectPath: Assets\Scripts\DallEPromptGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+        projectPath: Assets\Scripts\DialogManager.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+        projectPath: Assets\Scripts\GPTStoryGenerator.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+        projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-      - path: Assets\Scripts\GenerateDallEPrompts.cs.meta
-        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs.meta
-        projectPath: Assets\Scripts\GenerateDallEPrompts.cs.meta
+      - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+        projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-      - path: Assets\Scripts\GetPromptDallE.cs
-        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GetPromptDallE.cs
-        projectPath: Assets\Scripts\GetPromptDallE.cs
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Fallback.asset
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\TextMesh
+          Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+        projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+          SDF - Fallback.asset
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: Assets\Scripts\PromptManager.cs
-        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\PromptManager.cs
-        projectPath: Assets\Scripts\PromptManager.cs
+      - path: Packages\manifest.json
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\manifest.json
+        projectPath: Packages\manifest.json
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: Assets\Scripts\TextInputManager.cs
-        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
-        projectPath: Assets\Scripts\TextInputManager.cs
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
         originalPath: 
         indexStatus: 3
         workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\EditorUserSettings.asset
-        projectPath: UserSettings\EditorUserSettings.asset
+      - path: Recordings\Movie_002.mp4
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_002.mp4
+        projectPath: Recordings\Movie_002.mp4
         originalPath: 
-        indexStatus: 3
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Recordings\Movie_003.mp4
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_003.mp4
+        projectPath: Recordings\Movie_003.mp4
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
         workTreeStatus: 0
     treeChanges:
       assets:
@@ -11402,13 +13057,39 @@ MonoBehaviour:
       folders:
         keys:
         - Assets
+        - Assets\Animations
         - Assets\Scenes
         - Assets\Scripts
+        - Assets\Sprites
+        - Assets\TextMesh Pro
+        - Assets\TextMesh Pro\Resources
+        - Assets\TextMesh Pro\Resources\Fonts & Materials
+        - Packages
+        - Recordings
         - UserSettings
+        - UserSettings\Layouts
         values:
         - path: Assets
           label: Assets
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Animations
+          label: Animations
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -11460,9 +13141,135 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Sprites
+          label: Sprites
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro
+          label: TextMesh Pro
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources
+          label: Resources
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+          label: Fonts & Materials
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Packages
+          label: Packages
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Recordings
+          label: Recordings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: UserSettings
           label: UserSettings
           level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -11524,6 +13331,276 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Animations
+        label: Animations
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Animations\LeftPortraitAnimator.controller
+        label: LeftPortraitAnimator.controller
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\LeftPortraitAnimator.controller
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller
+          projectPath: Assets\Animations\LeftPortraitAnimator.controller
+          originalPath: Assets\Animations\LeftPortraitSpeak.controller
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\LeftPortraitAnimator.controller.meta
+        label: LeftPortraitAnimator.controller.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\LeftPortraitAnimator.controller.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\LeftPortraitAnimator.controller.meta
+          projectPath: Assets\Animations\LeftPortraitAnimator.controller.meta
+          originalPath: Assets\Animations\LeftPortraitSpeak.controller.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidEnter.anim
+        label: MidEnter.anim
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidEnter.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim
+          projectPath: Assets\Animations\MidEnter.anim
+          originalPath: Assets\Animations\LeftEnter.anim
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidEnter.anim.meta
+        label: MidEnter.anim.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidEnter.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidEnter.anim.meta
+          projectPath: Assets\Animations\MidEnter.anim.meta
+          originalPath: Assets\Animations\LeftEnter.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidExit.anim
+        label: MidExit.anim
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidExit.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim
+          projectPath: Assets\Animations\MidExit.anim
+          originalPath: Assets\Animations\LeftExit.anim
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidExit.anim.meta
+        label: MidExit.anim.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidExit.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidExit.anim.meta
+          projectPath: Assets\Animations\MidExit.anim.meta
+          originalPath: Assets\Animations\LeftExit.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidPortraitAnimator.controller
+        label: MidPortraitAnimator.controller
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidPortraitAnimator.controller
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller
+          projectPath: Assets\Animations\MidPortraitAnimator.controller
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Animations\MidPortraitAnimator.controller.meta
+        label: MidPortraitAnimator.controller.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidPortraitAnimator.controller.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidPortraitAnimator.controller.meta
+          projectPath: Assets\Animations\MidPortraitAnimator.controller.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Animations\MidShut.anim
+        label: MidShut.anim
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidShut.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim
+          projectPath: Assets\Animations\MidShut.anim
+          originalPath: Assets\Animations\LeftShut.anim
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidShut.anim.meta
+        label: MidShut.anim.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidShut.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidShut.anim.meta
+          projectPath: Assets\Animations\MidShut.anim.meta
+          originalPath: Assets\Animations\LeftShut.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidSpeak.anim
+        label: MidSpeak.anim
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidSpeak.anim
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim
+          projectPath: Assets\Animations\MidSpeak.anim
+          originalPath: Assets\Animations\LeftSpeak.anim
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\MidSpeak.anim.meta
+        label: MidSpeak.anim.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\MidSpeak.anim.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\MidSpeak.anim.meta
+          projectPath: Assets\Animations\MidSpeak.anim.meta
+          originalPath: Assets\Animations\LeftSpeak.anim.meta
+          indexStatus: 6
+          workTreeStatus: 0
+      - path: Assets\Animations\RightPortraitAnimator.controller
+        label: RightPortraitAnimator.controller
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\RightPortraitAnimator.controller
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller
+          projectPath: Assets\Animations\RightPortraitAnimator.controller
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Animations\RightPortraitAnimator.controller.meta
+        label: RightPortraitAnimator.controller.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Animations\RightPortraitAnimator.controller.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Animations\RightPortraitAnimator.controller.meta
+          projectPath: Assets\Animations\RightPortraitAnimator.controller.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - path: Assets\Scenes
         label: Scenes
         level: 1
@@ -11578,8 +13655,80 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\GenerateDallEPrompts.cs
-        label: GenerateDallEPrompts.cs
+      - path: Assets\Scripts\DallEPromptGenerator.cs
+        label: DallEPromptGenerator.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\DallEPromptGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DallEPromptGenerator.cs
+          projectPath: Assets\Scripts\DallEPromptGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\DialogManager.cs
+        label: DialogManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\DialogManager.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\DialogManager.cs
+          projectPath: Assets\Scripts\DialogManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\GPTStoryGenerator.cs
+        label: GPTStoryGenerator.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\GPTStoryGenerator.cs
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GPTStoryGenerator.cs
+          projectPath: Assets\Scripts\GPTStoryGenerator.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Sprites
+        label: Sprites
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+        label: palms_jungle_art_128116_1280x720.jpg
         level: 2
         isFolder: 0
         isContainer: 1
@@ -11590,14 +13739,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\GenerateDallEPrompts.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs
-          projectPath: Assets\Scripts\GenerateDallEPrompts.cs
+          path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
+          projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      - path: Assets\Scripts\GenerateDallEPrompts.cs.meta
-        label: GenerateDallEPrompts.cs.meta
+      - path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+        label: palms_jungle_art_128116_1280x720.jpg.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -11608,15 +13757,70 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\GenerateDallEPrompts.cs.meta
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GenerateDallEPrompts.cs.meta
-          projectPath: Assets\Scripts\GenerateDallEPrompts.cs.meta
+          path: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
+          projectPath: Assets\Sprites\palms_jungle_art_128116_1280x720.jpg.meta
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      - path: Assets\Scripts\GetPromptDallE.cs
-        label: GetPromptDallE.cs
+      - path: Assets\TextMesh Pro
+        label: TextMesh Pro
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources
+        label: Resources
         level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials
+        label: Fonts & Materials
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+          - Fallback.asset
+        label: LiberationSans SDF - Fallback.asset
+        level: 4
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -11626,15 +13830,36 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\GetPromptDallE.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\GetPromptDallE.cs
-          projectPath: Assets\Scripts\GetPromptDallE.cs
+          path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF
+            - Fallback.asset
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF - Fallback.asset
           originalPath: 
           indexStatus: 3
           workTreeStatus: 0
-      - path: Assets\Scripts\PromptManager.cs
-        label: PromptManager.cs
-        level: 2
+      - path: Packages
+        label: Packages
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Packages\manifest.json
+        label: manifest.json
+        level: 1
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -11644,15 +13869,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\PromptManager.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\PromptManager.cs
-          projectPath: Assets\Scripts\PromptManager.cs
+          path: Packages\manifest.json
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\manifest.json
+          projectPath: Packages\manifest.json
           originalPath: 
           indexStatus: 3
           workTreeStatus: 0
-      - path: Assets\Scripts\TextInputManager.cs
-        label: TextInputManager.cs
-        level: 2
+      - path: Packages\packages-lock.json
+        label: packages-lock.json
+        level: 1
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -11662,11 +13887,65 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\TextInputManager.cs
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Assets\Scripts\TextInputManager.cs
-          projectPath: Assets\Scripts\TextInputManager.cs
+          path: Packages\packages-lock.json
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
           originalPath: 
           indexStatus: 3
+          workTreeStatus: 0
+      - path: Recordings
+        label: Recordings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Recordings\Movie_002.mp4
+        label: Movie_002.mp4
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Recordings\Movie_002.mp4
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_002.mp4
+          projectPath: Recordings\Movie_002.mp4
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Recordings\Movie_003.mp4
+        label: Movie_003.mp4
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Recordings\Movie_003.mp4
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\Recordings\Movie_003.mp4
+          projectPath: Recordings\Movie_003.mp4
+          originalPath: 
+          indexStatus: 4
           workTreeStatus: 0
       - path: UserSettings
         label: UserSettings
@@ -11686,9 +13965,27 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
+      - path: UserSettings\Layouts
+        label: Layouts
         level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        label: CurrentMaximizeLayout.dwlt
+        level: 2
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -11698,11 +13995,29 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
+          path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
           originalPath: 
-          indexStatus: 3
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: C:\Users\firat\Documents\Projects\AIDungeonMaster\UserSettings\Layouts\default-2022.dwlt
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
           workTreeStatus: 0
       selectedNode:
         path: 
@@ -11734,20 +14049,20 @@ MonoBehaviour:
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-07-29T01:23:45.563+03:00
+      updatedTimeString: 2023-07-31T21:02:07.779+03:00
       cacheType: 1
     newRepositoryRemoteUrl: git@github.com:ahmetfirat23/Project-Korkut.git
     repositoryRemoteName: origin
     repositoryRemoteUrl: git@github.com:ahmetfirat23/Project-Korkut.git
     scroll: {x: 0, y: 0}
     userSettingsView:
-      gitName: Ahmet Firat Gamsiz
-      gitEmail: ahmetfiratgamsiz287@gmail.com
-      newGitName: Ahmet Firat Gamsiz
-      newGitEmail: ahmetfiratgamsiz287@gmail.com
+      gitName: 
+      gitEmail: 
+      newGitName: 
+      newGitEmail: 
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2023-07-29T01:24:00.780+03:00
+        updatedTimeString: 0001-01-01T00:00:00.000+00:00
         cacheType: 8
     webTimeout: 100000
     gitTimeout: 5000
@@ -11776,13 +14091,13 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Oca 0001, 02:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-07-29T01:31:44.194+03:00
+      updatedTimeString: 2023-07-29T23:03:04.773+03:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2023-07-29T01:31:46.879+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-07-29T01:30:59.173+03:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries: []
@@ -11812,13 +14127,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-07-29T01:31:44.194+03:00
+    updatedTimeString: 2023-08-01T20:41:02.308+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-07-29T15:56:02.574+03:00
+    updatedTimeString: 2023-08-01T20:41:09.810+03:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-07-29T16:11:13.641+03:00
+    updatedTimeString: 2023-08-01T20:42:52.989+03:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
