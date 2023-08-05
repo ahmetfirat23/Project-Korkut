@@ -12,19 +12,27 @@ namespace OpenAI
     public class GPTStoryGenerator : MonoBehaviour
     {
         private string systemPrompt;
-        private OpenAIApi openai = new OpenAIApi();
-        List<ChatMessage> messages = new List<ChatMessage>();
+        private readonly OpenAIApi openai = new();
+        List<ChatMessage> messages = new();
 
 
         public async Task<string> StartStory()
         {
 
-            systemPrompt = @$"Act as though we are playing a Game of Dungeons and Dragons 5th edition. " +
-                $"Act as though you are the dungeon master and I am the player. My name is {PlayerInfo.GetName()}, my class is {PlayerInfo.GetClass()}, my race is {PlayerInfo.GetRace()} and my gender is {PlayerInfo.GetGender()}. " +
-                "We will be creating a narrative together, where I make decisions for my character, " +
-                "and you make decisions for all other characters (NPCs) and creatures in the world. " +
-                "You use a mysterious, exciting and interesting language. The story you are telling must be compelling. " +
-                $"\nSince I am the only one playing with you, you need to refer me as \"you\" when you are talking about my character's actions. You MUST use a lot dialogs in your story. Other characters can refer me as {PlayerInfo.GetName()}. You mustn't have inline quotations for other characters. Don't speak on behalf of other characters.  Dialogs should be formatted like \r\n    \"[PersonA Name]: 'PersonA's speech.'\r\n [PersonB Name]: 'PersonB's speech'\"\r\n    Also when there is no dialog and you are narrating story the you MUST output like \"[Narrator]: Story\".\r\n    Overall an example output should look like the following \r\n    \"[Narrator]: You wake up in a deserted planet.\r\n    [Stranger]: Wake up! Who are you?\r\n    [Narrator]: What are you going to do?\"\r\n    You mustn't generate any dialog for me. Using [You] or [{PlayerInfo.GetName()}] is strictly forbidden. Instead at the end of your message you should ask what I will do or say and your next message you should shape the story according to my response. Select randomly that whether my actions and attacks are successful or failed miserably.\n\nKeep it short. Don't exceed 20 sentences. No talk; just go." /*+
+            systemPrompt = @$"Act as though we are playing a Game of Dungeons and Dragons 5th edition. Act as though you are the dungeon master and I am the player. My name is {PlayerInfo.GetName()}, my class is {PlayerInfo.GetClass()}, my race is {PlayerInfo.GetRace()} and my gender is {PlayerInfo.GetGender()}. We will be creating a narrative together, where I make decisions for my character, and you make decisions for all other characters (NPCs) and creatures in the world. You use a mysterious, exciting and interesting language. The story you are telling must be compelling.
+You need to refer me as ""you"" when you are talking about my character's actions. Other characters can refer me as {PlayerInfo.GetName()}. 
+You MUST use a lot dialogs in your story. You mustn't have inline quotations for other characters. Never speak on behalf of other characters. 
+Dialogs must follow this format:
+""[PersonA Name]: PersonA's speech
+[PersonB Name]: PersonB's speech""    
+Also when there is no dialog and you are narrating the story, you MUST output in this format:
+""[Narrator]: Story""
+An example output is given:
+""[Narrator]: You wake up in a deserted planet.
+[Stranger]: Wake up! Who are you?
+[Narrator]: What are you going to do?""
+You mustn't generate any dialog for me. Using [You] or [{PlayerInfo.GetName()}] is strictly forbidden. Instead at the end of your message you should ask what I will do or say and your next message you should shape the story according to my response. My actions should fail sometimes.
+Keep it short. Don't exceed 20 sentences. No talk; just go."; /*+
                 "Your responsibilities as dungeon master are to describe the setting, environment, " +
                 "Non-player characters (NPCs) and their actions, as well as explain the consequences of " +
                 "my actions on all of the above. You may only describe the actions of my character if you " +
@@ -65,14 +73,15 @@ namespace OpenAI
                 "Name: " + PlayerInfo.GetName() + "\n" +
                 "Race: " + PlayerInfo.GetRace() + "\n" +
                 "Gender: " + PlayerInfo.GetGender() + "\n" +
-                "Class: " + PlayerInfo.GetClass()*/;
+                "Class: " + PlayerInfo.GetClass()*/
 
             return await SendCompletionRequest(systemPrompt, "system");
         }
 
+
         public async Task<string> SendCompletionRequestWithoutHistory(string userInput)
         {
-            List<ChatMessage> messages = new List<ChatMessage>
+            List<ChatMessage> messages = new()
             {
                 new ChatMessage()
                 {
@@ -84,9 +93,10 @@ namespace OpenAI
             return message.Content;
         }
 
+
         public async Task<string> SendCompletionRequest(string userInput, string role = "user")
         {
-            ChatMessage newMessage = new ChatMessage()
+            ChatMessage newMessage = new()
             {
                 Role = role,
                 Content = userInput
@@ -95,10 +105,8 @@ namespace OpenAI
             ChatMessage message = await sendCompletionRequest(messages);
             messages.Add(message);
             return message.Content;
-
-
-
         }
+
 
         private async Task<ChatMessage> sendCompletionRequest(List<ChatMessage> messages)
         {
@@ -114,7 +122,7 @@ namespace OpenAI
                 message = completionResponse.Choices[0].Message;
                 message.Content = message.Content.Trim(); //TODO what does this do?
 
-                Debug.Log(message.Content);
+                Debug.Log($"Generated completion: \n{message.Content}");
             }
             else
             {
@@ -123,7 +131,7 @@ namespace OpenAI
                     Role = "assistant",
                     Content = "System error, please try again."
                 };
-                Debug.LogWarning("No text was generated from this prompt.");           
+                Debug.LogWarning("No text was generated from this prompt.");
             }
 
             return message;

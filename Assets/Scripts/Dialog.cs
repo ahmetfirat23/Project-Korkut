@@ -20,9 +20,7 @@ public class Dialog
         foreach(DialogBoxData data in dialogBoxDatas)
         {
             if(data.name.ToLower() == name.ToLower())
-            {
                 return data;
-            }
         }
 
         throw new Exception($"Invalid character name {name}");

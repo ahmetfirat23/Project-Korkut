@@ -13,16 +13,20 @@ public class TextInputManager : MonoBehaviour
     public GameObject submitButton;
     public GameObject skipButton;
     public GameObject inputField;
-    DialogTrigger dialogTrigger;
-    
 
+    DialogTrigger dialogTrigger;
     PlayerInput playerInput;
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         dialogTrigger = FindObjectOfType<DialogTrigger>();
         playerInput = GetComponent<PlayerInput>();
+    }
+    void Start()
+    {
         playerInput.actions.FindAction("Player/Submit").Disable();
+        SwitchSubmitButton(false);
+        SwitchStartButton(false);
     }
 
 
@@ -38,46 +42,40 @@ public class TextInputManager : MonoBehaviour
             submitButton.GetComponent<Button>().interactable = false;
             skipButton.GetComponent<Button>().interactable = true;
             EventSystem.current.SetSelectedGameObject(null);
-            SwitchActionMap(true);
+            SwitchSkipButton(true);
             SwitchSubmitButton(false);
             userInput = inputField.GetComponent<TMP_InputField>().text;
-            Debug.Log(userInput);
+            Debug.Log($"User entered: \n{userInput}");
             dialogTrigger.NextDialog(userInput);
         }
     }
-    /*
-    public void OnSkipClick(InputAction.CallbackContext context)
-    {
-        if (context.performed && inputField != null)
-        {
-            userInput = inputField.text;
-        }
-    }*/
+
 
     public void SwitchSubmitButton(bool enable)
     {
         if (enable)
-        {
             playerInput.actions.FindAction("Player/Submit").Enable();
-        }
         else
-        {
             playerInput.actions.FindAction("Player/Submit").Disable();
-        }
 
     }
 
-    public void SwitchActionMap(bool enable)
+    public void SwitchSkipButton(bool enable)
     {
         if (enable)
-        {
             playerInput.actions.FindAction("Skip").Enable();
-        }
         else
-        {
             playerInput.actions.FindAction("Skip").Disable();
-        }
     }
+
+    public void SwitchStartButton(bool enable)
+    {
+        if (enable)
+            playerInput.actions.FindAction("Start").Enable();
+        else
+            playerInput.actions.FindAction("Start").Disable();
+    }
+
 
     public void CreatePlayer(InputAction.CallbackContext context) { if (context.performed) createPlayer(); }
     public void CreatePlayer() { createPlayer(); }
@@ -88,9 +86,8 @@ public class TextInputManager : MonoBehaviour
         PlayerInfo.SetClass(GameObject.Find("ClassInput").GetComponent<TMP_Dropdown>().value);
         PlayerInfo.SetRace(GameObject.Find("RaceInput").GetComponent<TMP_Dropdown>().value);
 
-        playerInput.actions.FindAction("Start").Disable();
-        GameObject.Find("CharacterGeneration").SetActive(false);
-        FindObjectOfType<DialogTrigger>().TriggerDialog();
+        SwitchStartButton(false);
+        FindObjectOfType<GameManager>().StartGame();
     }
 
 }

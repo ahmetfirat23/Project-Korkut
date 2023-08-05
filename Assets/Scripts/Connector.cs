@@ -17,25 +17,22 @@ public class Connector : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogText;
     public GameObject dialogBox;
-    public List<string> Names = new List<string>();
-    List<DialogBoxData> dbds = new List<DialogBoxData>();
-
-    GPTStoryGenerator gsg;
+    public List<string> Names = new();
+    List<DialogBoxData> generalDBDs = new();
     TextToSpeech tts;
     DallEImageGenerator dalle;
+    GameManager gm;
 
-
-    void Start()
+    void Awake()
     {
-        gsg = FindObjectOfType<GPTStoryGenerator>();
         tts = FindObjectOfType<TextToSpeech>();
         dalle = FindObjectOfType<DallEImageGenerator>();
-
+        gm = FindAnyObjectByType<GameManager>();
     }
 
-    public void CreatePlayer() {
+    public void CreatePlayerDBD() {
 
-        DialogBoxData dbd = new DialogBoxData() {
+        DialogBoxData dbd = new() {
             name = PlayerInfo.GetName(),
             gender = PlayerInfo.GetGender(),
             color = (ColorEnum)Random.Range(0, 2),
@@ -43,32 +40,37 @@ public class Connector : MonoBehaviour
             dialogBox = dialogBox,
             portraitOrientation = OrientationEnum.Middle,
         };
-        tts.GenerateSynthesizer(dbd, dbd.gender);
+        if (gm.generateVoice)
+            tts.GenerateSynthesizer(dbd, dbd.gender);
         Names.Add(PlayerInfo.GetName());
-        dbds.Add(dbd);
+        generalDBDs.Add(dbd);
         Task task = dalle.GeneratePlayerImage(dbd);
         task.ContinueWith(task => { });
     }
 
     public async Task<Dialog> CreateDialog(string gptResponse) {
- 
+
         List<Line> lines = SplitResponseToLines(gptResponse);
-        
-        List<Task> tasks = new List<Task>();
-        DialogData dialogData = new DialogData();
-        List<DialogBoxData> dbdList = new List<DialogBoxData>();
 
-        Task background = dalle.GenerateBackgroundImage(gptResponse);
-        tasks.Append(background);
+        List<Task> tasks = new();
+        DialogData dialogData = new();
+        List<DialogBoxData> dialogDBDs = new();
+        if(gm.generateBackground)
+        {
+            Task background = dalle.GenerateBackgroundImage(gptResponse); 
+            tasks.Append(background); 
+        }
 
-        dbdList.Add(dbds[0]);
+        dialogDBDs.Add(generalDBDs[0]); //Add player dbd to list
 
         foreach (Line line in lines)
         {
             if (!Names.Contains(line.name))
             {
-                OrientationEnum portraitOrientation = line.name == "Narrator" ? OrientationEnum.Middle : (OrientationEnum)(Names.Count % 2);
-                DialogBoxData dbd = new DialogBoxData()
+                OrientationEnum portraitOrientation = 
+                    line.name == "Narrator" ? OrientationEnum.Middle : (OrientationEnum)(Names.Count % 2);
+
+                DialogBoxData dbd = new()
                 {
                     name = line.name,
                     gender = (GenderEnum)Random.Range(0, 3),
@@ -79,9 +81,11 @@ public class Connector : MonoBehaviour
                     portraitOrientation = portraitOrientation
                 };
                 Names.Add(line.name);
-                dbds.Add(dbd);
-                Debug.Log(line.name);
-                tts.GenerateSynthesizer(dbd, dbd.gender);
+                generalDBDs.Add(dbd);
+                Debug.Log($"DBD created for: {line.name}");
+
+                if (gm.generateVoice)
+                    tts.GenerateSynthesizer(dbd, dbd.gender);
 
                 if (line.name == "Narrator")
                 {
@@ -95,73 +99,79 @@ public class Connector : MonoBehaviour
                     Task task = dalle.GenerateNPCImage(dbd, gptResponse);
                     tasks.Add(task);
                 }
-                dbdList.Add(dbd);
+                dialogDBDs.Add(dbd);
             }
             else
             {
                 int idx = Names.IndexOf(line.name);
-                if (!dbdList.Contains(dbds[idx]))
+                if (!dialogDBDs.Contains(generalDBDs[idx]))
                 {
-                    Debug.Log(line.name);
-                    dbdList.Add(dbds[idx]);
+                    dialogDBDs.Add(generalDBDs[idx]);
                 }
             }
         }
         dialogData.lines = lines.ToArray();
 
 
-        Dialog dialog = new Dialog()
+        Dialog dialog = new()
         {
             dialogData = dialogData,
             dialogBoxColors = dialogBoxColors,
-            dialogBoxDatas = dbdList.ToArray(),
+            dialogBoxDatas = dialogDBDs.ToArray(),
             portraitGameObjects = portraitGameObjects,
         };
 
-        foreach (Line line in dialog.dialogData.lines)
+        if (gm.generateVoice)
         {
-            line.voiceName = dialog.GetDialogBoxDataWithName(line.name).voiceName;
-            tts.GenerateSentenceAudio(line, dialog.GetDialogBoxDataWithName(line.name).synthesizer);
+            foreach (Line line in dialog.dialogData.lines)
+            {
+                line.voiceName = dialog.GetDialogBoxDataWithName(line.name).voiceName;
+                tts.GenerateSentenceAudio(line, dialog.GetDialogBoxDataWithName(line.name).synthesizer);
+            }
         }
-        /**foreach (GameObject portraitGO in dialog.portraitGameObjects)
-            portraitGO.SetActive(false);**/
+
         await Task.WhenAll(tasks.ToArray());
 
         return dialog;
     }
 
-    // Update is called once per frame
-    //[Narrator]:Speak
-    //[a KISISI]:SPEAK STUFF.
+
     public List<Line> SplitResponseToLines(string gptResponse)
     {
-        List<string> speechs = new List<string>();
-        List<string> names = new List<string>();
-        List<Line> lines = new List<Line>();
+        List<string> speechs = new();
+        List<string> names = new();
+        List<Line> lines = new();
 
-        MatchCollection speechMatches = Regex.Matches(gptResponse, @"\[[A-Za-z\s0-9]+\]:([^\[]*)");
-        MatchCollection namesMatches = Regex.Matches(gptResponse, @"\[([A-Za-z0-9\s]+)\]:");
-        foreach (Match match in speechMatches)
-        {
-            speechs.Add(match.Groups[1].Value);
-            Debug.Log(match.Groups[1].Value);
-        }
-        foreach (Match match in namesMatches)
+        MatchCollection speechMatches = Regex.Matches(gptResponse, @"\[[A-Za-z\s0-9\-._]+\]:([^\[]*)");
+        MatchCollection namesMatches = Regex.Matches(gptResponse, @"\[([A-Za-z0-9\s\-._]+)\]:");
+
+        foreach (Match match in namesMatches.Cast<Match>())
         {
             names.Add(match.Groups[1].Value);
-            Debug.Log(match.Groups[1].Value);
+            Debug.Log($"Speaker: \n{match.Groups[1].Value}");
         }
+
+        foreach (Match match in speechMatches.Cast<Match>())
+        {
+            speechs.Add(match.Groups[1].Value);
+            Debug.Log($"Line: \n{match.Groups[1].Value}");
+        }
+
         if (speechs.Count == 0) {
             speechs.Add(gptResponse);
             names.Add("Narrator");
-            Debug.Log("ChatGPT formatting error!");
+            Debug.Log($"ChatGPT formatting error! \n{gptResponse}");
         }
 
         for (int i = 0; i < speechs.Count; i++)
         {
             if (names[i] == "You" || names[i] == PlayerInfo.GetName())
+            {
+                Debug.Log($"ChatGPT formatting error! \n{names[i]}\n{speechs[i]}");
                 break;
-            Line line = new Line()
+            }
+
+            Line line = new()
             {
                 name = names[i],
                 line = speechs[i]

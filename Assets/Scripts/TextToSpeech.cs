@@ -6,39 +6,57 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Microsoft.CognitiveServices.Speech.Audio;
 using System.Collections.ObjectModel;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class TextToSpeech : MonoBehaviour
 {
 
-    public List<string> maleVoices = new List<string>();
-    public List<string> femaleVoices = new List<string>();
-    public List<string> unknownVoices = new List<string>();
+    public List<string> maleVoices = new();
+    public List<string> femaleVoices = new();
+    public List<string> unknownVoices = new();
+    int maleVoicesCount;
+    int femaleVoicesCount;
 
-    private List<string> usedVoices = new List<string>();
+    private List<string> usedVoices = new();
 
+    private GameManager gm;
 
     private async void Awake()
     { 
-        SpeechSynthesizer synthesizer = generateSynthesizer();
-        SynthesisVoicesResult result = await synthesizer.GetVoicesAsync();
-        ReadOnlyCollection<VoiceInfo> voices = result.Voices;
-        Debug.Log(voices.Count);
-        foreach (VoiceInfo voice in voices)
+        gm = FindObjectOfType<GameManager>();
+        if (gm.generateVoice)
         {
-            if (voice.ShortName.StartsWith("en"))
+            SpeechSynthesizer synthesizer = generateSynthesizer();
+            SynthesisVoicesResult result = await synthesizer.GetVoicesAsync();
+            ReadOnlyCollection<VoiceInfo> voices = result.Voices;
+            Debug.Log(voices.Count);
+            foreach (VoiceInfo voice in voices)
             {
-                if (voice.Gender.ToString() == "Male")
-                    maleVoices.Add(voice.ShortName);
-                else if (voice.Gender.ToString() == "Female")
-                    femaleVoices.Add(voice.ShortName);
-                else
-                    unknownVoices.Add(voice.ShortName);
+                if (voice.ShortName.StartsWith("en"))
+                {
+                    if (voice.Gender.ToString() == "Male")
+                        maleVoices.Add(voice.ShortName);
+                    else if (voice.Gender.ToString() == "Female")
+                        femaleVoices.Add(voice.ShortName);
+                    else
+                        unknownVoices.Add(voice.ShortName);
+                }
             }
+            synthesizer.Dispose();
+            if (maleVoices.Count > 0)
+                gm.EnableStartButton();
+            else
+                gm.OnAzureInitError();
+
+            maleVoicesCount = maleVoices.Count;
+            femaleVoicesCount = femaleVoices.Count;
         }
-        synthesizer.Dispose();
-        Debug.Log(maleVoices.Count);
-        Debug.Log(femaleVoices.Count);
-        Debug.Log(unknownVoices.Count);
+        else
+        {
+            await Task.Delay(10);
+            gm.EnableStartButton();
+        }
     }
 
     public void GenerateSynthesizer(DialogBoxData dbd, GenderEnum gender)
@@ -48,6 +66,13 @@ public class TextToSpeech : MonoBehaviour
         config.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
         string voice; 
         int idx;
+        if (usedVoices.Intersect(maleVoices).Count() == maleVoicesCount ||
+            usedVoices.Intersect(femaleVoices).Count() == femaleVoicesCount)
+        {
+            Debug.Log("All voices used");
+            usedVoices = new();
+        }
+
         do
         {
             if (gender == GenderEnum.Male)
@@ -70,7 +95,7 @@ public class TextToSpeech : MonoBehaviour
         while (!usedVoices.Contains(voice));
         dbd.voiceName = voice;
         config.SpeechSynthesisVoiceName = voice;
-        SpeechSynthesizer synthesizer = new SpeechSynthesizer(config, audioConfig);
+        SpeechSynthesizer synthesizer = new(config, audioConfig);
         dbd.synthesizer = synthesizer;
     }
 
@@ -79,17 +104,6 @@ public class TextToSpeech : MonoBehaviour
         generateSentenceAudio(line, synthesizer); 
     }
 
-    private SpeechSynthesizer generateSynthesizer()
-    {
-        AudioConfig audioConfig = AudioConfig.FromStreamOutput(AudioOutputStream.CreatePullStream());
-        SpeechConfig config = SpeechConfig.FromSubscription("a7297d7539e14fd4aa773bac0b100455", "westus");
-        config.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
-        SpeechSynthesizer synthesizer = new SpeechSynthesizer(config, audioConfig);
-        return synthesizer;
-    }
-
-
-
     private async void generateSentenceAudio(Line line, SpeechSynthesizer synthesizer)
     {
         Debug.Log(line.voiceName);
@@ -97,4 +111,16 @@ public class TextToSpeech : MonoBehaviour
         line.audio = result.AudioData;
         Debug.Log(result);
     }
+
+    private SpeechSynthesizer generateSynthesizer()
+    {
+        AudioConfig audioConfig = AudioConfig.FromStreamOutput(AudioOutputStream.CreatePullStream());
+        SpeechConfig config = SpeechConfig.FromSubscription("a7297d7539e14fd4aa773bac0b100455", "westus");
+        config.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
+        SpeechSynthesizer synthesizer = new(config, audioConfig);
+        return synthesizer;
+    }
+
+
+
 }

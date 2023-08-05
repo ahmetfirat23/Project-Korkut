@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Microsoft.CognitiveServices.Speech;
 
 public class DialogManager : MonoBehaviour
 {
@@ -31,17 +28,15 @@ public class DialogManager : MonoBehaviour
 
     int nextLineID = 0;
     string sentence;
-    TextToSpeech tts;
     TextInputManager tim;
-
-
+    GameManager gm;
 
 
     void Awake()
     {
         started = false;
-        tts = FindObjectOfType<TextToSpeech>();
         tim = FindObjectOfType<TextInputManager>();
+        gm = FindAnyObjectByType<GameManager>();
 
     }
 
@@ -57,11 +52,9 @@ public class DialogManager : MonoBehaviour
                 tim.skipButton.GetComponentInChildren<TMP_Text>().text = "Skip (c)";
                 nextLineID++;
                 if (line.final)
-                {
                     nextLineID = -1;
-                }
+
                 portraitAnim.SetBool("speaking", false);
- 
                 DisplayNextSentence(nextLineID);
             }
 
@@ -93,9 +86,7 @@ public class DialogManager : MonoBehaviour
     public void DisplayNextSentence(int lineID)
     {
         if (!line.final)
-        {
             speechSource.Stop();
-        }
 
         skipClick = false;
         autoClick = false;
@@ -109,7 +100,6 @@ public class DialogManager : MonoBehaviour
         }
 
         line = dialogData.lines[lineID];
-
 
         boxData = dialog.GetDialogBoxDataWithName(line.name);
         line.voiceName = boxData.voiceName;
@@ -131,7 +121,6 @@ public class DialogManager : MonoBehaviour
 
         StopAllCoroutines();
 
-
         sentence = line.line;
 
         StartCoroutine(TypeSentence(line));
@@ -142,8 +131,11 @@ public class DialogManager : MonoBehaviour
     {
         boxData.dialogText.text = "";
         sentence = line.line;
-        yield return new WaitUntil(()=>line.audio!=null);
-        speechSource.clip = WavUtility.ToAudioClip(line.audio);
+        if (gm.generateVoice)
+        {
+            yield return new WaitUntil(() => line.audio != null);
+            speechSource.clip = WavUtility.ToAudioClip(line.audio);
+        }
         speechSource.Play();
           
 
@@ -157,7 +149,7 @@ public class DialogManager : MonoBehaviour
         }
         isTyped = true;
         if (!line.final)
-            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(5f);
         autoClick = true;
         //boxData.dialogBox.SetActive(false);
     }
@@ -166,15 +158,16 @@ public class DialogManager : MonoBehaviour
     {
         finished = true;
         started = false;
-        tim.SwitchActionMap(false);
+
+        tim.SwitchSkipButton(false);
         tim.skipButton.GetComponent<Button>().interactable = false; 
         
         DialogBoxData playerdbd = dialog.GetDialogBoxDataWithName(PlayerInfo.GetName());
-        if (boxData.portraitOrientation == OrientationEnum.Left)
-            playerdbd.portraitOrientation = OrientationEnum.Right;
-        else if(boxData.portraitOrientation == OrientationEnum.Right)
+        if (boxData.portraitOrientation == OrientationEnum.Right)
             playerdbd.portraitOrientation = OrientationEnum.Left;
-        else
+        else// if(boxData.portraitOrientation == OrientationEnum.Left)
+            playerdbd.portraitOrientation = OrientationEnum.Right;
+        /**else
         {
             if (playerdbd.portraitOrientation == OrientationEnum.Middle)
             {
@@ -184,9 +177,8 @@ public class DialogManager : MonoBehaviour
                 else
                     playerdbd.portraitOrientation = OrientationEnum.Right;
             }
-        }
+        }**/
         portraitGO = dialog.GetPortraitGOWithOrientation(playerdbd.portraitOrientation);
-        portraitGO.SetActive(true);
         portraitAnim = portraitGO.GetComponent<Animator>();
 
         dialog.SetVisuals(playerdbd.name, playerdbd.color, playerdbd.portraitOrientation);
@@ -198,8 +190,7 @@ public class DialogManager : MonoBehaviour
 
         portraitAnim.SetBool("speaking", true);
 
-        if (tim.inputField.activeSelf == false)
-            tim.inputField.SetActive(true);
+        tim.inputField.SetActive(true);
         tim.inputField.GetComponent<TMP_InputField>().interactable=true;
         tim.inputField.GetComponent<TMP_InputField>().text = "";
         EventSystem.current.SetSelectedGameObject(tim.inputField);
@@ -208,30 +199,15 @@ public class DialogManager : MonoBehaviour
 
     public void OnSkipClick(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            if (finished == false)
-            {
-                skipClick = true;
-            }
-            else
-            {
-                return;
-            }
-        }
+        if (context.performed && finished==false)
+            skipClick = true;
     }
 
 
     public void OnSkipClick()
     {
         if (finished == false)
-        {
             skipClick = true;
-        }
-        else
-        {
-            return;
-        }
     }
 
 
@@ -241,14 +217,14 @@ public class DialogManager : MonoBehaviour
         boxData.dialogText.text = sentence;
         isTyped = true;
 
-        if (!speechSource.isPlaying)
+        if (gm.generateVoice && !speechSource.isPlaying)
         {
             yield return new WaitUntil(() => (line.audio.Length != 0));
             speechSource.clip = WavUtility.ToAudioClip(line.audio);
             speechSource.Play();
         }
         if (!line.final)
-            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(10f);
         autoClick = true;
         //boxData.dialogBox.SetActive(false);
     }
