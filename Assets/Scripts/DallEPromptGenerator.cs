@@ -24,7 +24,6 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
 
 
         
-
         void Start()
         {
             template = new ChatMessage()
@@ -42,7 +41,7 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $@"In a DnD(Dungeons and Dragons) game, create a background story the character that has name {dbd.name} in the following dialog : {gptAnswer}"
+                Content = $@"In a DnD(Dungeons and Dragons) game, create a short background story the character that has name {dbd.name} in the following dialog : {gptAnswer}"
             };
             messages.Add(newMessage);
 
@@ -118,9 +117,9 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
                 Debug.LogWarning("No text was generated from this prompt.");
                 string failed_return;
                 if (character == true){
-                    failed_return = "Portrait of a man";
+                    failed_return = "Describe a random dnd character";
                 }else{
-                    failed_return = "Creative image of a background";
+                    failed_return = "Describe a creative image of a background";
                 }
                 
                 return failed_return;

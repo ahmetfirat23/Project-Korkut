@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Microsoft.CognitiveServices.Speech;
 
@@ -19,7 +20,6 @@ public class DialogManager : MonoBehaviour
     [HideInInspector] public bool finished = false;
     [HideInInspector] public bool started = false;
 
-    [SerializeField] private GameObject inputFieldGO;
     [SerializeField] private AudioSource speechSource;
 
     GameObject portraitGO;
@@ -54,6 +54,7 @@ public class DialogManager : MonoBehaviour
                 skipClick = false;
                 autoClick = false;
                 isTyped = false;
+                tim.skipButton.GetComponentInChildren<TMP_Text>().text = "Skip (c)";
                 nextLineID++;
                 if (line.final)
                 {
@@ -69,6 +70,7 @@ public class DialogManager : MonoBehaviour
                 skipClick = false;
                 autoClick = false;
                 isTyped = false;
+                tim.skipButton.GetComponentInChildren<TMP_Text>().text = "Next (c)";
                 StopAllCoroutines();
                 StartCoroutine(DisplayWholeText());
             }
@@ -77,6 +79,9 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog dialog)
     {
+        if(portraitAnim!=null)
+            portraitAnim.SetBool("speaking", false);
+
         finished = false;
         started = true;
         nextLineID = 0;
@@ -162,17 +167,29 @@ public class DialogManager : MonoBehaviour
         finished = true;
         started = false;
         tim.SwitchActionMap(false);
-        tim.skipButton.GetComponent<Button>().interactable = false;
+        tim.skipButton.GetComponent<Button>().interactable = false; 
+        
         DialogBoxData playerdbd = dialog.GetDialogBoxDataWithName(PlayerInfo.GetName());
         if (boxData.portraitOrientation == OrientationEnum.Left)
             playerdbd.portraitOrientation = OrientationEnum.Right;
-        else
+        else if(boxData.portraitOrientation == OrientationEnum.Right)
             playerdbd.portraitOrientation = OrientationEnum.Left;
-        portraitGO = dialog.GetPortraitGOWithOrientation(boxData.portraitOrientation);
+        else
+        {
+            if (playerdbd.portraitOrientation == OrientationEnum.Middle)
+            {
+                if (dialog.GetPortraitGOWithOrientation(OrientationEnum.Right).activeSelf == true &&
+                    dialog.GetPortraitGOWithOrientation(OrientationEnum.Left).activeSelf == false)
+                    playerdbd.portraitOrientation = OrientationEnum.Left;
+                else
+                    playerdbd.portraitOrientation = OrientationEnum.Right;
+            }
+        }
+        portraitGO = dialog.GetPortraitGOWithOrientation(playerdbd.portraitOrientation);
         portraitGO.SetActive(true);
         portraitAnim = portraitGO.GetComponent<Animator>();
 
-        dialog.SetVisuals(line.name, boxData.color, boxData.portraitOrientation);
+        dialog.SetVisuals(playerdbd.name, playerdbd.color, playerdbd.portraitOrientation);
 
         if (!portraitGO.activeSelf)
             portraitGO.SetActive(true);
@@ -181,10 +198,11 @@ public class DialogManager : MonoBehaviour
 
         portraitAnim.SetBool("speaking", true);
 
-        if (inputFieldGO.activeSelf == false)
-            inputFieldGO.SetActive(true);
-        inputFieldGO.GetComponent<TMP_InputField>().interactable=true;
-        inputFieldGO.GetComponent<TMP_InputField>().text = "";
+        if (tim.inputField.activeSelf == false)
+            tim.inputField.SetActive(true);
+        tim.inputField.GetComponent<TMP_InputField>().interactable=true;
+        tim.inputField.GetComponent<TMP_InputField>().text = "";
+        EventSystem.current.SetSelectedGameObject(tim.inputField);
 
     }
 

@@ -41,7 +41,7 @@ public class Connector : MonoBehaviour
             color = (ColorEnum)Random.Range(0, 2),
             dialogText = dialogText,
             dialogBox = dialogBox,
-            portraitOrientation = OrientationEnum.Right,
+            portraitOrientation = OrientationEnum.Middle,
         };
         tts.GenerateSynthesizer(dbd, dbd.gender);
         Names.Add(PlayerInfo.GetName());
@@ -157,6 +157,8 @@ public class Connector : MonoBehaviour
 
         for (int i = 0; i < speechs.Count; i++)
         {
+            if (names[i] == "You" || names[i] == PlayerInfo.GetName())
+                break;
             Line line = new Line()
             {
                 name = names[i],
