@@ -24,7 +24,7 @@ namespace OpenAI
                 "We will be creating a narrative together, where I make decisions for my character, " +
                 "and you make decisions for all other characters (NPCs) and creatures in the world. " +
                 "You use a mysterious, exciting and interesting language. The story you are telling must be compelling. " +
-                $"\nSince I am the only one playing with you, you need to refer me as \"you\" when you are talking about my character's actions. You MUST use a lot dialogs in your story. Other characters can refer me as {PlayerInfo.GetName()}. You mustn't have inline quotations for other characters. Don't speak on behalf of other characters.  Dialogs should be formatted like \r\n    \"[PersonA Name]: Speech\r\n [PersonB Name]: Speech\"\r\n    Also when there is no dialog and you are narrating story the you MUST output like \"[Narrator]: Story\".\r\n    Overall an example output should look like the following \r\n    \"[Narrator]: You wake up in a deserted planet.\r\n    [Stranger]: Wake up! Who are you?\r\n    [Narrator]: What are you going to do?\"\r\n    You mustn't generate any dialog for me. Using [You] or [{PlayerInfo.GetName()}] is strictly forbidden. Instead at the end of your message you should ask what I will do or say and your next message you should shape the story according to my response.\n\nKeep it short. Don't exceed 20 sentences. No talk; just go." /*+
+                $"\nSince I am the only one playing with you, you need to refer me as \"you\" when you are talking about my character's actions. You MUST use a lot dialogs in your story. Other characters can refer me as {PlayerInfo.GetName()}. You mustn't have inline quotations for other characters. Don't speak on behalf of other characters.  Dialogs should be formatted like \r\n    \"[PersonA Name]: 'PersonA's speech.'\r\n [PersonB Name]: 'PersonB's speech'\"\r\n    Also when there is no dialog and you are narrating story the you MUST output like \"[Narrator]: Story\".\r\n    Overall an example output should look like the following \r\n    \"[Narrator]: You wake up in a deserted planet.\r\n    [Stranger]: Wake up! Who are you?\r\n    [Narrator]: What are you going to do?\"\r\n    You mustn't generate any dialog for me. Using [You] or [{PlayerInfo.GetName()}] is strictly forbidden. Instead at the end of your message you should ask what I will do or say and your next message you should shape the story according to my response. Select randomly that whether my actions and attacks are successful or failed miserably.\n\nKeep it short. Don't exceed 20 sentences. No talk; just go." /*+
                 "Your responsibilities as dungeon master are to describe the setting, environment, " +
                 "Non-player characters (NPCs) and their actions, as well as explain the consequences of " +
                 "my actions on all of the above. You may only describe the actions of my character if you " +
@@ -104,7 +104,7 @@ namespace OpenAI
         {
             CreateChatCompletionResponse completionResponse = await openai.CreateChatCompletion(new CreateChatCompletionRequest()
             {
-                Model = "gpt-3.5-turbo-0301",
+                Model = "gpt-3.5-turbo-0613",
                 Messages = messages,
             });
 

@@ -79,9 +79,9 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
                 custom_prompt = $@"In a DnD(Dungeons and Dragons) game, following example prompts, generate a prompt for the image generation of a character portrait. You should use the following text for extra information. Include word 'portrait'in the prompt. Keep the prompt shorter than 70 words.
                 ###Text:'{description}'";
             }else{
-                custom_prompt = $@"Generate a captivating background image that captures the essence of a Dungeons and Dragons adventure based on the provided opening message.
+                custom_prompt = $@"Generate a captivating background image prompt that captures the essence of a Dungeons and Dragons adventure based on the provided opening message. Keep the prompt shorter than 70 words.
                 Opening Message: '{description}'
-                Image Specifications: High-resolution, vibrant colors, intricate details, and a sense of wonder. Incorporate elements like mystical creatures, ancient ruins, lush forests, and brave adventurers.
+                Image Specifications: High-resolution, dark colors, highly-realistic scenes. Incorporate elements like mystical creatures, ancient ruins, lush forests, and brave {PlayerInfo.GetClass()}.
                 ";
             }
 

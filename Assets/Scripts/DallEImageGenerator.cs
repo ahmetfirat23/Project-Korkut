@@ -76,7 +76,7 @@ namespace OpenAI
 
                     Texture2D texture = new Texture2D(2, 2);
                     texture.LoadImage(request.downloadHandler.data);
-                    var sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
                     dbd.portraitSprite = sprite;
                     Debug.Log("completed");
                 }
@@ -108,14 +108,14 @@ namespace OpenAI
 
                     Texture2D texture = new Texture2D(2, 2);
                     texture.LoadImage(request.downloadHandler.data);
-                    var sprite = Sprite.Create(texture, new Rect(0, 0, 1024, 1024), Vector2.zero, 1f);
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
                     background_image.sprite = sprite;
-                    Debug.Log("completed");
+                    Debug.Log("Background imge created");
                 }
             }
             else
             {
-                Debug.LogWarning("No image was created from this prompt.");
+                Debug.LogWarning("No background image was created from this prompt.");
             }
 
         }

@@ -51,14 +51,16 @@ public class Connector : MonoBehaviour
     }
 
     public async Task<Dialog> CreateDialog(string gptResponse) {
-
+ 
         List<Line> lines = SplitResponseToLines(gptResponse);
         
         List<Task> tasks = new List<Task>();
         DialogData dialogData = new DialogData();
         List<DialogBoxData> dbdList = new List<DialogBoxData>();
 
-        Debug.Log(dbds[0].name);
+        Task background = dalle.GenerateBackgroundImage(gptResponse);
+        tasks.Append(background);
+
         dbdList.Add(dbds[0]);
 
         foreach (Line line in lines)
