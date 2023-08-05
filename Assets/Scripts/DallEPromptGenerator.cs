@@ -19,6 +19,7 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
 - a fantasy style portrait painting of rachel lane / alison brie hybrid in the style of francois boucher oil painting unreal 5 daz.rpg portrait, extremely detailed artgerm greg rutkowski alphonse mucha greg hildebrandt tim hildebrandt
 - athena, greek goddess, claudia black, art by artgerm and greg rutkowski and magali villeneuve, bronze greek armor, owl crown, d & d, fantasy, intricate, portrait, highly detailed, headshot, digital painting, trending on artstation, concept art, sharp focus, illustration
 - a close up of a woman with a braid in her hair, fantasy concept art portrait, a portrait of an elf, character art portrait, portrait of an elf, dnd character art portrait, dnd portrait, portrait dnd, detailed matte fantasy portrait, detailed character portrait, fantasy art portrait, digital fantasy portrait, side portrait of elven royalty, portrait of a female elf warlock
+-     
     Follow the structure of the example prompts.";
 
 
@@ -72,13 +73,24 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
         }
 
 
-        public async Task<string> GenerateDallEPrompt(string description)
+        public async Task<string> GenerateDallEPrompt(string description, bool character) //if character is false, then it is for background
         {
+            string custom_prompt;
+            if (character == true){
+                custom_prompt = $@"In a DnD(Dungeons and Dragons) game, following example prompts, generate a prompt for the image generation of a character portrait. You should use the following text for extra information. Include word 'portrait'in the prompt. Keep the prompt shorter than 70 words.
+                ###Text:'{description}'";
+            }else{
+                custom_prompt = $@"Generate a captivating background image that captures the essence of a Dungeons and Dragons adventure based on the provided opening message.
+                Opening Message: '{description}'
+                Image Specifications: High-resolution, vibrant colors, intricate details, and a sense of wonder. Incorporate elements like mystical creatures, ancient ruins, lush forests, and brave adventurers.
+                ";
+            }
+
+
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $@"In a DnD(Dungeons and Dragons) game, following example prompts, generate a prompt for the image generation of a character portrait. You should use the following text for extra information. Include word 'portrait'in the prompt. Keep the prompt shorter than 70 words.
-###Text:'{description}'"
+                Content = custom_prompt
             };
             messages.Add(newMessage);
 
@@ -104,8 +116,18 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
             else
             {
                 Debug.LogWarning("No text was generated from this prompt.");
-                return "Portrait of a man";
+                string failed_return;
+                if (character == true){
+                    failed_return = "Portrait of a man";
+                }else{
+                    failed_return = "Creative image of a background";
+                }
+                
+                return failed_return;
             }
         }
+
+
+        
     }
 }

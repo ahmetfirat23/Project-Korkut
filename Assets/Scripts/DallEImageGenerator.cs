@@ -14,6 +14,8 @@ namespace OpenAI
 {
     public class DallEImageGenerator : MonoBehaviour
     { 
+
+        [SerializeField] private Image background_image;
         private OpenAIApi openai = new OpenAIApi();
 
 
@@ -36,7 +38,7 @@ namespace OpenAI
         public async Task GeneratePlayerImage(DialogBoxData dbd)
         {
             string player_information = GetProfileInfo();
-            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(player_information);
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(player_information,true);
             await SendImageRequest(dbd, prompt);
         }
 
@@ -44,8 +46,14 @@ namespace OpenAI
         public async Task GenerateNPCImage(DialogBoxData dbd, string str)
         {
             string description = await GetComponent<DallEPromptGenerator>().DescribeCharacter(dbd, str);
-            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(description);
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(description,true);
             await SendImageRequest(dbd, prompt);
+        }
+
+        public async Task GenerateBackgroundImage(string gptFirstAnswer)
+        {
+            string prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(gptFirstAnswer, false);
+            await SendBackGroundImageRequest(prompt);
         }
 
         private async Task SendImageRequest(DialogBoxData dbd, string prompt)
@@ -70,6 +78,38 @@ namespace OpenAI
                     texture.LoadImage(request.downloadHandler.data);
                     var sprite = Sprite.Create(texture, new Rect(0, 0, 256, 256), Vector2.zero, 1f);
                     dbd.portraitSprite = sprite;
+                    Debug.Log("completed");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("No image was created from this prompt.");
+            }
+
+        }
+
+        private async Task SendBackGroundImageRequest(string prompt)
+        {   
+            CreateImageResponse response = await openai.CreateImage(new CreateImageRequest
+            {
+                Prompt = prompt,
+                Size = ImageSize.Size256
+            });
+
+            if (response.Data != null && response.Data.Count > 0)
+            {
+                using(var request = new UnityWebRequest(response.Data[0].Url))
+                {
+                    request.downloadHandler = new DownloadHandlerBuffer();
+                    request.SetRequestHeader("Access-Control-Allow-Origin", "*");
+                    request.SendWebRequest();
+
+                    while (!request.isDone) await Task.Yield();
+
+                    Texture2D texture = new Texture2D(2, 2);
+                    texture.LoadImage(request.downloadHandler.data);
+                    var sprite = Sprite.Create(texture, new Rect(0, 0, 1024, 1024), Vector2.zero, 1f);
+                    background_image.sprite = sprite;
                     Debug.Log("completed");
                 }
             }
