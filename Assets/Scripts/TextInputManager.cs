@@ -9,10 +9,10 @@ using UnityEngine.UI;
 
 public class TextInputManager : MonoBehaviour
 {
-    public TMP_InputField inputField;
     public string userInput;
-    [HideInInspector] public GameObject submitButton;
-    [HideInInspector] public GameObject skipButton;
+    public GameObject submitButton;
+    public GameObject skipButton;
+    public GameObject inputField;
     DialogTrigger dialogTrigger;
     
 
@@ -23,8 +23,6 @@ public class TextInputManager : MonoBehaviour
         dialogTrigger = FindObjectOfType<DialogTrigger>();
         playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindAction("Player/Submit").Disable();
-        submitButton = GameObject.Find("SubmitButton");
-        skipButton = GameObject.Find("SkipButton");
     }
 
 
@@ -34,15 +32,15 @@ public class TextInputManager : MonoBehaviour
 
     private void onSubmit()
     {
-        if (inputField.text != "")
+        if (inputField.GetComponent<TMP_InputField>().text != "")
         {
-            inputField.interactable = false;
+            inputField.GetComponent<TMP_InputField>().interactable = false;
             submitButton.GetComponent<Button>().interactable = false;
             skipButton.GetComponent<Button>().interactable = true;
             EventSystem.current.SetSelectedGameObject(null);
             SwitchActionMap(true);
             SwitchSubmitButton(false);
-            userInput = inputField.text;
+            userInput = inputField.GetComponent<TMP_InputField>().text;
             Debug.Log(userInput);
             dialogTrigger.NextDialog(userInput);
         }

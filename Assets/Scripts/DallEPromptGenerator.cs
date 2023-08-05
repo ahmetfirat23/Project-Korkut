@@ -23,7 +23,6 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
 
 
         
-
         void Start()
         {
             template = new ChatMessage()
@@ -41,7 +40,7 @@ Below is a list of prompts that can be used to generate images with Stable Diffu
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $@"In a DnD(Dungeons and Dragons) game, create a background story the character that has name {dbd.name} in the following dialog : {gptAnswer}"
+                Content = $@"In a DnD(Dungeons and Dragons) game, create a short background story the character that has name {dbd.name} in the following dialog : {gptAnswer}"
             };
             messages.Add(newMessage);
 
