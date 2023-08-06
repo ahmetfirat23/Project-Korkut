@@ -4822,7 +4822,8 @@ MonoBehaviour:
   TextInput: {fileID: 1744714738}
   generateBackground: 0
   generateVoice: 0
-  doubleGeneration: 0
+  doubleGeneration: 1
+  moderate: 1
 --- !u!1 &897854224
 GameObject:
   m_ObjectHideFlags: 0

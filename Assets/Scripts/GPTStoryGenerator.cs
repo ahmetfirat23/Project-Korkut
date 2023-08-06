@@ -33,7 +33,7 @@ An example output is given:
 [Stranger]: Wake up! Who are you?
 [Narrator]: What are you going to do?""
 You mustn't generate any dialog for me. Using [You] or [{PlayerInfo.GetName()}] is strictly forbidden. Instead at the end of your message you should ask what I will do or say and your next message you should shape the story according to my response. My actions should fail sometimes.
-Keep it short. Don't exceed 20 sentences. No talk; just go."; /*+
+Keep it short. Don't exceed 100 words. No talk; just go."; /*+
                 "Your responsibilities as dungeon master are to describe the setting, environment, " +
                 "Non-player characters (NPCs) and their actions, as well as explain the consequences of " +
                 "my actions on all of the above. You may only describe the actions of my character if you " +

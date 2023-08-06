@@ -36,7 +36,13 @@ You generate prompts similar to these examples.";
             ChatMessage newMessage = new ChatMessage()
             {
                 Role = "user",
-                Content = $"In a Dungeons and Dragons game, create a short background story for the character whose name is {dbd.name}. Include their class and race. Don't exceed 5 sentences. This character is from the following dialog:\r\n{gptAnswer}"
+                Content = @$"In a Dungeons and Dragons game, create a short background story for the character whose name is {dbd.name}. Include their race, class and gender(Male or Female). Follow the given formatting:
+""""""[Name]: Character name
+[Race]: Character race
+[Class]: Character class
+[Gender]: Character gender
+[Background story]: Background story""""""
+Don't exceed 50 words in background story. This character is from the following dialog:\r\n{gptAnswer}"
             };
             messages.Add(newMessage);
 
@@ -71,12 +77,12 @@ You generate prompts similar to these examples.";
             string custom_prompt;
             if (dbd != null)
             {
-                custom_prompt = $@"In a Dungeons and Dragons game, following example prompts, generate a prompt for image generation of the character {dbd.name}'s portrait. You should use the following text for extra information. Include word 'portrait' in the prompt. Keep the prompt shorter than 70 words.
+                custom_prompt = $@"In a Dungeons and Dragons game, following example prompts, generate a prompt for image generation of the character {dbd.name}'s portrait. You should use the following text for extra information. Include word 'portrait' in the prompt. Keep the prompt shorter than 30 words.
                 ###Text:'{description}'";
             }
             else
             {
-                custom_prompt = $@"Generate a captivating background image prompt that captures the essence of a Dungeons and Dragons adventure based on the provided message. Keep the prompt shorter than 70 words.
+                custom_prompt = $@"Generate a captivating background image prompt that captures the essence of a Dungeons and Dragons adventure based on the provided message. Keep the prompt shorter than 30 words.
                 ###Message: '{description}'
                 ###Image Specifications: High-resolution, dark colors, highly-realistic scenes. Incorporate elements like mystical creatures, ancient ruins, lush forests, and brave {PlayerInfo.GetClass()}.";
             }

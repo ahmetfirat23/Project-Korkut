@@ -19,11 +19,13 @@ namespace OpenAI
         [SerializeField] private Image backgroundImage;
         private readonly OpenAIApi openai = new();
         GameManager gm;
+        Connector connector;
 
 
         private void Awake()
         {
             gm = FindObjectOfType<GameManager>();
+            connector = FindAnyObjectByType<Connector>();
         }
 
 
@@ -50,6 +52,18 @@ Race: {PlayerInfo.GetRace()}";
             if (gm.doubleGeneration)
             {
                 string description = await GetComponent<DallEPromptGenerator>().DescribeCharacter(dbd, str);
+                try
+                {
+                    List<string> NPCProperties = connector.SplitBackgroundStory(description);
+                    description = $"Character's name is {NPCProperties[0]}, race is {NPCProperties[1]}, class is {NPCProperties[2]}, and gender is {NPCProperties[3]}. Background story as follows: {NPCProperties[4]}";
+                    if (NPCProperties[3] == "Male" || NPCProperties[3] == "male")
+                        dbd.gender = GenderEnum.Male;
+                    else
+                        dbd.gender = GenderEnum.Female;
+                }
+                catch (Exception e){
+                    Debug.LogWarning($"Background story formatting failed\n{e}\n {str}");
+                }
                 prompt = await GetComponent<DallEPromptGenerator>().GenerateDallEPrompt(description, dbd);
             }
             else

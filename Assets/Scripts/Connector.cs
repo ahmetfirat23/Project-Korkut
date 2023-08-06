@@ -181,10 +181,24 @@ public class Connector : MonoBehaviour
                 line = gptResponse
             };
             lines.Add(line);
-            Debug.Log($"ChatGPT formatting error! \n{gptResponse}");
+            Debug.LogWarning($"ChatGPT formatting error! \n{gptResponse}");
         }
 
         lines[^1].final = true;
         return lines;
     }
+
+    public List<string> SplitBackgroundStory(string gptResponse)
+    {
+        Match nameMatch = Regex.Match(gptResponse, @"\[Name\]:([^\[]*)");
+        Match raceMatch = Regex.Match(gptResponse, @"\[Race\]:([^\[]*)");
+        Match classMatch = Regex.Match(gptResponse, @"\[Class\]:([^\[]*)");
+        Match genderMatch = Regex.Match(gptResponse, @"\[Gender\]:([^\[]*)");
+        Match storyMatch = Regex.Match(gptResponse, @"\[Background story\]:([^\[]*)");
+
+        List<string> matches = new() { nameMatch.Groups[1].Value, raceMatch.Groups[1].Value, classMatch.Groups[1].Value, genderMatch.Groups[1].Value, storyMatch.Groups[1].Value };
+        return matches;
+    }
 }
+
+
