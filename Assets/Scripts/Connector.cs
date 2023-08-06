@@ -1,11 +1,10 @@
 using OpenAI;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Connector : MonoBehaviour
@@ -30,12 +29,13 @@ public class Connector : MonoBehaviour
         gm = FindAnyObjectByType<GameManager>();
     }
 
+
     public void CreatePlayerDBD() {
 
         DialogBoxData dbd = new() {
             name = PlayerInfo.GetName(),
             gender = PlayerInfo.GetGender(),
-            color = (ColorEnum)Random.Range(0, 2),
+            color = (ColorEnum)UnityEngine.Random.Range(0, 2),
             dialogText = dialogText,
             dialogBox = dialogBox,
             portraitOrientation = OrientationEnum.Middle,
@@ -48,8 +48,7 @@ public class Connector : MonoBehaviour
         task.ContinueWith(task => { });
     }
 
-    public async Task<Dialog> CreateDialog(string gptResponse) {
-
+    public async Task<Dialog> CreateDialog(string gptResponse) { 
         List<Line> lines = SplitResponseToLines(gptResponse);
 
         List<Task> tasks = new();
@@ -73,8 +72,8 @@ public class Connector : MonoBehaviour
                 DialogBoxData dbd = new()
                 {
                     name = line.name,
-                    gender = (GenderEnum)Random.Range(0, 3),
-                    color = (ColorEnum)Random.Range(0, 2),
+                    gender = (GenderEnum)UnityEngine.Random.Range(0, 3),
+                    color = (ColorEnum)UnityEngine.Random.Range(0, 2),
                     nameText = nameText,
                     dialogText = dialogText,
                     dialogBox = dialogBox,
@@ -90,9 +89,9 @@ public class Connector : MonoBehaviour
                 if (line.name == "Narrator")
                 {
                     if (dbd.gender == GenderEnum.Male)
-                        dbd.portraitSprite = maleNarrators[Random.Range(0, maleNarrators.Length)];
+                        dbd.portraitSprite = maleNarrators[UnityEngine.Random.Range(0, maleNarrators.Length)];
                     else
-                        dbd.portraitSprite = femaleNarrators[Random.Range(0, femaleNarrators.Length)];
+                        dbd.portraitSprite = femaleNarrators[UnityEngine.Random.Range(0, femaleNarrators.Length)];
                 }
                 else
                 {
@@ -157,11 +156,6 @@ public class Connector : MonoBehaviour
             Debug.Log($"Line: \n{match.Groups[1].Value}");
         }
 
-        if (speechs.Count == 0) {
-            speechs.Add(gptResponse);
-            names.Add("Narrator");
-            Debug.Log($"ChatGPT formatting error! \n{gptResponse}");
-        }
 
         for (int i = 0; i < speechs.Count; i++)
         {
@@ -178,6 +172,18 @@ public class Connector : MonoBehaviour
             };
             lines.Add(line);
         }
+
+        if (lines.Count == 0)
+        {
+            Line line = new()
+            {
+                name = "Narrator",
+                line = gptResponse
+            };
+            lines.Add(line);
+            Debug.Log($"ChatGPT formatting error! \n{gptResponse}");
+        }
+
         lines[^1].final = true;
         return lines;
     }

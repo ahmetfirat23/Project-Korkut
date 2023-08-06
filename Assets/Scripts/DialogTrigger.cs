@@ -12,6 +12,7 @@ public class DialogTrigger : MonoBehaviour
     DialogManager dm;
     GPTStoryGenerator gsg;
     Connector connector;
+    GameManager gm;
 
     bool triggered = false;
     
@@ -21,6 +22,7 @@ public class DialogTrigger : MonoBehaviour
         dm = FindObjectOfType<DialogManager>();
         gsg = FindObjectOfType<GPTStoryGenerator>();
         connector = FindObjectOfType<Connector>();
+        gm = FindObjectOfType<GameManager>();
     }
 
     public async void TriggerDialog()
@@ -40,7 +42,13 @@ public class DialogTrigger : MonoBehaviour
         if (!dm.started && !triggered) 
         {
             triggered = true;
-            string gptResponse = await gsg.SendCompletionRequest(userInput);
+            bool flagged = await gsg.ModerationRequest(userInput);
+            string gptResponse;
+            if (!flagged || !gm.moderate)
+                gptResponse = await gsg.SendCompletionRequest(userInput);
+            else
+                gptResponse = "[Narrator]: Inappropriate input! Please be more considerate and try again.";
+
             Dialog dialog = await connector.CreateDialog(gptResponse);
             dm.StartDialog(dialog);
             triggered = false;

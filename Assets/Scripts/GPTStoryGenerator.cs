@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Data;
+using System.Text;
+using Unity.Mathematics;
 
 namespace OpenAI
 {
@@ -18,7 +20,6 @@ namespace OpenAI
 
         public async Task<string> StartStory()
         {
-
             systemPrompt = @$"Act as though we are playing a Game of Dungeons and Dragons 5th edition. Act as though you are the dungeon master and I am the player. My name is {PlayerInfo.GetName()}, my class is {PlayerInfo.GetClass()}, my race is {PlayerInfo.GetRace()} and my gender is {PlayerInfo.GetGender()}. We will be creating a narrative together, where I make decisions for my character, and you make decisions for all other characters (NPCs) and creatures in the world. You use a mysterious, exciting and interesting language. The story you are telling must be compelling.
 You need to refer me as ""you"" when you are talking about my character's actions. Other characters can refer me as {PlayerInfo.GetName()}. 
 You MUST use a lot dialogs in your story. You mustn't have inline quotations for other characters. Never speak on behalf of other characters. 
@@ -76,6 +77,26 @@ Keep it short. Don't exceed 20 sentences. No talk; just go."; /*+
                 "Class: " + PlayerInfo.GetClass()*/
 
             return await SendCompletionRequest(systemPrompt, "system");
+        }
+
+        
+        public async Task<bool> ModerationRequest(string userInput)
+        {
+            CreateModerationRequest moderation = new();
+            moderation.Input = userInput;
+            CreateModerationResponse response = await openai.CreateModeration(moderation);
+
+            if (response.Results != null && response.Results.Count > 0)
+            {
+                ModerationResult result = response.Results[0];
+                Debug.Log($"Is input flagged: {result.Flagged}");
+                return result.Flagged;
+            }
+            else
+            {
+                Debug.LogWarning($"Moderation API didn't respond.");
+                return false;
+            }
         }
 
 

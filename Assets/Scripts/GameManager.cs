@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool generateBackground = true;
     public bool generateVoice = true;
     public bool doubleGeneration = true;
+    public bool moderate = true;
 
     private TextInputManager tim;
 
