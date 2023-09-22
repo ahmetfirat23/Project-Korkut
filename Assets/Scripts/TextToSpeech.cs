@@ -62,7 +62,7 @@ public class TextToSpeech : MonoBehaviour
     public void GenerateSynthesizer(DialogBoxData dbd, GenderEnum gender)
     {
         AudioConfig audioConfig = AudioConfig.FromStreamOutput(AudioOutputStream.CreatePullStream());
-        SpeechConfig config = SpeechConfig.FromSubscription("a7297d7539e14fd4aa773bac0b100455", "westus");
+        SpeechConfig config = SpeechConfig.FromSubscription("api key here", "westus"); // old key won't work
         config.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
         string voice; 
         int idx;
